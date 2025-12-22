@@ -1,0 +1,262 @@
+// --- VARIABLES ---
+$bg-color: #fafafa;
+$text-color: #262626;
+$accent-color: #0095f6;
+$overlay-bg: rgba(0, 0, 0, 0.9); // Dark background lel modal
+$white: #ffffff;
+$radius: 12px; // Tdaour l 7rouf
+
+// --- GLOBAL STYLES ---
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// --- HEADER ---
+.app-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 20px 0;
+  
+  .brand-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .brand-subtitle {
+    color: #8e8e8e;
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+}
+
+// --- CATALOGUE GRID (THE MAIN PART) ---
+.catalog-grid {
+  display: grid;
+  // Desktop: 3 colonnes
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; // Espace bin les cartes
+  padding-bottom: 50px;
+
+  // --- MOBILE RESPONSIVE ---
+  @media (max-width: 768px) {
+    // Mobile: 1 Colonne (Ta7t b3adhhom)
+    grid-template-columns: 1fr;
+    gap: 40px; 
+    padding: 0 10px; // Espace sghir 3al jnab
+  }
+}
+
+// --- CARD STYLE ---
+.catalog-card {
+  position: relative;
+  // Format Portrait (3/4) kima t7eb
+  aspect-ratio: 3 / 4; 
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: $radius;
+  background-color: #e0e0e0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08); // Ombrage 5fif
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  .image-wrapper {
+    width: 100%;
+    height: 100%;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Y3abbi l cadre
+      transition: transform 0.6s ease;
+    }
+  }
+
+  // Hover Effects (PC)
+  &:hover {
+    transform: translateY(-5px); // Tatla3 chwaya lfou9
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+
+    .cover-img {
+      transform: scale(1.08); // Zoom sghir 3al taswira
+    }
+  }
+
+  // Text Overlay
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    // Degradé k7al mil louta bch l ktiba tban
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+    display: flex;
+    align-items: flex-end; // Texte yji louta
+    padding: 25px;
+    
+    .overlay-text {
+      color: $white;
+      font-weight: 500;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+  }
+}
+
+// --- MODAL / CAROUSEL ---
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: $overlay-bg;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: $white;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 2001;
+  opacity: 0.8;
+  &:hover { opacity: 1; }
+}
+
+.carousel-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slide-display {
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    max-height: 80vh; // Mayfoutech tol l ecran
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+
+  .slide-counter {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+}
+
+// Navigation Buttons
+// --- NAVIGATION BUTTONS ---
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  // 1. Raddineha K7ala chwaya bch l flèche l baydha tban 3la ay taswira
+  background: rgba(0, 0, 0, 0.6); 
+  border: 2px solid rgba(255, 255, 255, 0.2); // Cadre sghir
+  
+  color: $white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 2002;
+  backdrop-filter: blur(2px); // Flou wra l bouton
+
+  // Hover fil PC
+  &:hover {
+    background: rgba(0, 0, 0, 0.8); // Yzid yk7al fil hover
+    transform: translateY(-50%) scale(1.1);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  &.prev { left: 20px; }
+  &.next { right: 20px; }
+
+  // --- MOBILE AJUSTEMENT (Houni l 5edma) ---
+  @media (max-width: 768px) {
+    width: 55px;   // Kabbarnaha akther fil mobile
+    height: 55px;
+    font-size: 1.8rem; // L flèche akber
+    background: rgba(0, 0, 0, 0.7); // Ak7al akther bch yban mli7
+    
+    // Nlazzouhom lel 7arf chwaya bch mayghattiwch taswira barcha
+    &.prev { left: 5px; }  
+    &.next { right: 5px; }
+
+    // Kif tenzel 3liha b sob3ek tcha33el chwaya
+    &:active {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%) scale(0.95);
+    }
+  }
+}
+
+// Petite animation d'ouverture
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+// --- HEADER ---
+.app-header {
+  display: flex;             // <--- Zidna hethi bch ncentriw kol chy
+  flex-direction: column;    // <--- Ta7t b3adhhom
+  align-items: center;       // <--- Fi wost
+  margin-bottom: 50px;
+  padding: 40px 0;           // Kabbarna chwaya l padding
+  
+  .app-logo {
+    margin-bottom: 20px;     // Espace bin logo w titre
+    border-radius: 50%;      // <--- Ken t7ebou mdawwer (kima profil insta). Kenech fassa5ha
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); // Dholl sghir ta7t logo
+  }
+
+  .brand-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .brand-subtitle {
+    color: #8e8e8e;
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+}

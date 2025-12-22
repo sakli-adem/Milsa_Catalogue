@@ -1,114 +1,210 @@
 // --- VARIABLES ---
 $bg-color: #fafafa;
-$text-color: #262626;
+$text-color: #1a1a1a;
 $accent-color: #0095f6;
-$overlay-bg: rgba(0, 0, 0, 0.9); // Dark background lel modal
+$overlay-bg: rgba(0, 0, 0, 0.95);
 $white: #ffffff;
-$radius: 12px; // Tdaour l 7rouf
+$radius: 16px;
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);
 
 // --- GLOBAL STYLES ---
 :host {
   display: block;
   min-height: 100vh;
-  background-color: $bg-color;
+  background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
   color: $text-color;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .main-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
+  
+  @media (max-width: 768px) {
+    padding: 20px 16px;
+  }
 }
 
 // --- HEADER ---
 .app-header {
-  text-align: center;
-  margin-bottom: 50px;
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 60px 0 40px;
+  position: relative;
   
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, $accent-color, transparent);
+    border-radius: 2px;
+  }
+  
+  .app-logo {
+    margin-bottom: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: $shadow-md;
+    border: 4px solid $white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: $shadow-lg;
+    }
+  }
+
   .brand-title {
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
     margin: 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, $text-color 0%, #666 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .brand-subtitle {
-    color: #8e8e8e;
-    margin-top: 10px;
+    color: #666;
+    margin-top: 12px;
     font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 40px 0 30px;
+    margin-bottom: 40px;
+    
+    .brand-subtitle {
+      font-size: 1rem;
+      text-align: center;
+      padding: 0 20px;
+    }
   }
 }
 
-// --- CATALOGUE GRID (THE MAIN PART) ---
+// --- CATALOGUE GRID ---
 .catalog-grid {
   display: grid;
-  // Desktop: 3 colonnes
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px; // Espace bin les cartes
-  padding-bottom: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+  padding-bottom: 60px;
 
-  // --- MOBILE RESPONSIVE ---
   @media (max-width: 768px) {
-    // Mobile: 1 Colonne (Ta7t b3adhhom)
     grid-template-columns: 1fr;
-    gap: 40px; 
-    padding: 0 10px; // Espace sghir 3al jnab
+    gap: 24px;
+    padding-bottom: 40px;
   }
 }
 
 // --- CARD STYLE ---
 .catalog-card {
   position: relative;
-  // Format Portrait (3/4) kima t7eb
-  aspect-ratio: 3 / 4; 
+  aspect-ratio: 3 / 4;
   cursor: pointer;
   overflow: hidden;
   border-radius: $radius;
-  background-color: #e0e0e0;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08); // Ombrage 5fif
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
+  box-shadow: $shadow-sm;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+  }
 
   .image-wrapper {
     width: 100%;
     height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      transition: background 0.4s ease;
+      z-index: 2;
+    }
     
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover; // Y3abbi l cadre
-      transition: transform 0.6s ease;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
-  // Hover Effects (PC)
   &:hover {
-    transform: translateY(-5px); // Tatla3 chwaya lfou9
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: $shadow-lg;
+    
+    &::before {
+      opacity: 1;
+    }
 
-    .cover-img {
-      transform: scale(1.08); // Zoom sghir 3al taswira
+    .image-wrapper {
+
+      
+      img {
+        transform: scale(1.1);
+      }
+    }
+    
+    .card-overlay {
+      
+      .overlay-text {
+        transform: translateY(-4px);
+      }
     }
   }
 
-  // Text Overlay
   .card-overlay {
     position: absolute;
     inset: 0;
-    // Degradé k7al mil louta bch l ktiba tban
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 60%);
     display: flex;
-    align-items: flex-end; // Texte yji louta
-    padding: 25px;
+    align-items: flex-end;
+    padding: 28px;
+    z-index: 3;
+    transition: background 0.4s ease;
     
     .overlay-text {
       color: $white;
-      font-weight: 500;
-      font-size: 1.6rem;
-      letter-spacing: 1px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      font-weight: 600;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    border-radius: 12px;
+    
+    &:active {
+      transform: scale(0.98);
+    }
+    
+    .card-overlay {
+      padding: 20px;
     }
   }
 }
@@ -122,22 +218,51 @@ $radius: 12px; // Tdaour l 7rouf
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(8px);
-  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px;
+  
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 }
 
 .close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background: transparent;
-  border: none;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: $white;
-  font-size: 3rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 2rem;
   cursor: pointer;
   z-index: 2001;
-  opacity: 0.8;
-  &:hover { opacity: 1; }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  &:active {
+    transform: rotate(90deg) scale(0.95);
+  }
+  
+  @media (max-width: 768px) {
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
+  }
 }
 
 .carousel-content {
@@ -155,108 +280,142 @@ $radius: 12px; // Tdaour l 7rouf
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 
   img {
     max-width: 100%;
-    max-height: 80vh; // Mayfoutech tol l ecran
+    max-height: 80vh;
     object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .slide-counter {
-    margin-top: 15px;
-    color: #ccc;
-    font-size: 1rem;
-    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  @media (max-width: 768px) {
+    max-width: 95%;
+    gap: 16px;
+    
+    img {
+      max-height: 70vh;
+      border-radius: 6px;
+    }
+    
+    .slide-counter {
+      font-size: 0.9rem;
+      padding: 6px 14px;
+    }
   }
 }
 
-// Navigation Buttons
 // --- NAVIGATION BUTTONS ---
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  
-  // 1. Raddineha K7ala chwaya bch l flèche l baydha tban 3la ay taswira
-  background: rgba(0, 0, 0, 0.6); 
-  border: 2px solid rgba(255, 255, 255, 0.2); // Cadre sghir
-  
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: $white;
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2002;
-  backdrop-filter: blur(2px); // Flou wra l bouton
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 
-  // Hover fil PC
   &:hover {
-    background: rgba(0, 0, 0, 0.8); // Yzid yk7al fil hover
+    background: rgba(255, 255, 255, 0.25);
     transform: translateY(-50%) scale(1.1);
-    border-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   }
 
-  &.prev { left: 20px; }
-  &.next { right: 20px; }
+  &.prev {
+    left: 24px;
+    padding-right: 2px;
+  }
+  
+  &.next {
+    right: 24px;
+    padding-left: 2px;
+  }
 
-  // --- MOBILE AJUSTEMENT (Houni l 5edma) ---
   @media (max-width: 768px) {
-    width: 55px;   // Kabbarnaha akther fil mobile
-    height: 55px;
-    font-size: 1.8rem; // L flèche akber
-    background: rgba(0, 0, 0, 0.7); // Ak7al akther bch yban mli7
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+    background: rgba(255, 255, 255, 0.2);
     
-    // Nlazzouhom lel 7arf chwaya bch mayghattiwch taswira barcha
-    &.prev { left: 5px; }  
-    &.next { right: 5px; }
+    &.prev { left: 8px; }
+    &.next { right: 8px; }
 
-    // Kif tenzel 3liha b sob3ek tcha33el chwaya
     &:active {
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.35);
       transform: translateY(-50%) scale(0.95);
     }
   }
 }
 
-// Petite animation d'ouverture
+// --- ANIMATIONS ---
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(12px);
+  }
 }
 
-// --- HEADER ---
-.app-header {
-  display: flex;             // <--- Zidna hethi bch ncentriw kol chy
-  flex-direction: column;    // <--- Ta7t b3adhhom
-  align-items: center;       // <--- Fi wost
-  margin-bottom: 50px;
-  padding: 40px 0;           // Kabbarna chwaya l padding
-  
-  .app-logo {
-    margin-bottom: 20px;     // Espace bin logo w titre
-    border-radius: 50%;      // <--- Ken t7ebou mdawwer (kima profil insta). Kenech fassa5ha
-    object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); // Dholl sghir ta7t logo
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
-
-  .brand-title {
-    font-size: 2.5rem;
-    font-weight: 300;
-    margin: 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
+}
 
-  .brand-subtitle {
-    color: #8e8e8e;
-    margin-top: 10px;
-    font-size: 1.1rem;
+// --- LOADING STATES ---
+.catalog-card,
+.slide-display img {
+  &.loading {
+    background: linear-gradient(
+      90deg,
+      #e8e8e8 0%,
+      #f5f5f5 50%,
+      #e8e8e8 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }

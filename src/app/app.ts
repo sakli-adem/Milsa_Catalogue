@@ -18,13 +18,13 @@ export class AppComponent {
       title: '',
       coverImage: 'images/cat1/cover.png',
       images: [
-        'images/cat1/2.png',
-        'images/cat1/3.png',
-        'images/cat1/4.png',
-        'images/cat1/5.png',
-        'images/cat1/6.png',
-        'images/cat1/7.png',
-        'images/cat1/8.png',
+        'images/cat1/2.webp',
+        'images/cat1/3.webp',
+        'images/cat1/4.webp',
+        'images/cat1/5.webp',
+        'images/cat1/6.webp',
+        'images/cat1/7.webp',
+        'images/cat1/8.webp',
       ]
     },
     {
@@ -32,11 +32,11 @@ export class AppComponent {
       title: '',
       coverImage: 'images/cat2/cover.png',
       images: [
-        'images/cat2/10.png',
-        'images/cat2/11.png',
-        'images/cat2/12.png',
-        'images/cat2/13.png',
-        'images/cat2/14.png',
+        'images/cat2/10.webp',
+        'images/cat2/11.webp',
+        'images/cat2/12.webp',
+        'images/cat2/13.webp',
+        'images/cat2/14.webp',
       ]
     },
     {

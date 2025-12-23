@@ -1,0 +1,160 @@
+// --- VARIABLES ---
+$bg-color: #ffffff;
+$text-primary: #1a1a1a;
+$text-secondary: #666;
+$accent-color: #d4af37; // GOLD
+$ease-pro: cubic-bezier(0.33, 1, 0.68, 1);
+$radius: 8px;
+
+.contact-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #fafafa 0%, #fff 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+// --- HEADER ---
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+
+  .title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    color: $text-primary;
+  }
+
+  .line {
+    width: 60px; height: 3px; background: $accent-color;
+    margin: 20px auto;
+  }
+
+  .subtitle {
+    color: $text-secondary;
+    font-size: 1.1rem;
+  }
+}
+
+// --- GRID ---
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr; // Mobile: ta7t b3adhhom
+    gap: 40px;
+  }
+}
+
+// --- GAUCHE: INFO & SOCIAL ---
+.info-column {
+  h3 { font-size: 1.8rem; margin-bottom: 20px; color: $text-primary; }
+  .intro-text { color: $text-secondary; line-height: 1.6; margin-bottom: 40px; }
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .social-btn {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    border-radius: $radius;
+    cursor: pointer;
+    transition: all 0.3s $ease-pro;
+    
+    .icon { font-size: 2rem; margin-right: 20px; }
+    
+    .btn-text {
+      text-align: left;
+      display: flex; flex-direction: column;
+      .label { font-size: 0.8rem; color: #888; }
+      .value { font-size: 1.1rem; font-weight: bold; color: $text-primary; }
+    }
+
+    &:hover {
+      transform: translateX(10px);
+      border-color: $accent-color;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      
+      &.whatsapp .value { color: #25D366; }
+      &.instagram .value { color: #E1306C; }
+    }
+  }
+}
+
+// --- DROITE: FORMULAIRE ---
+.form-column {
+  background: white;
+  padding: 40px;
+  border-radius: $radius;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.03);
+
+  @media (max-width: 600px) { padding: 25px; }
+
+  .form-group {
+    margin-bottom: 25px;
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $text-primary;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-bottom: 2px solid #eee; // Style Luxe (Ligne barka)
+      background: transparent;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+      outline: none;
+      font-family: inherit;
+
+      &:focus {
+        border-color: $accent-color;
+      }
+      
+      &::placeholder { color: #ccc; }
+    }
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: $text-primary;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+
+    &:hover {
+      background: $accent-color;
+      color: black;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+  }
+}

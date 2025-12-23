@@ -1,0 +1,63 @@
+<section class="about-container">
+  
+  <div class="main-header">
+    <h2 class="grand-title">À Propos de Nos Parfums</h2>
+    <div class="header-line"></div>
+    <p class="grand-subtitle">Une transparence totale sur ce que vous portez</p>
+  </div>
+  <div class="partner-section">
+    <div class="partner-logo-wrapper">
+      <img [ngSrc]="partner.logo" width="200" height="100" class="chogan-logo" alt="Chogan Logo" priority>
+    </div>
+    <div class="partner-text">
+      <span class="tag">Partenaire Officiel</span>
+      <h2>L'Excellence Italienne</h2>
+      <p>{{ partner.description }}</p>
+    </div>
+  </div>
+
+  <div class="comparison-section">
+    <h2 class="section-title">Pourquoi choisir l'Extrait ?</h2>
+    <p class="section-subtitle">La différence est dans la concentration.</p>
+
+    <div class="table-wrapper">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Concentration</th>
+            <th>Tenue Moyenne</th>
+            <th>Intensité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of comparisons" [class.highlight]="row.intensity === 'Intense'">
+            <td class="type-cell">{{ row.type }}</td>
+            <td>{{ row.concentration }}</td>
+            <td>{{ row.tenue }}</td>
+            <td>
+              <span class="badge" [class.intense]="row.intensity === 'Intense'">
+                {{ row.intensity }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bio-section">
+    <h2 class="section-title">Bio & Respectueux</h2>
+    <p class="section-subtitle">Bon pour vous, bon pour la planète.</p>
+
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let item of features">
+        <div class="icon-circle">{{ item.icon }}</div>
+        <h3>{{ item.title }}</h3>
+        <div class="separator"></div>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+
+</section>

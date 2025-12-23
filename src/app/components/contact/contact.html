@@ -1,0 +1,61 @@
+<section class="contact-section">
+  
+  <div class="main-container">
+    
+    <div class="section-header">
+      <h2 class="title">Contactez-Nous</h2>
+      <div class="line"></div>
+      <p class="subtitle">Une question ? Une commande spéciale ? Nous sommes là.</p>
+    </div>
+
+    <div class="content-grid">
+      
+      <div class="info-column">
+        <h3>Restons Connectés</h3>
+        <p class="intro-text">
+          Suivez nos dernières créations sur Instagram ou discutez directement avec nous sur WhatsApp pour un conseil personnalisé.
+        </p>
+
+        <div class="social-buttons">
+          <button class="social-btn whatsapp" (click)="openWhatsApp()">
+            <span class="icon">💬</span> <div class="btn-text">
+              <span class="label">Discuter sur</span>
+              <span class="value">WhatsApp</span>
+            </div>
+          </button>
+
+          <button class="social-btn instagram" (click)="openInstagram()">
+            <span class="icon">📸</span>
+            <div class="btn-text">
+              <span class="label">Suivez-nous sur</span>
+              <span class="value">Instagram</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="form-column">
+        <form (ngSubmit)="sendMessage()">
+          
+          <div class="form-group">
+            <label>Nom & Prénom</label>
+            <input type="text" [(ngModel)]="formData.name" name="name" placeholder="Votre nom" required>
+          </div>
+
+          <div class="form-group">
+            <label>Téléphone</label>
+            <input type="tel" [(ngModel)]="formData.phone" name="phone" placeholder="Votre numéro" required>
+          </div>
+
+          <div class="form-group">
+            <label>Message</label>
+            <textarea [(ngModel)]="formData.message" name="message" rows="4" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Envoyer le message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+<section class="main-container">
+  
+  <header class="app-header">
+    <div class="logo-wrapper">
+      <img ngSrc="images/logo.png" 
+           width="200" height="200" 
+           priority 
+           alt="Logo Milsa" 
+           class="app-logo">
+    </div>
+
+    <h1 class="brand-title">Nos Collections</h1>
+    <div class="header-line"></div>
+    <p class="brand-subtitle">L'essence de l'élégance en trois univers</p>
+  </header>
+
+  <div class="catalog-grid">
+    <article 
+      class="catalog-card" 
+      *ngFor="let cat of catalogs" 
+      (click)="openCatalog(cat)">
+      
+      <div class="image-wrapper">
+        <img [ngSrc]="cat.coverImage" 
+             width="400" height="533" 
+             priority 
+             alt="{{ cat.title }}"
+             class="cover-img">
+             
+        <div class="card-overlay">
+           <span class="explore-btn">Découvrir</span>
+        </div>
+      </div>
+           
+    </article>
+  </div>
+
+  <div class="modal-overlay" *ngIf="selectedCatalog">
+    
+    <button class="close-btn" (click)="closeCatalog()" aria-label="Close">✕</button>
+    
+    <div class="carousel-content" 
+         (touchstart)="swipeStart($event)" 
+         (touchend)="swipeEnd($event)">
+      
+      <button class="nav-btn prev" (click)="prevSlide()">&#10094;</button>
+
+      <div class="slide-display">
+         <img [ngSrc]="selectedCatalog.images[currentSlideIndex]" 
+              width="800" height="800" 
+              alt="Catalogue Slide"
+              class="active-slide">
+         
+         <div class="slide-counter">
+           {{ currentSlideIndex + 1 }} / {{ selectedCatalog.images.length }}
+         </div>
+      </div>
+
+      <button class="nav-btn next" (click)="nextSlide()">&#10095;</button>
+    </div>
+  </div>
+
+</section>

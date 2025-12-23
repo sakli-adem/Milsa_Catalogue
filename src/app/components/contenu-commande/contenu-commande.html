@@ -1,0 +1,44 @@
+<section class="order-container">
+  <h2 class="section-title">Dans votre colis</h2>
+  <p class="section-subtitle">Plus qu'une simple commande</p>
+
+  <div class="items-grid">
+    <div class="item-card" *ngFor="let item of items">
+      
+      <span class="badge" [ngClass]="item.type.toLowerCase()">
+        {{ item.type === 'Occasion' ? 'Event' : item.type }}
+      </span>
+
+      <div class="image-box">
+        <img [ngSrc]="item.image" 
+             width="300" height="300" 
+             alt="{{ item.title }}" 
+             class="item-img">
+      </div>
+
+      <div class="info-box">
+        <h3>{{ item.title }}</h3>
+        <button class="details-btn" (click)="openDetails(item)">
+          Voir Détails
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" *ngIf="selectedItem" (click)="closeDetails()">
+    
+    <div class="modal-card" (click)="$event.stopPropagation()">
+      <button class="close-icon" (click)="closeDetails()">✕</button>
+      
+      <div class="modal-content">
+        <div class="modal-text">
+          <span class="modal-type">{{ selectedItem.type }}</span>
+          <h2>{{ selectedItem.title }}</h2>
+          <div class="separator"></div> <p class="desc-text">{{ selectedItem.description }}</p>
+          
+          <button class="action-btn" (click)="closeDetails()">OK, J'ai compris</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,257 @@
+// --- VARIABLES LUXE ---
+$bg-color: #ffffff;
+$text-primary: #1a1a1a;
+$text-secondary: #666666;
+$accent-color: #224c84; // GOLD
+$overlay-bg: rgba(0, 0, 0, 0.9);
+$radius: 4px;
+$ease-pro: cubic-bezier(0.33, 1, 0.68, 1);
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: $bg-color;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+// --- HEADER ---
+.app-header {
+  text-align: center;
+  margin-bottom: 80px;
+
+  .logo-wrapper {
+    margin-bottom: 20px;
+    .app-logo {
+      object-fit: contain;
+      border-radius: 50%;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    }
+  }
+
+  .brand-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    color: $text-primary;
+  }
+
+  .header-line {
+    width: 60px;
+    height: 3px;
+    background-color: $accent-color;
+    margin: 20px auto;
+  }
+
+  .brand-subtitle {
+    color: $text-secondary;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+
+// --- GRID ---
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+// --- CARD STYLE ---
+.catalog-card {
+  cursor: pointer;
+  
+  .image-wrapper {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    border-radius: $radius;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s $ease-pro;
+    }
+
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.2);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.4s ease;
+
+      .explore-btn {
+        background: $accent-color; // <--- HETHI TSAL7ET (kenet $create-color)
+        color: white;
+        border: 1px solid white;
+        padding: 10px 24px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        transform: translateY(20px);
+        transition: transform 0.4s $ease-pro;
+        backdrop-filter: blur(4px);
+      }
+    }
+  }
+
+  .card-info {
+    text-align: center;
+    padding-top: 20px;
+
+    h3 {
+      font-size: 1.4rem;
+      margin: 0;
+      font-weight: 400;
+      color: $text-primary;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: $accent-color;
+      font-size: 0.9rem;
+      margin-top: 5px;
+      font-weight: 600;
+    }
+  }
+
+  // HOVER EFFECT
+  &:hover {
+    .image-wrapper {
+      img { transform: scale(1.1); }
+      .card-overlay { opacity: 1; }
+      .explore-btn { transform: translateY(0); }
+    }
+  }
+}
+
+// --- MODAL / CAROUSEL ---
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: $overlay-bg;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.4s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 2001;
+  transition: transform 0.3s;
+  
+  &:hover { transform: rotate(90deg); color: $accent-color; }
+}
+
+.carousel-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; // <--- ZID HETHI (Tchadded l boutons)
+}
+.slide-display {
+  position: relative;
+  max-width: 90%;
+  
+  img {
+    max-height: 80vh;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+
+  .slide-counter {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #888;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+}
+
+// --- NAVIGATION BUTTONS ---
+// --- NAVIGATION BUTTONS ---
+.nav-btn {
+  // --- STYLE PC (Desktop) ---
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2010;
+  transition: all 0.3s;
+  
+  // --- HETHI L PARTIE ELLI KENET NAQSA FIL PC ---
+  &.prev { left: 40px; }   // 40px 3al lisar
+  &.next { right: 40px; }  // 40px 3al limin
+  // ----------------------------------------------
+
+  &:hover {
+    background: $accent-color;
+    color: black;
+    border-color: $accent-color;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  // --- STYLE MOBILE (TLP) ---
+  @media (max-width: 768px) {
+    width: 50px; 
+    height: 50px;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.7); 
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    color: white;
+    
+    // Houni deja enti mrigelhom
+    &.prev { left: 10px; }
+    &.next { right: 10px; }
+
+    &:active {
+      background: $accent-color;
+      color: black;
+    }
+  }
+}

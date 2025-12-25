@@ -2,9 +2,9 @@
 $bg-color: #ffffff;
 $text-primary: #1a1a1a;
 $text-secondary: #666666;
-$accent-color: #224c84; // GOLD
+$accent-color: #122238; // GOLD
 $overlay-bg: rgba(0, 0, 0, 0.9);
-$radius: 4px;
+$radius: 20px;
 $ease-pro: cubic-bezier(0.33, 1, 0.68, 1);
 
 :host {
@@ -96,7 +96,7 @@ $ease-pro: cubic-bezier(0.33, 1, 0.68, 1);
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.2);
-      opacity: 0;
+      opacity: 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -105,7 +105,7 @@ $ease-pro: cubic-bezier(0.33, 1, 0.68, 1);
       .explore-btn {
         background: $accent-color; // <--- HETHI TSAL7ET (kenet $create-color)
         color: white;
-        border: 1px solid white;
+        border: 2px solid white;
         padding: 10px 24px;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -153,7 +153,7 @@ $ease-pro: cubic-bezier(0.33, 1, 0.68, 1);
   position: fixed;
   inset: 0;
   background: $overlay-bg;
-  z-index: 2000;
+  z-index: 11000;
   display: flex;
   justify-content: center;
   align-items: center;

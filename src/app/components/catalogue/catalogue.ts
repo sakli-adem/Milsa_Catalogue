@@ -16,7 +16,7 @@ export class CatalogueComponent {
     {
       id: 1,
       title: 'Collection Femme',
-      coverImage: 'images/cat1/cover.png',
+      coverImage: 'images/cat1/cover.webp',
       images: [
         'images/cat1/2.webp', 'images/cat1/3.webp', 'images/cat1/4.webp',
         'images/cat1/5.webp', 'images/cat1/6.webp', 'images/cat1/7.webp', 'images/cat1/8.webp'
@@ -25,7 +25,7 @@ export class CatalogueComponent {
     {
       id: 2,
       title: 'Collection Homme',
-      coverImage: 'images/cat2/cover.png',
+      coverImage: 'images/cat2/cover.webp',
       images: [
         'images/cat2/10.webp', 'images/cat2/11.webp', 'images/cat2/12.webp',
         'images/cat2/13.webp', 'images/cat2/14.webp'
@@ -34,7 +34,7 @@ export class CatalogueComponent {
     {
       id: 3,
       title: 'Collection Mixte',
-      coverImage: 'images/cat3/cover.png',
+      coverImage: 'images/cat3/cover.webp',
       images: [
         'images/cat3/16.png', 'images/cat3/17.png', 'images/cat3/18.png', 'images/cat3/19.png'
       ]

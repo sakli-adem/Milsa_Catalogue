@@ -16,22 +16,24 @@
           Suivez nos dernières créations sur Instagram ou discutez directement avec nous sur WhatsApp pour un conseil personnalisé.
         </p>
 
-        <div class="social-buttons">
-          <button class="social-btn whatsapp" (click)="openWhatsApp()">
-            <span class="icon">💬</span> <div class="btn-text">
-              <span class="label">Discuter sur</span>
-              <span class="value">WhatsApp</span>
-            </div>
-          </button>
+<div class="social-buttons">
+  <button class="social-btn whatsapp" (click)="openWhatsApp()">
+    <i class="fa-brands fa-whatsapp icon"></i>
+    <div class="btn-text">
+      <span class="label">Discuter sur</span>
+      <span class="value">WhatsApp</span>
+    </div>
+  </button>
 
-          <button class="social-btn instagram" (click)="openInstagram()">
-            <span class="icon">📸</span>
-            <div class="btn-text">
-              <span class="label">Suivez-nous sur</span>
-              <span class="value">Instagram</span>
-            </div>
-          </button>
-        </div>
+  <button class="social-btn instagram" (click)="openInstagram()">
+    <i class="fa-brands fa-instagram icon"></i>
+    <div class="btn-text">
+      <span class="label">Suivez-nous sur</span>
+      <span class="value">Instagram</span>
+    </div>
+  </button>
+</div>
+
       </div>
 
       <div class="form-column">
@@ -52,7 +54,10 @@
             <textarea [(ngModel)]="formData.message" name="message" rows="4" placeholder="Comment pouvons-nous vous aider ?"></textarea>
           </div>
 
-          <button type="submit" class="submit-btn">Envoyer le message</button>
+         <button type="submit" class="submit-btn" [disabled]="isLoading">
+          <span *ngIf="!isLoading">Envoyer le message</span>
+          <span *ngIf="isLoading">Envoi en cours... ⏳</span>
+        </button>
         </form>
       </div>
 

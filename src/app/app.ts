@@ -4,10 +4,11 @@ import { CatalogueComponent } from './components/catalogue/catalogue';
 import { ContenuCommande } from './components/contenu-commande/contenu-commande';
 import { AproposParfumsComponent } from './components/apropos-parfums/apropos-parfums';
 import { ContactComponent } from './components/contact/contact';
+import { NavbarComponent } from './components/navbar/navbar';
 @Component({
   selector: 'app-root',
   standalone: true,
-imports: [CatalogueComponent, ContenuCommande, AproposParfumsComponent, ContactComponent],
+imports: [CatalogueComponent, ContenuCommande, AproposParfumsComponent, ContactComponent, NavbarComponent],
   templateUrl: './app.html',
   styleUrls: ['./app.scss']
 })

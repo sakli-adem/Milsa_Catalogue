@@ -1,0 +1,68 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="navbar-brand" (click)="scrollToSection('home')" style="cursor: pointer;">
+    <img src="images/logo.webp" alt="Logo" class="logo" />
+    <span class="brand-name">MilSa</span>
+  </div>
+
+  <div class="navbar-links desktop-only">
+    <a (click)="scrollToSection('home')" class="nav-link" style="cursor: pointer;">
+      <span class="icon">🏠</span> Accueil
+    </a>
+    
+    <a class="nav-link" style="cursor: not-allowed; opacity: 0.6;">
+      <span class="icon">🛍️</span> Boutique
+    </a>
+
+
+    <a (click)="scrollToSection('apropos')" class="nav-link" style="cursor: pointer;">
+      <span class="icon">⚜️</span> À propos
+    </a>
+    <a (click)="scrollToSection('contact')" class="nav-link" style="cursor: pointer;">
+      <span class="icon">✉️</span> Contact
+    </a>
+  </div>
+
+  <div class="navbar-extras desktop-only">
+    <div class="navbar-search">
+      <input type="text" placeholder="Rechercher..." />
+      <button class="search-btn">🔍</button>
+    </div>
+    <button class="cart-btn">
+      🛒 <span class="badge">0</span>
+    </button>
+  </div>
+
+  <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <div class="navbar-menu" [class.open]="isMenuOpen">
+    <div class="mobile-content">
+      
+      <a (click)="scrollToSection('home')" class="nav-link mobile-link" style="cursor: pointer;">
+        <span class="icon">🏠</span> Accueil
+      </a>
+
+      <a class="nav-link mobile-link" style="opacity: 0.5;">
+        <span class="icon">🛍️</span> Boutique
+      </a>
+
+      <a (click)="scrollToSection('apropos')" class="nav-link mobile-link" style="cursor: pointer;">
+        <span class="icon">⚜️</span> À propos
+      </a>
+      <a (click)="scrollToSection('contact')" class="nav-link mobile-link" style="cursor: pointer;">
+        <span class="icon">✉️</span> Contact
+      </a>
+
+      <div class="mobile-search-wrapper">
+        <input type="text" placeholder="Rechercher un parfum..." />
+        <button class="search-btn">🔍</button>
+      </div>
+       <button class="cart-btn mobile-cart">
+        Mon Panier (0) 🛒
+      </button>
+    </div>
+  </div>
+</nav>

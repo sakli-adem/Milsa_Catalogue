@@ -1,0 +1,71 @@
+<div class="cart-container">
+  <h1>🛒 Mon Panier</h1>
+
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <p>Votre panier est vide pour le moment.</p>
+    <a routerLink="/boutique" class="btn-shop">Aller à la boutique</a>
+  </div>
+
+  <div *ngIf="cartItems.length > 0" class="cart-content">
+    
+    <div class="cart-items">
+      <div *ngFor="let item of cartItems" class="cart-item">
+        
+        <div class="item-img">
+          <img [src]="item.product.image" [alt]="item.product.nom">
+        </div>
+
+        <div class="item-info">
+          <h3>{{ item.product.nom }}</h3>
+          <span class="variant-badge">{{ item.variant.volume }}</span>
+          <p class="unit-price">{{ item.variant.prix }} TND / unité</p>
+        </div>
+
+        <div class="item-qty">
+          <button (click)="decreaseQty(item)">-</button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="increaseQty(item)">+</button>
+        </div>
+
+        <div class="item-total">
+          {{ item.variant.prix * item.quantity }} TND
+        </div>
+
+        <button class="btn-delete" (click)="removeItem(item)">🗑️</button>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <h2>Récapitulatif</h2>
+      
+      <div class="summary-row">
+        <span>Sous-total</span>
+        <span>{{ totalPrice }} TND</span>
+      </div>
+      
+      <div class="summary-row">
+        <span>Livraison</span>
+        <span>7.000 TND</span>
+      </div>
+      
+      <div class="summary-row total">
+        <span>Total à payer</span>
+        <span>{{ totalPrice + 7 }} TND</span>
+      </div>
+
+      <button class="btn-checkout" (click)="openCheckout()">
+        Passer la commande 👉
+      </button>
+    </div>
+
+  </div>
+
+  <app-checkout-modal 
+    *ngIf="showCheckoutModal" 
+    [cartItems]="cartItems" 
+    [totalPrice]="totalPrice"
+    (close)="showCheckoutModal = false"
+    (orderConfirmed)="onOrderSuccess()">
+  </app-checkout-modal>
+
+</div>

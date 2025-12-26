@@ -1,0 +1,70 @@
+[
+  {
+    "code": "HOM-001",
+    "nom": "Blue Ocean",
+    "categorie": "Homme",
+    "description": "La liberté du grand large dans un flacon.",
+    "image": "data/hommes/images/blue.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Citron, Menthe, Poivre rose",
+      "coeur": "Gingembre, Iso E Super, Muscade",
+      "fond": "Encens, Vétiver, Cèdre"
+    },
+    "variantes": [
+      { "volume": "35ml", "prix": 35 },
+      { "volume": "100ml", "prix": 65 }
+    ]
+  },
+  {
+    "code": "HOM-002",
+    "nom": "Sport Extreme",
+    "categorie": "Homme",
+    "description": "Adrénaline et fraîcheur pour l'homme sportif.",
+    "image": "data/hommes/images/sport.webp",
+    "nouveau": true,
+    "composition": {
+      "tete": "Mandarine, Menthe, Cyprès",
+      "coeur": "Poivre, Fève Tonka",
+      "fond": "Musc, Santal, Cèdre"
+    },
+    "variantes": [
+      { "volume": "35ml", "prix": 30 },
+      { "volume": "100ml", "prix": 60 }
+    ]
+  },
+  {
+    "code": "HOM-003",
+    "nom": "King Wood",
+    "categorie": "Homme",
+    "description": "L'or en barre. Un parfum épicé et cuiré.",
+    "image": "data/hommes/images/king.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Pamplemousse, Menthe, Mandarine sanguine",
+      "coeur": "Rose, Cannelle, Notes épicées",
+      "fond": "Cuir, Notes boisées, Ambre"
+    },
+    "variantes": [
+      { "volume": "35ml", "prix": 40 },
+      { "volume": "100ml", "prix": 75 }
+    ]
+  },
+  {
+    "code": "HOM-004",
+    "nom": "Savage Night",
+    "categorie": "Homme",
+    "description": "Brut et noble à la fois. Une fraîcheur radicale.",
+    "image": "data/hommes/images/savage.webp",
+    "nouveau": true,
+    "composition": {
+      "tete": "Bergamote de Calabre, Poivre",
+      "coeur": "Poivre de Sichuan, Lavande, Poivre rose",
+      "fond": "Ambroxan, Cèdre, Labdanum"
+    },
+    "variantes": [
+      { "volume": "35ml", "prix": 45 },
+      { "volume": "100ml", "prix": 80 }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "code": "LUX-001",
+    "nom": "Oud Royal",
+    "categorie": "Unisex",
+    "description": "La grandeur du bois de Oud dans toute sa splendeur.",
+    "image": "data/luxe/images/oud.webp",
+    "nouveau": true,
+    "composition": {
+      "tete": "Citron, Poivre rose, Bergamote",
+      "coeur": "Cèdre, Galbanum, Angélique",
+      "fond": "Oud, Santal, Musc"
+    },
+    "variantes": [
+      { "volume": "50ml", "prix": 85 },
+      { "volume": "100ml", "prix": 140 }
+    ]
+  },
+  {
+    "code": "LUX-002",
+    "nom": "Rouge 540",
+    "categorie": "Unisex",
+    "description": "Une signature olfactive graphique et condensée.",
+    "image": "data/luxe/images/rouge.webp",
+    "nouveau": true,
+    "composition": {
+      "tete": "Jasmin, Safran",
+      "coeur": "Ambre gris, Notes ambrées",
+      "fond": "Résine de sapin, Cèdre"
+    },
+    "variantes": [
+      { "volume": "50ml", "prix": 90 },
+      { "volume": "100ml", "prix": 150 }
+    ]
+  },
+  {
+    "code": "LUX-003",
+    "nom": "Tobacco Vanille",
+    "categorie": "Unisex",
+    "description": "Opulent, chaud et iconique. Un club anglais moderne.",
+    "image": "data/luxe/images/tobacco.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Feuille de tabac, Notes épicées",
+      "coeur": "Fève Tonka, Fleur de tabac, Vanille",
+      "fond": "Fruits secs, Notes boisées"
+    },
+    "variantes": [
+      { "volume": "50ml", "prix": 80 },
+      { "volume": "100ml", "prix": 130 }
+    ]
+  },
+  {
+    "code": "LUX-004",
+    "nom": "Black Orchid",
+    "categorie": "Unisex",
+    "description": "",
+    "image": "data/luxe/images/orchid.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Truffe, Gardénia, Cassis",
+      "coeur": "Orchidée noire, Épices, Notes fruitées",
+      "fond": "Chocolat mexicain, Patchouli, Vanille"
+    },
+    "variantes": [
+      { "volume": "50ml", "prix": 85 },
+      { "volume": "100ml", "prix": 140 }
+    ]
+  }
+]

@@ -1,17 +1,20 @@
 <nav class="navbar" [class.scrolled]="isScrolled">
-  <div class="navbar-brand" (click)="scrollToSection('home')" style="cursor: pointer;">
+  
+  <div class="navbar-brand" routerLink="/" style="cursor: pointer;">
     <img src="images/logo.webp" alt="Logo" class="logo" />
     <span class="brand-name">MilSa</span>
   </div>
 
   <div class="navbar-links desktop-only">
-    <a (click)="scrollToSection('home')" class="nav-link" style="cursor: pointer;">
+    
+    <a routerLink="/" class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
       <span class="icon">🏠</span> Accueil
     </a>
     
-    <a class="nav-link" style="cursor: not-allowed; opacity: 0.6;">
+    <!-- <a routerLink="/boutique" class="nav-link" routerLinkActive="active-link" >
       <span class="icon">🛍️</span> Boutique
-    </a>
+    </a> -->
+<a routerLink="/boutique" class="nav-link" [class.disabled]="true" > <span class="icon">🛍️</span> Boutique </a>
 
 
     <a (click)="scrollToSection('apropos')" class="nav-link" style="cursor: pointer;">
@@ -27,9 +30,9 @@
       <input type="text" placeholder="Rechercher..." />
       <button class="search-btn">🔍</button>
     </div>
-    <button class="cart-btn">
-      🛒 <span class="badge">0</span>
-    </button>
+<button class="cart-btn" routerLink="/panier">
+  🛒 <span class="badge">{{ cartItemCount }}</span>
+</button>
   </div>
 
   <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
@@ -41,18 +44,19 @@
   <div class="navbar-menu" [class.open]="isMenuOpen">
     <div class="mobile-content">
       
-      <a (click)="scrollToSection('home')" class="nav-link mobile-link" style="cursor: pointer;">
+      <a routerLink="/" (click)="toggleMenu()" class="nav-link mobile-link">
         <span class="icon">🏠</span> Accueil
       </a>
 
-      <a class="nav-link mobile-link" style="opacity: 0.5;">
+      <a routerLink="/boutique" (click)="toggleMenu()" class="nav-link mobile-link">
         <span class="icon">🛍️</span> Boutique
       </a>
 
-      <a (click)="scrollToSection('apropos')" class="nav-link mobile-link" style="cursor: pointer;">
+      <a (click)="scrollToSection('apropos'); toggleMenu()" class="nav-link mobile-link">
         <span class="icon">⚜️</span> À propos
       </a>
-      <a (click)="scrollToSection('contact')" class="nav-link mobile-link" style="cursor: pointer;">
+      
+      <a (click)="scrollToSection('contact'); toggleMenu()" class="nav-link mobile-link">
         <span class="icon">✉️</span> Contact
       </a>
 

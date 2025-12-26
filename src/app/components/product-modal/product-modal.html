@@ -1,0 +1,48 @@
+<div class="modal-overlay" (click)="close.emit()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    
+    <button class="close-btn" (click)="close.emit()">×</button>
+
+    <div class="modal-body">
+      <div class="product-image">
+        <img [src]="product.image" [alt]="product.nom">
+      </div>
+
+      <div class="product-details">
+        <span class="category">{{ product.categorie }}</span>
+        <h2>{{ product.nom }}</h2>
+        <p class="description">{{ product.description }}</p>
+
+        <div class="composition-box">
+          <h4>Pyramide Olfactive 👃</h4>
+          <ul>
+            <li><strong>Tête:</strong> {{ product.composition.tete }}</li>
+            <li><strong>Cœur:</strong> {{ product.composition.coeur }}</li>
+            <li><strong>Fond:</strong> {{ product.composition.fond }}</li>
+          </ul>
+        </div>
+
+        <div class="variants-selector">
+          <p>Choisir le volume :</p>
+          <div class="variant-buttons">
+            <button *ngFor="let v of product.variantes" 
+                    [class.active]="v === selectedVariant"
+                    (click)="selectVariant(v)">
+              {{ v.volume }}
+            </button>
+          </div>
+        </div>
+
+        <div class="action-area">
+          <div class="price-tag">
+            {{ selectedVariant.prix }} TND
+          </div>
+          <button class="add-cart-btn" (click)="onAddToCart()">
+            Ajouter au panier 🛒
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

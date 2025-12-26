@@ -321,3 +321,9 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
     }
   }
 }
+
+.disabled {
+  pointer-events: none; /* empêche le clic */
+  opacity: 0.5;         /* effet visuel disabled */
+  cursor: not-allowed;  /* curseur interdit */
+}

@@ -1,0 +1,138 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6); // K7oulia 5fifa
+  backdrop-filter: blur(5px); // Flou wra l modal
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  width: 900px;
+  max-width: 100%;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: slideUp 0.3s ease-out;
+
+  .close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    background: none; border: none;
+    font-size: 2rem; cursor: pointer;
+    z-index: 10;
+    &:hover { color: red; }
+  }
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap; // Bech fel mobile yjiw ta7t b3adhhom
+}
+
+.product-image {
+  flex: 1;
+  min-width: 300px;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  
+  img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+  }
+}
+
+.product-details {
+  flex: 1.2;
+  min-width: 300px;
+  padding: 40px;
+
+  .category { color: #999; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+  h2 { margin: 10px 0; font-size: 2rem; font-family: 'Playfair Display', serif; }
+  .description { color: #666; line-height: 1.6; margin-bottom: 20px; }
+
+  .composition-box {
+    background: #fffcf5;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    h4 { margin-top: 0; color: #d4af37; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { margin-bottom: 5px; font-size: 0.9rem; color: #555; }
+  }
+
+  .variants-selector {
+    margin-bottom: 25px;
+    p { margin-bottom: 10px; font-weight: bold; }
+    
+    .variant-buttons {
+      display: flex;
+      gap: 10px;
+      button {
+        padding: 10px 20px;
+        border: 2px solid #eee;
+        background: white;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s;
+
+        &.active, &:hover {
+          border-color: #333;
+          background: #333;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .action-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+
+    .price-tag {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .add-cart-btn {
+      flex: 1;
+      background: #d4af37;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover { background: #b5952f; }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+// Mobile Responsiveness
+@media (max-width: 768px) {
+  .modal-body { flex-direction: column; }
+  .product-image { padding: 20px; img { max-height: 200px; } }
+  .product-details { padding: 20px; }
+}

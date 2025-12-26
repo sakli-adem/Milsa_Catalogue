@@ -1,0 +1,138 @@
+.boutique-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 50px; // 120px top bech mayghatich 3liha navbar
+}
+
+// --- 1. DISCLAIMER STYLE ---
+.disclaimer-box {
+  background-color: #fff8e1; // Asfer fete7
+  border-left: 5px solid #ffc107; // Asfer ghamed
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+  .icon { font-size: 1.5rem; }
+  p { margin: 0; font-size: 0.95rem; color: #555; line-height: 1.5; }
+  strong { color: #333; }
+}
+
+// --- 2. CATEGORIES BUTTONS ---
+.categories-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+
+  .cat-btn {
+    padding: 10px 25px;
+    border: 2px solid #eee;
+    background: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover { border-color: #d4af37; }
+    
+    &.active {
+      background: #333;
+      color: white;
+      border-color: #333;
+      
+      &.luxe {
+        background: black;
+        border-color: gold;
+        color: gold;
+      }
+    }
+  }
+}
+
+// --- 3. PRODUCTS GRID ---
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); // Responsive Grid
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  position: relative;
+
+  &:hover { transform: translateY(-5px); }
+
+  .badge-new {
+    position: absolute;
+    top: 10px; left: 10px;
+    background: #d4af37;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    z-index: 2;
+  }
+
+  .image-wrapper {
+    height: 250px;
+    overflow: hidden;
+    background: #f9f9f9;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // Bech taswira matetkbsich
+      padding: 20px;
+    }
+  }
+
+  .card-content {
+    padding: 20px;
+    
+    .category-tag {
+      font-size: 0.8rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h3 { margin: 5px 0; font-size: 1.2rem; }
+    
+    .desc { 
+      font-size: 0.9rem; color: #666; 
+      margin-bottom: 15px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; // Max 2 lignes description
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      .price { font-weight: bold; font-size: 1.1rem; color: #333; }
+    }
+
+    .add-btn {
+      width: 100%;
+      padding: 10px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      &:hover { background: #d4af37; }
+    }
+  }
+}

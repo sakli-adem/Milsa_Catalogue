@@ -1,0 +1,74 @@
+<div class="boutique-container">
+  
+  <div class="disclaimer-box">
+    <span class="icon">⚠️</span>
+    <p>
+      <strong>Note Importante :</strong> Nos parfums sont de la marque <strong>Chogan</strong>. 
+      Les images et noms sont à titre indicatif pour identifier la famille olfactive (similaire à 98%). 
+      Le packaging réel est standard Chogan.<br>
+      <small>Une confirmation téléphonique sera effectuée pour chaque commande.</small>
+    </p>
+  </div>
+
+  <div class="categories-wrapper">
+    <button 
+      (click)="chargerParfums('femmes')" 
+      [class.active]="activeCategory === 'femmes'"
+      class="cat-btn">
+      👩 Femmes
+    </button>
+
+    <button 
+      (click)="chargerParfums('hommes')" 
+      [class.active]="activeCategory === 'hommes'"
+      class="cat-btn">
+      👨 Hommes
+    </button>
+
+    <button 
+      (click)="chargerParfums('luxe')" 
+      [class.active]="activeCategory === 'luxe'"
+      class="cat-btn luxe">
+      ✨ Luxe
+    </button>
+  </div>
+
+  <div class="products-grid">
+    
+    <div *ngIf="isLoading" class="loading-msg">
+      Chargement des parfums en cours...
+    </div>
+
+    <div *ngFor="let p of parfums" class="product-card">
+      
+      <span *ngIf="p.nouveau" class="badge-new">Nouveau</span>
+
+      <div class="image-wrapper" (click)="openModal(p)" style="cursor: pointer;">
+        <img [src]="p.image" [alt]="p.nom" />
+      </div>
+
+      <div class="card-content">
+        <span class="category-tag">{{ p.categorie }}</span>
+        <h3>{{ p.nom }}</h3>
+        
+        <p class="desc">{{ p.description }}</p>
+        
+        <div class="price-row">
+          <span class="price">dès {{ p.variantes[0].prix }} TND</span>
+        </div>
+
+        <button class="add-btn" (click)="openModal(p)">
+          Voir Options 🛒
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <app-product-modal 
+    *ngIf="selectedProduct" 
+    [product]="selectedProduct" 
+    (close)="closeModal()"
+    (addToCart)="handleAddToCart($event)">
+  </app-product-modal>
+
+</div>

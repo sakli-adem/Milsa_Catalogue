@@ -1,0 +1,122 @@
+.cart-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 20px 50px;
+  min-height: 80vh;
+
+  h1 { text-align: center; margin-bottom: 40px; font-family: serif; font-size: 2.5rem; }
+}
+
+// --- Empty State ---
+.empty-cart {
+  text-align: center;
+  padding: 50px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  
+  p { font-size: 1.2rem; color: #777; margin-bottom: 20px; }
+  
+  .btn-shop {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    &:hover { background: #d4af37; }
+  }
+}
+
+// --- Cart Content (Grid PC) ---
+.cart-content {
+  display: flex;
+  gap: 30px;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+// --- Liste Items ---
+.cart-items {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  gap: 15px;
+
+  .item-img {
+    width: 80px; height: 80px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    img { max-height: 90%; max-width: 90%; }
+  }
+
+  .item-info {
+    flex: 1;
+    h3 { margin: 0 0 5px; font-size: 1.1rem; }
+    .variant-badge { font-size: 0.8rem; background: #eee; padding: 2px 8px; border-radius: 4px; }
+    .unit-price { font-size: 0.9rem; color: #888; margin-top: 5px; }
+  }
+
+  .item-qty {
+    display: flex; align-items: center; border: 1px solid #ddd; border-radius: 5px;
+    button { background: none; border: none; padding: 5px 10px; cursor: pointer; font-size: 1.2rem; &:hover { background: #eee; } }
+    span { padding: 0 10px; font-weight: bold; }
+  }
+
+  .item-total { font-weight: bold; font-size: 1.1rem; color: #333; min-width: 80px; text-align: right; }
+
+  .btn-delete {
+    background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #999;
+    &:hover { color: red; transform: scale(1.1); }
+  }
+
+  // Mobile Tweaks
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+    .item-img { width: 60px; height: 60px; }
+    .item-info { min-width: 120px; }
+    .item-qty { margin-left: auto; }
+    .item-total { width: 100%; text-align: right; margin-top: 10px; border-top: 1px dashed #eee; padding-top: 5px;}
+  }
+}
+
+// --- Summary Box (Droite) ---
+.cart-summary {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  height: fit-content;
+  position: sticky; top: 120px;
+
+  h2 { margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; margin-bottom: 20px; }
+
+  .summary-row {
+    display: flex; justify-content: space-between; margin-bottom: 15px; color: #555;
+    &.total { font-weight: bold; color: #333; font-size: 1.3rem; border-top: 2px solid #eee; padding-top: 15px; margin-top: 20px; }
+  }
+
+  .btn-checkout {
+    width: 100%;
+    padding: 15px;
+    background: #d4af37;
+    color: white;
+    border: none; border-radius: 8px;
+    font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 20px;
+    &:hover { background: #b5952f; }
+  }
+}

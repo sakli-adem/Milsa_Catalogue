@@ -1,10 +1,10 @@
 [
   {
-    "code": "001",
-    "nom": "Rose Velvet",
+    "code": "006",
+    "nom": "Opium Y.SAINT LAURENT",
     "categorie": "Femme",
     "description": "Un parfum floral gourmand, inspiré par la douceur de la vie.",
-    "image": "data/femmes/images/f.webp",
+    "image": "data/femmes/images/006.webp",
     "nouveau": true,
     "composition": {
       "tete": "Cassis, Poire",
@@ -12,16 +12,16 @@
       "fond": "Patchouli, Fève Tonka, Vanille"
     },
     "variantes": [
-      { "volume": "35ml", "prix": 35 },
-      { "volume": "100ml", "prix": 65 }
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
     ]
   },
   {
-    "code": "002",
-    "nom": "Jasmine Pure",
+    "code": "007",
+    "nom": "J'Adore C. DIOR",
     "categorie": "Femme",
     "description": "L'élégance absolue d'un bouquet floral blanc.",
-    "image": "data/femmes/images/f.webp",
+    "image": "data/femmes/images/007.webp",
     "nouveau": false,
     "composition": {
       "tete": "Magnolia, Melon, Pêche",
@@ -29,16 +29,16 @@
       "fond": "Musc, Vanille, Cèdre"
     },
     "variantes": [
-      { "volume": "35ml", "prix": 40 },
-      { "volume": "100ml", "prix": 70 }
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
     ]
   },
   {
-    "code": "003",
-    "nom": "Lady Gold",
+    "code": "010",
+    "nom": "Alien T. MUGLER",
     "categorie": "Femme",
     "description": "Un parfum audacieux pour celle qui mène le jeu.",
-    "image": "data/femmes/images/f.webp",
+    "image": "data/femmes/images/010.webp",
     "nouveau": false,
     "composition": {
       "tete": "Néroli, Bigarade, Framboise",
@@ -46,16 +46,16 @@
       "fond": "Patchouli, Miel"
     },
     "variantes": [
-      { "volume": "35ml", "prix": 35 },
-      { "volume": "100ml", "prix": 65 }
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
     ]
   },
   {
-    "code": "004",
-    "nom": "Night Dream",
+    "code": "011",
+    "nom": "Light Blue D&G",
     "categorie": "Femme",
     "description": "Le café noir rencontre les fleurs blanches. Addictif.",
-    "image": "data/femmes/images/f.webp",
+    "image": "data/femmes/images/011.webp",
     "nouveau": true,
     "composition": {
       "tete": "Poire, Poivre rose, Fleur d'oranger",
@@ -63,45 +63,890 @@
       "fond": "Vanille, Patchouli, Cèdre"
     },
     "variantes": [
-      { "volume": "35ml", "prix": 38 },
-      { "volume": "100ml", "prix": 68 }
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
     ]
   },
-
-
-    {
-    "code": "005",
-    "nom": "Night Dream",
+  {
+    "code": "013",
+    "nom": "Guilty GUCCI",
     "categorie": "Femme",
-    "description": "Le café noir rencontre les fleurs blanches. Addictif.",
-    "image": "data/femmes/images/019.avif",
-    "nouveau": true,
+    "description": "Une fragrance rebelle et sensuelle pour les âmes libres.",
+    "image": "data/femmes/images/013.webp",
+    "nouveau": false,
     "composition": {
-      "tete": "Poire, Poivre rose, Fleur d'oranger",
-      "coeur": "Café, Jasmin, Amande amère",
-      "fond": "Vanille, Patchouli, Cèdre"
+      "tete": "Mandarine, Bergamote, Poivre rose",
+      "coeur": "Lys, Géranium, Pêche",
+      "fond": "Patchouli, Ambre, Vanille"
     },
     "variantes": [
-      { "volume": "35ml", "prix": 38 },
-      { "volume": "100ml", "prix": 68 }
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
     ]
   },
-
-      {
-    "code": "006",
-    "nom": "Night Dream",
+  {
+    "code": "014",
+    "nom": "Manifesto Y. SAINT LAURENT",
     "categorie": "Femme",
-    "description": "Le café noir rencontre les fleurs blanches. Addictif.",
-    "image": "data/femmes/images/006.jpg",
-    "nouveau": true,
+    "description": "Un manifeste floral audacieux et moderne.",
+    "image": "data/femmes/images/014.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Cassis",
+      "coeur": "Lys, Jasmin Sambac",
+      "fond": "Bois de santal, Vanille, Cèdre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "019",
+    "nom": "Lady Million P. RABANNE",
+    "categorie": "Femme",
+    "description": "L'essence du glamour, extravagant et irrésistible.",
+    "image": "data/femmes/images/019.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Néroli, Framboise, Fleur d'oranger",
+      "coeur": "Jasmin, Gardénia",
+      "fond": "Miel, Patchouli, Ambre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "023",
+    "nom": "Hypnotic Poison C. DIOR",
+    "categorie": "Femme",
+    "description": "Envoûtant et mystérieux, un poison irrésistible.",
+    "image": "data/femmes/images/023.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Prune, Noix de coco",
+      "coeur": "Jasmin, Rose, Carvi",
+      "fond": "Vanille, Amande, Bois de santal"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "024",
+    "nom": "Chanel n°5 CHANEL",
+    "categorie": "Femme",
+    "description": "L'icône intemporelle de l'élégance et du raffinement.",
+    "image": "data/femmes/images/024.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Néroli, Ylang-ylang, Aldéhydes",
+      "coeur": "Jasmin, Rose, Muguet",
+      "fond": "Vétiver, Bois de santal, Vanille"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "025",
+    "nom": "For Her N. RODRIGUE",
+    "categorie": "Femme",
+    "description": "Sensuel et musqué, une signature féminine unique.",
+    "image": "data/femmes/images/025.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Mandarine, Pêche",
+      "coeur": "Rose, Jasmin, Musc",
+      "fond": "Patchouli, Vanille, Ambre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "026",
+    "nom": "Flower KENZO",
+    "categorie": "Femme",
+    "description": "Un coquelicot délicat, frais et poudré.",
+    "image": "data/femmes/images/026.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Cassis, Rose bulgare",
+      "coeur": "Coquelicot, Violette",
+      "fond": "Musc blanc, Vanille, Encens"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "027",
+    "nom": "Trésor LANCOME",
+    "categorie": "Femme",
+    "description": "Un trésor floral romantique et précieux.",
+    "image": "data/femmes/images/027.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Abricot, Pêche, Rose",
+      "coeur": "Lys, Iris, Héliotrope",
+      "fond": "Musc, Vanille, Bois de santal"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "028",
+    "nom": "Angel T. MUGLER",
+    "categorie": "Femme",
+    "description": "Gourmand céleste, sucré et envoûtant.",
+    "image": "data/femmes/images/028.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Melon",
+      "coeur": "Miel, Fruits rouges, Caramel",
+      "fond": "Patchouli, Vanille, Chocolat"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "029",
+    "nom": "Eau D'Issey I. MIYAKE",
+    "categorie": "Femme",
+    "description": "Aquatique et floral, la pureté de l'eau.",
+    "image": "data/femmes/images/029.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Melon, Freesia, Rose",
+      "coeur": "Pivoine, Lys, Muguet",
+      "fond": "Bois de cèdre, Musc, Ambre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "039",
+    "nom": "Miss Dior Chérie C. DIOR",
+    "categorie": "Femme",
+    "description": "Romantique et pétillant, un bouquet de jeunesse.",
+    "image": "data/femmes/images/039.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine verte, Fraise",
+      "coeur": "Jasmin, Violette, Caramel",
+      "fond": "Musc, Patchouli, Popcorn"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "040",
+    "nom": "Hypnose LANCOME",
+    "categorie": "Femme",
+    "description": "Sensuel et mystérieux, un jeu de séduction.",
+    "image": "data/femmes/images/040.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Passion fruit, Vanille",
+      "coeur": "Gardénia, Jasmin, Lys",
+      "fond": "Vétiver, Vanille, Musc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "041",
+    "nom": "Chloé CHLOE",
+    "categorie": "Femme",
+    "description": "Romantique et féminin, l'essence de la féminité moderne.",
+    "image": "data/femmes/images/041.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Pivoine, Freesia, Litchi",
+      "coeur": "Rose, Magnolia, Muguet",
+      "fond": "Ambre, Cèdre, Miel"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "042",
+    "nom": "La Vie est Belle LANCOME",
+    "categorie": "Femme",
+    "description": "La vie est belle, gourmand et joyeux.",
+    "image": "data/femmes/images/042.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Cassis, Poire",
+      "coeur": "Iris, Jasmin, Fleur d'oranger",
+      "fond": "Patchouli, Fève Tonka, Vanille"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "043",
+    "nom": "Love Chloé, CHLOE",
+    "categorie": "Femme",
+    "description": "Frais et fleuri, une déclaration d'amour parfumée.",
+    "image": "data/femmes/images/043.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Néroli, Orange sanguine",
+      "coeur": "Pivoine, Rose sauvage",
+      "fond": "Cèdre, Musc, Riz"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "047",
+    "nom": "Crystal Noir VERSACE",
+    "categorie": "Femme",
+    "description": "Oriental mystérieux, sensuel et précieux.",
+    "image": "data/femmes/images/047.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Gingembre, Poivre, Cardamome",
+      "coeur": "Fleur d'oranger, Pivoine, Gardénia",
+      "fond": "Ambre, Musc, Bois de santal"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "049",
+    "nom": "Dolce D&G",
+    "categorie": "Femme",
+    "description": "Floral frais et féminin, la dolce vita italienne.",
+    "image": "data/femmes/images/049.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Néroli, Papaye",
+      "coeur": "Narcisse, Nénuphar",
+      "fond": "Musc, Cashmeran, Bois de santal"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "051",
+    "nom": "Coco Mademoiselle CHANEL",
+    "categorie": "Femme",
+    "description": "Frais et moderne, l'esprit rebelle de Chanel.",
+    "image": "data/femmes/images/051.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Orange, Bergamote, Pamplemousse",
+      "coeur": "Rose, Jasmin, Litchi",
+      "fond": "Patchouli, Vanille, Vétiver"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "053",
+    "nom": "Narciso N.RODRIGUEZ",
+    "categorie": "Femme",
+    "description": "Musqué et sensuel, une signature minimaliste.",
+    "image": "data/femmes/images/053.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Mandarine",
+      "coeur": "Rose bulgare, Musc",
+      "fond": "Vétiver, Cèdre, Vanille"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "055",
+    "nom": "Black Opium Y. SAINT LAURENT",
+    "categorie": "Femme",
+    "description": "Café noir addictif, rock et glamour.",
+    "image": "data/femmes/images/055.webp",
+    "nouveau": false,
     "composition": {
       "tete": "Poire, Poivre rose, Fleur d'oranger",
       "coeur": "Café, Jasmin, Amande amère",
       "fond": "Vanille, Patchouli, Cèdre"
     },
     "variantes": [
-      { "volume": "35ml", "prix": 38 },
-      { "volume": "100ml", "prix": 68 }
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "056",
+    "nom": "Ange ou Démon GIVENCHY",
+    "categorie": "Femme",
+    "description": "Entre innocence et sensualité, un double jeu.",
+    "image": "data/femmes/images/056.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine, Safran",
+      "coeur": "Lys, Orchidée, Rose",
+      "fond": "Fève Tonka, Bois de santal, Vanille"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "057",
+    "nom": "Omnia Améthyste BULGARI",
+    "categorie": "Femme",
+    "description": "Floral délicat aux reflets d'iris et de rose.",
+    "image": "data/femmes/images/057.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Pamplemousse rose, Iris",
+      "coeur": "Rose bulgare, Héliotrope",
+      "fond": "Bois de santal, Musc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "063",
+    "nom": "Hugo H. BOSS",
+    "categorie": "Femme",
+    "description": "Frais et pétillant, l'énergie féminine.",
+    "image": "data/femmes/images/063.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Cassis, Thé vert, Framboise",
+      "coeur": "Freesia, Jasmin, Rose",
+      "fond": "Cèdre, Musc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "064",
+    "nom": "Omnia Indian Garnet BULGARI",
+    "categorie": "Femme",
+    "description": "Oriental épicé, mystérieux et envoûtant.",
+    "image": "data/femmes/images/064.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Safran, Orange, Mandarine",
+      "coeur": "Osmanthus, Frangipani",
+      "fond": "Ambre, Encens, Bois"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "067",
+    "nom": "Olympéa P. RABANNE",
+    "categorie": "Femme",
+    "description": "Une déesse moderne, sensuelle et puissante.",
+    "image": "data/femmes/images/067.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine verte, Gingembre, Eau",
+      "coeur": "Jasmin, Fleur de sel",
+      "fond": "Vanille, Ambre, Bois de cachemire"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "070",
+    "nom": "The One D&G",
+    "categorie": "Femme",
+    "description": "Élégant et chaleureux, l'unique.",
+    "image": "data/femmes/images/070.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Mandarine, Litchi",
+      "coeur": "Fleur d'oranger, Lys, Pêche",
+      "fond": "Vanille, Musc, Ambre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "071",
+    "nom": "Allure CHANEL",
+    "categorie": "Femme",
+    "description": "Le parfum de la séduction intemporelle.",
+    "image": "data/femmes/images/071.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Mandarine, Pêche",
+      "coeur": "Rose, Jasmin, Magnolia",
+      "fond": "Vanille, Vétiver, Patchouli"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "076",
+    "nom": "Acqua di Gioia G. ARMANI",
+    "categorie": "Femme",
+    "description": "Fraîcheur aquatique et lumineuse.",
+    "image": "data/femmes/images/076.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Menthe, Citron vert",
+      "coeur": "Jasmin, Pivoine rose",
+      "fond": "Cèdre, Sucre brun"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "077",
+    "nom": "Flora GUCCI",
+    "categorie": "Femme",
+    "description": "Jardin floral radieux et joyeux.",
+    "image": "data/femmes/images/077.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Agrumes, Pivoine",
+      "coeur": "Rose, Osmanthus",
+      "fond": "Bois de santal, Patchouli"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "080",
+    "nom": "Si G. ARMANI",
+    "categorie": "Femme",
+    "description": "Chypré moderne, audacieux et féminin.",
+    "image": "data/femmes/images/080.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Cassis, Mandarine",
+      "coeur": "Rose de Mai, Freesia",
+      "fond": "Patchouli, Musc, Vanille"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "081",
+    "nom": "Classique Essence J.P GAULTIER",
+    "categorie": "Femme",
+    "description": "L'essence pure de la féminité sensuelle.",
+    "image": "data/femmes/images/081.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Poire",
+      "coeur": "Fleur d'oranger, Jasmin, Rose",
+      "fond": "Vanille, Musc, Ambre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "082",
+    "nom": "Signorina S. FERRAGAMO",
+    "categorie": "Femme",
+    "description": "Chic et élégant, l'esprit italien.",
+    "image": "data/femmes/images/082.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Pamplemousse rose, Groseille",
+      "coeur": "Jasmin, Pivoine, Rose",
+      "fond": "Patchouli, Musc, Panacotta"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "085",
+    "nom": "Chance CHANEL",
+    "categorie": "Femme",
+    "description": "Frais et pétillant, un tourbillon de chance.",
+    "image": "data/femmes/images/085.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Pamplemousse rose, Coing",
+      "coeur": "Jacinthe, Jasmin",
+      "fond": "Musc blanc, Ambre, Iris"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "089",
+    "nom": "Mon Paris Y. SAINT LAURENT",
+    "categorie": "Femme",
+    "description": "L'amour fou à Paris, gourmand et fleuri.",
+    "image": "data/femmes/images/089.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Fraise, Framboise, Bergamote",
+      "coeur": "Pivoine, Poire, Fleur d'oranger",
+      "fond": "Patchouli, Mousse, Musc blanc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "090",
+    "nom": "Poison Girl C. DIOR",
+    "categorie": "Femme",
+    "description": "Sensuel et sucré, irrésistiblement séduisant.",
+    "image": "data/femmes/images/090.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Orange amère, Citron",
+      "coeur": "Rose de Grasse, Fleur d'oranger",
+      "fond": "Fève Tonka, Vanille, Amande"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "093",
+    "nom": "Aventus for Her CREED",
+    "categorie": "Femme",
+    "description": "Fruité et puissant, pour les femmes conquérantes.",
+    "image": "data/femmes/images/093.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Citron vert, Bergamote, Pamplemousse",
+      "coeur": "Rose, Ylang-ylang, Musk",
+      "fond": "Bois de santal, Patchouli, Styrax"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 100 },
+      { "volume": "70ml", "prix": 190 }
+    ]
+  },
+  {
+    "code": "095",
+    "nom": "Burberry BURBERRY",
+    "categorie": "Femme",
+    "description": "Élégance britannique, frais et sophistiqué.",
+    "image": "data/femmes/images/095.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Cassis, Pomme verte, Cèdre",
+      "coeur": "Jasmin, Muguet, Pivoine",
+      "fond": "Musc, Bois de santal, Ambre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "096",
+    "nom": "Gabrielle CHANEL",
+    "categorie": "Femme",
+    "description": "Solaire et lumineux, l'essence de Gabrielle Chanel.",
+    "image": "data/femmes/images/096.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine, Cassis, Pamplemousse",
+      "coeur": "Jasmin, Ylang-ylang, Fleur d'oranger, Tubéreuse",
+      "fond": "Musc, Bois de santal, Vanille"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "097",
+    "nom": "Amo Ferragamo S.FERRAGAMO",
+    "categorie": "Femme",
+    "description": "Je t'aime en italien, floral et romantique.",
+    "image": "data/femmes/images/097.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Prune, Poivre rose",
+      "coeur": "Iris, Jasmin",
+      "fond": "Vanille, Musc, Bois de santal"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "098",
+    "nom": "Joy C. DIOR",
+    "categorie": "Femme",
+    "description": "La joie pure dans un flacon, intensément floral.",
+    "image": "data/femmes/images/098.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Mandarine",
+      "coeur": "Rose de Grasse, Jasmin",
+      "fond": "Bois de santal, Musc blanc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "109",
+    "nom": "J'Adore l'Or C. DIOR",
+    "categorie": "Femme",
+    "description": "L'essence absolue de J'adore, précieux et rare.",
+    "image": "data/femmes/images/109.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine, Ylang-ylang",
+      "coeur": "Jasmin Grandiflorum, Rose de mai",
+      "fond": "Bois de santal, Tubéreuse"
+    },
+    "variantes": [
+      { "volume": "50ml", "prix": 175 }
+    ]
+  },
+  {
+    "code": "115",
+    "nom": "Idôle LANCOME",
+    "categorie": "Femme",
+    "description": "Floral propre et moderne pour une nouvelle génération.",
+    "image": "data/femmes/images/115.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Poire, Bergamote",
+      "coeur": "Rose, Jasmin",
+      "fond": "Musc blanc, Vanille, Cèdre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "116",
+    "nom": "Yes I Am CACHAREL",
+    "categorie": "Femme",
+    "description": "Affirmation audacieuse, gourmand et sensuel.",
+    "image": "data/femmes/images/116.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Gingembre, Cardamome",
+      "coeur": "Jasmin, Fleur d'oranger",
+      "fond": "Bois de santal, Vanille, Lait"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "119",
+    "nom": "Scandal JP. GAULTIER",
+    "categorie": "Femme",
+    "description": "Scandaleux et addictif, miel et fleurs.",
+    "image": "data/femmes/images/119.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine sanguine, Miel",
+      "coeur": "Gardénia, Fleur d'oranger",
+      "fond": "Caramel, Patchouli"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "120",
+    "nom": "La Petite Robe Noire GUERLAIN",
+    "categorie": "Femme",
+    "description": "La petite robe noire du parfum, intemporel et gourmand.",
+    "image": "data/femmes/images/120.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Cerise noire, Amande, Bergamote",
+      "coeur": "Rose, Thé, Réglisse",
+      "fond": "Vanille, Iris, Patchouli"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "121",
+    "nom": "L'Interdit GIVENCHY",
+    "categorie": "Femme",
+    "description": "L'audace interdite, floral blanc enivrant.",
+    "image": "data/femmes/images/121.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Poire",
+      "coeur": "Tubéreuse, Fleur d'oranger, Jasmin",
+      "fond": "Patchouli, Vanille, Vétiver"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "122",
+    "nom": "Libre Y. SAINT LAURENT",
+    "categorie": "Femme",
+    "description": "Libre d'être soi-même, lavande et fleur d'oranger.",
+    "image": "data/femmes/images/122.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine, Lavande, Cassis",
+      "coeur": "Fleur d'oranger, Jasmin",
+      "fond": "Vanille, Musc, Ambre gris"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 85 },
+      { "volume": "70ml", "prix": 160 }
+    ]
+  },
+  {
+    "code": "123",
+    "nom": "Good Girl Gone Bad KILIAN",
+    "categorie": "Femme",
+    "description": "La bonne fille devenue rebelle, tuberéuse addictive.",
+    "image": "data/femmes/images/123.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Osmanthus, Néroli",
+      "coeur": "Tubéreuse, Jasmin, Rose de Mai",
+      "fond": "Ambre, Vanille, Bois de santal"
+    },
+    "variantes": [
+      { "volume": "50ml", "prix": 175 }
+    ]
+  },
+  {
+    "code": "131",
+    "nom": "Good Girl C. HERRERA",
+    "categorie": "Femme",
+    "description": "Bonne ou méchante, audacieusement féminin.",
+    "image": "data/femmes/images/131.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Amande, Café",
+      "coeur": "Tubéreuse, Jasmin Sambac",
+      "fond": "Fève Tonka, Cacao, Bois de santal"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 85 },
+      { "volume": "70ml", "prix": 160 }
+    ]
+  },
+  {
+    "code": "132",
+    "nom": "My Way G. ARMANI",
+    "categorie": "Femme",
+    "description": "Mon chemin, floral rayonnant et universel.",
+    "image": "data/femmes/images/132.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Fleur d'oranger",
+      "coeur": "Tubéreuse, Jasmin d'Inde",
+      "fond": "Vanille de Madagascar, Musc blanc, Cèdre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 85 },
+      { "volume": "70ml", "prix": 160 }
+    ]
+  },
+  {
+    "code": "133",
+    "nom": "Prada Paradoxe PRADA",
+    "categorie": "Femme",
+    "description": "Le paradoxe de la féminité moderne, floral musc.",
+    "image": "data/femmes/images/133.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Poire, Bergamote, Mandarine",
+      "coeur": "Néroli, Jasmin Sambac, Fleur d'oranger",
+      "fond": "Vanille Bourbon, Ambre, Musc blanc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "145",
+    "nom": "Dévotion D&G",
+    "categorie": "Femme",
+    "description": "Dévotion italienne, fleur d'oranger lumineuse.",
+    "image": "data/femmes/images/145.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Citron de Sicile, Fleur d'oranger",
+      "coeur": "Néroli, Panettone",
+      "fond": "Vanille, Musc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
     ]
   }
 ]

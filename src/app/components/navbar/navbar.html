@@ -6,17 +6,12 @@
   </div>
 
   <div class="navbar-links desktop-only">
-    
     <a routerLink="/" class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
       <span class="icon">🏠</span> Accueil
     </a>
-    
-    <a routerLink="/boutique" class="nav-link" routerLinkActive="active-link" >
+    <a routerLink="/boutique" class="nav-link" routerLinkActive="active-link">
       <span class="icon">🛍️</span> Boutique
     </a>
-<!-- <a routerLink="/boutique" class="nav-link" [class.disabled]="true" > <span class="icon">🛍️</span> Boutique </a> -->
-
-
     <a (click)="scrollToSection('apropos')" class="nav-link" style="cursor: pointer;">
       <span class="icon">⚜️</span> À propos
     </a>
@@ -26,13 +21,33 @@
   </div>
 
   <div class="navbar-extras desktop-only">
+    
     <div class="navbar-search">
-      <input type="text" placeholder="Rechercher..." />
-      <button class="search-btn">🔍</button>
+      <div class="search-input-wrapper">
+        <input type="text" 
+               placeholder="Rechercher..." 
+               [(ngModel)]="searchTerm"
+               (input)="onSearchInput()"
+               (keyup.enter)="onSearchSubmit()"
+               autocomplete="off" />
+        
+        <button class="search-btn" (click)="onSearchSubmit()">🔍</button>
+
+        <ul class="autocomplete-list" *ngIf="showSuggestions && suggestions.length > 0">
+          <li *ngFor="let s of suggestions" (click)="selectSuggestion(s)">
+            <img [src]="s.image" alt="ico" class="mini-img">
+            <div class="info">
+              <span class="name">{{ s.nom }}</span>
+              <span class="code">{{ s.code }}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-<button class="cart-btn" routerLink="/panier">
-  🛒 <span class="badge">{{ cartItemCount }}</span>
-</button>
+
+    <button class="cart-btn" routerLink="/panier">
+      🛒 <span class="badge">{{ cartItemCount }}</span>
+    </button>
   </div>
 
   <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
@@ -47,26 +62,40 @@
       <a routerLink="/" (click)="toggleMenu()" class="nav-link mobile-link">
         <span class="icon">🏠</span> Accueil
       </a>
-
-      <a  (click)="toggleMenu()" class="nav-link mobile-link">
+      <a routerLink="/boutique" (click)="toggleMenu()" class="nav-link mobile-link">
         <span class="icon">🛍️</span> Boutique
       </a>
-
       <a (click)="scrollToSection('apropos'); toggleMenu()" class="nav-link mobile-link">
         <span class="icon">⚜️</span> À propos
       </a>
-      
       <a (click)="scrollToSection('contact'); toggleMenu()" class="nav-link mobile-link">
         <span class="icon">✉️</span> Contact
       </a>
 
       <div class="mobile-search-wrapper">
-        <input type="text" placeholder="Rechercher un parfum..." />
-        <button class="search-btn">🔍</button>
+        <input type="text" 
+               placeholder="Rechercher un parfum..." 
+               [(ngModel)]="searchTerm"
+               (input)="onSearchInput()"
+               (keyup.enter)="onSearchSubmit(); toggleMenu()" />
+        
+        <button class="search-btn" (click)="onSearchSubmit(); toggleMenu()">🔍</button>
+
+        <ul class="autocomplete-list mobile-list" *ngIf="showSuggestions && suggestions.length > 0">
+          <li *ngFor="let s of suggestions" (click)="selectSuggestion(s); toggleMenu()">
+            <img [src]="s.image" alt="ico" class="mini-img">
+            <div class="info">
+              <span class="name">{{ s.nom }}</span>
+              <span class="code">{{ s.code }}</span>
+            </div>
+          </li>
+        </ul>
       </div>
-       <button class="cart-btn mobile-cart">
-        Mon Panier (0) 🛒
+
+      <button class="cart-btn mobile-cart" routerLink="/panier" (click)="toggleMenu()">
+        Mon Panier ({{ cartItemCount }}) 🛒
       </button>
     </div>
   </div>
+
 </nav>

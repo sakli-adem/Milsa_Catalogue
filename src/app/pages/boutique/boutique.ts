@@ -10,68 +10,125 @@ import { ProductModalComponent } from '../../components/product-modal/product-mo
 @Component({
   selector: 'app-boutique',
   standalone: true,
-  imports: [CommonModule, ProductModalComponent], 
+  imports: [CommonModule, ProductModalComponent],
   templateUrl: './boutique.html',
   styleUrls: ['./boutique.scss']
 })
 export class BoutiqueComponent implements OnInit {
   
+  // Injection des services
   private parfumService = inject(ParfumService);
-  private cartService = inject(CartService); 
+  private cartService = inject(CartService);
   
-  parfums: Parfum[] = [];
+  // --- VARIABLES DE DONNÉES ---
+  categoryList: Parfum[] = []; // Liste pour l'onglet actif (ex: juste Femmes)
+  globalList: Parfum[] = [];   // Stock complet pour la recherche (Femmes + Hommes + Luxe)
+  parfums: Parfum[] = [];      // Liste affichée à l'écran (celle qu'on filtre)
+  
+  // État de l'interface
   activeCategory: 'femmes' | 'hommes' | 'luxe' = 'femmes';
   isLoading = false;
-
-
-  selectedProduct: Parfum | null = null; 
+  selectedProduct: Parfum | null = null; // Pour le Modal
+  
+  // Terme de recherche actuel
+  currentSearchTerm = ''; 
 
   ngOnInit() {
+    // 1. Charger la catégorie par défaut (Femmes)
     this.chargerParfums('femmes');
+
+    // 2. Charger le STOCK GLOBAL en arrière-plan (pour la recherche)
+    this.parfumService.getAllParfumsCombined().subscribe(data => {
+      this.globalList = data;
+    });
+
+    // 3. Écouter la barre de recherche (Navbar)
+    this.parfumService.search$.subscribe(term => {
+      this.currentSearchTerm = term;
+      this.applyFilter(); // Appliquer le filtre à chaque lettre tapée
+    });
   }
 
+  // Fonction appelée quand on clique sur les boutons (Femmes, Hommes, Luxe)
   chargerParfums(categorie: 'femmes' | 'hommes' | 'luxe') {
-    this.activeCategory = categorie;
+    // On vide la recherche car l'utilisateur a cliqué manuellement sur une catégorie
+    this.parfumService.updateSearchTerm(''); 
+    
+    this.loadCategory(categorie);
+  }
+
+  // Helper pour charger les données d'une catégorie spécifique
+  loadCategory(cat: 'femmes' | 'hommes' | 'luxe') {
+    this.activeCategory = cat;
     this.isLoading = true;
     
-    this.parfums = []; // Nvidiw list 9bal ma ncharjiw
-    
-    this.parfums = []; 
-    this.parfumService.getParfums(categorie).subscribe({
+    // On vide l'affichage pour montrer le chargement
+    this.parfums = [];
+
+    this.parfumService.getParfums(cat).subscribe({
       next: (data) => {
-        this.parfums = data;
+        this.categoryList = data; // On garde les données de la catégorie en mémoire
+        this.applyFilter();       // On affiche
         this.isLoading = false;
       },
       error: (err) => {
-        console.error('Erreur chargement parfums', err);
+        console.error('Erreur chargement', err);
         this.isLoading = false;
       }
     });
   }
 
-  // 1. T7ell Modal
+  // 🔥 FONCTION INTELLIGENTE DE FILTRAGE
+  applyFilter() {
+    // CAS 1: Il y a une recherche active
+    if (this.currentSearchTerm && this.currentSearchTerm.trim() !== '') {
+      const term = this.currentSearchTerm.toLowerCase();
+      
+      // On cherche dans le GLOBAL LIST (Tout le stock)
+      this.parfums = this.globalList.filter(p => 
+        p.nom.toLowerCase().includes(term) || 
+        p.code.toLowerCase().includes(term)
+      );
+
+      // ✨ MAGIE: Changement automatique de l'onglet ✨
+      if (this.parfums.length > 0) {
+        const firstMatch = this.parfums[0]; // On regarde le premier produit trouvé
+        
+        // On change activeCategory selon le type du produit trouvé
+        if (firstMatch.categorie === 'Homme') {
+          this.activeCategory = 'hommes';
+        } else if (firstMatch.categorie === 'Femme') {
+          this.activeCategory = 'femmes';
+        } else if (firstMatch.categorie === 'Unisex') {
+          this.activeCategory = 'luxe';
+        }
+      }
+
+    } else {
+      // CAS 2: Pas de recherche (Mode navigation normal)
+      // On affiche simplement la liste de la catégorie active
+      this.parfums = [...this.categoryList];
+    }
+  }
+
+  // --- LOGIQUE DU MODAL ---
   openModal(product: Parfum) {
     this.selectedProduct = product;
-    document.body.style.overflow = 'hidden'; // Bloqui scroll page wra
+    document.body.style.overflow = 'hidden'; // Bloquer le scroll
   }
 
-  // 2. Tsakker Modal
   closeModal() {
     this.selectedProduct = null;
-    document.body.style.overflow = 'auto'; // Rajja3 scroll
+    document.body.style.overflow = 'auto'; // Débloquer le scroll
   }
 
-  // 3. ACTION: Zid fel Panier
+  // --- LOGIQUE AJOUT PANIER ---
   handleAddToCart(event: any) {
-    // event fih: { product, variant, quantity }
-    
     this.cartService.addToCart({
       product: event.product,
       variant: event.variant,
       quantity: event.quantity
     });
-
-    // Nsakkrou l modal direct
-    this.closeModal();
+    this.closeModal(); // Fermer le modal après ajout
   }
 }

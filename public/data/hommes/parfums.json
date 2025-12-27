@@ -1,70 +1,772 @@
 [
   {
-    "code": "HOM-001",
-    "nom": "Blue Ocean",
+    "code": "001",
+    "nom": "One Million",
+    "marque": "PACO RABANNE",
     "categorie": "Homme",
-    "description": "La liberté du grand large dans un flacon.",
-    "image": "data/hommes/images/blue.webp",
+    "description": "Une fragrance audacieuse et séduisante",
+    "image": "data/hommes/images/001.webp",
     "nouveau": false,
     "composition": {
-      "tete": "Citron, Menthe, Poivre rose",
-      "coeur": "Gingembre, Iso E Super, Muscade",
-      "fond": "Encens, Vétiver, Cèdre"
+      "tete": "Pamplemousse, Menthe",
+      "coeur": "Rose, Cannelle",
+      "fond": "Cuir, Ambre, Patchouli"
     },
     "variantes": [
-      { "volume": "35ml", "prix": 35 },
-      { "volume": "100ml", "prix": 65 }
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
     ]
   },
   {
-    "code": "HOM-002",
-    "nom": "Sport Extreme",
+    "code": "002",
+    "nom": "Acqua Di Gio",
+    "marque": "GIORGIO ARMANI",
     "categorie": "Homme",
-    "description": "Adrénaline et fraîcheur pour l'homme sportif.",
-    "image": "data/hommes/images/sport.webp",
-    "nouveau": true,
-    "composition": {
-      "tete": "Mandarine, Menthe, Cyprès",
-      "coeur": "Poivre, Fève Tonka",
-      "fond": "Musc, Santal, Cèdre"
-    },
-    "variantes": [
-      { "volume": "35ml", "prix": 30 },
-      { "volume": "100ml", "prix": 60 }
-    ]
-  },
-  {
-    "code": "HOM-003",
-    "nom": "King Wood",
-    "categorie": "Homme",
-    "description": "L'or en barre. Un parfum épicé et cuiré.",
-    "image": "data/hommes/images/king.webp",
+    "description": "Fraîcheur marine et élégance intemporelle",
+    "image": "data/hommes/images/002.webp",
     "nouveau": false,
     "composition": {
-      "tete": "Pamplemousse, Menthe, Mandarine sanguine",
-      "coeur": "Rose, Cannelle, Notes épicées",
-      "fond": "Cuir, Notes boisées, Ambre"
+      "tete": "Bergamote, Néroli, Mandarine verte",
+      "coeur": "Jasmin, Calone, Persil",
+      "fond": "Cèdre, Mousse de chêne, Patchouli"
     },
     "variantes": [
-      { "volume": "35ml", "prix": 40 },
-      { "volume": "100ml", "prix": 75 }
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
     ]
   },
   {
-    "code": "HOM-004",
-    "nom": "Savage Night",
+    "code": "003",
+    "nom": "Fahrenheit",
+    "marque": "CHRISTIAN DIOR",
     "categorie": "Homme",
-    "description": "Brut et noble à la fois. Une fraîcheur radicale.",
-    "image": "data/hommes/images/savage.webp",
-    "nouveau": true,
+    "description": "Un contraste unique entre puissance et raffinement",
+    "image": "data/hommes/images/003.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine, Fleur d'aubépine, Noisette",
+      "coeur": "Violette, Cèdre, Carvi",
+      "fond": "Cuir, Vétiver, Musc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "004",
+    "nom": "The One",
+    "marque": "DOLCE & GABBANA",
+    "categorie": "Homme",
+    "description": "Élégance orientale et moderne",
+    "image": "data/hommes/images/004.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Coriandre, Basilic, Pamplemousse",
+      "coeur": "Cardamome, Gingembre, Fleur d'oranger",
+      "fond": "Ambre, Tabac, Cèdre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "005",
+    "nom": "Hugo",
+    "marque": "HUGO BOSS",
+    "categorie": "Homme",
+    "description": "Fraîcheur verte et dynamique",
+    "image": "data/hommes/images/005.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Pomme verte, Menthe, Lavande",
+      "coeur": "Géranium, Sauge, Clou de girofle",
+      "fond": "Cèdre, Sapin, Patchouli"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "012",
+    "nom": "Eau Sauvage",
+    "marque": "CHRISTIAN DIOR",
+    "categorie": "Homme",
+    "description": "Fraîcheur citronnée intemporelle",
+    "image": "data/hommes/images/012.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Citron, Bergamote, Basilic",
+      "coeur": "Jasmin, Coriandre, Rose",
+      "fond": "Vétiver, Patchouli, Mousse de chêne"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "015",
+    "nom": "Roma",
+    "marque": "LAURA BIAGIOTTI",
+    "categorie": "Homme",
+    "description": "Élégance italienne classique",
+    "image": "data/hommes/images/015.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Menthe, Galbanum, Basilic",
+      "coeur": "Jasmin, Rose, Carnation",
+      "fond": "Mousse de chêne, Patchouli, Santal"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "016",
+    "nom": "Le Mâle",
+    "marque": "JEAN PAUL GAULTIER",
+    "categorie": "Homme",
+    "description": "Puissance et sensualité masculine",
+    "image": "data/hommes/images/016.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Menthe, Lavande, Cardamome",
+      "coeur": "Cannelle, Cumin, Fleur d'oranger",
+      "fond": "Vanille, Cèdre, Santal, Tonka"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "017",
+    "nom": "Guilty",
+    "marque": "GUCCI",
+    "categorie": "Homme",
+    "description": "Sensualité contemporaine et provocante",
+    "image": "data/hommes/images/017.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Citron, Lavande",
+      "coeur": "Fleur d'oranger",
+      "fond": "Patchouli, Cèdre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "018",
+    "nom": "Déclaration",
+    "marque": "CARTIER",
+    "categorie": "Homme",
+    "description": "Épicé et boisé, une déclaration d'amour",
+    "image": "data/hommes/images/018.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Mandarine, Cardamome",
+      "coeur": "Gingembre, Cannelle, Poivre",
+      "fond": "Cèdre, Vétiver, Musc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "020",
+    "nom": "La Nuit de l'Homme",
+    "marque": "YVES SAINT LAURENT",
+    "categorie": "Homme",
+    "description": "Séduction nocturne et mystérieuse",
+    "image": "data/hommes/images/020.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Cardamome, Bergamote",
+      "coeur": "Cèdre, Lavande",
+      "fond": "Vétiver, Cumin, Fève Tonka"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "021",
+    "nom": "Light Blue",
+    "marque": "DOLCE & GABBANA",
+    "categorie": "Homme",
+    "description": "Fraîcheur méditerranéenne lumineuse",
+    "image": "data/hommes/images/021.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine sicilienne, Bergamote, Genévrier",
+      "coeur": "Romarin, Poivre rose",
+      "fond": "Musc, Bois de gaïac"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "022",
+    "nom": "Terre d'Hermès",
+    "marque": "HERMÈS",
+    "categorie": "Homme",
+    "description": "Un parfum qui relie l'homme à la terre",
+    "image": "data/hommes/images/022.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Pamplemousse, Poivre",
+      "coeur": "Géranium, Patchouli",
+      "fond": "Vétiver, Cèdre, Benjoin"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "030",
+    "nom": "Black XS",
+    "marque": "PACO RABANNE",
+    "categorie": "Homme",
+    "description": "Excès et sensualité extrême",
+    "image": "data/hommes/images/030.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Citron, Tagète",
+      "coeur": "Cannelle, Praline",
+      "fond": "Patchouli, Ambre noir"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "032",
+    "nom": "Spice Bomb",
+    "marque": "VIKTOR & ROLF",
+    "categorie": "Homme",
+    "description": "Explosion d'épices captivante",
+    "image": "data/hommes/images/032.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Piment, Grapefruit",
+      "coeur": "Cannelle, Safran, Poivre rose",
+      "fond": "Tabac, Vétiver, Cuir"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "033",
+    "nom": "Black Code",
+    "marque": "GIORGIO ARMANI",
+    "categorie": "Homme",
+    "description": "Séduction intense et mystérieuse",
+    "image": "data/hommes/images/033.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Citron",
+      "coeur": "Fleur d'oranger, Anis étoilé, Olive",
+      "fond": "Fève Tonka, Cuir"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "037",
+    "nom": "Man",
+    "marque": "BVLGARI",
+    "categorie": "Homme",
+    "description": "Sophistication et modernité",
+    "image": "data/hommes/images/037.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Fleur de lotus",
+      "coeur": "Bois de cashmere",
+      "fond": "Ambre, Musc blanc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "038",
+    "nom": "Bleu",
+    "marque": "CHANEL",
+    "categorie": "Homme",
+    "description": "Liberté et détermination masculine",
+    "image": "data/hommes/images/038.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Citron, Menthe, Pamplemousse rose",
+      "coeur": "Gingembre, Jasmin, Iso E Super",
+      "fond": "Encens, Vétiver, Cèdre, Santal"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "048",
+    "nom": "Allure",
+    "marque": "CHANEL",
+    "categorie": "Homme",
+    "description": "Fraîcheur et sensualité orientale",
+    "image": "data/hommes/images/048.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine, Menthe",
+      "coeur": "Fève Tonka, Jasmin",
+      "fond": "Vanille, Vétiver, Cèdre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "050",
+    "nom": "Burberry for Men",
+    "marque": "BURBERRY",
+    "categorie": "Homme",
+    "description": "Élégance britannique intemporelle",
+    "image": "data/hommes/images/050.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Thym, Bergamote, Menthe",
+      "coeur": "Lavande, Géranium",
+      "fond": "Cèdre, Santal, Musc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "052",
+    "nom": "Pasha 150",
+    "marque": "CARTIER",
+    "categorie": "Homme",
+    "description": "Raffinement et caractère",
+    "image": "data/hommes/images/052.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Mandarine, Anis, Carvi",
+      "coeur": "Coriandre, Rose de Bulgarie",
+      "fond": "Labdanum, Patchouli, Santal"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "061",
+    "nom": "Invictus",
+    "marque": "PACO RABANNE",
+    "categorie": "Homme",
+    "description": "Victoire éclatante et puissance",
+    "image": "data/hommes/images/061.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Pamplemousse, Notes marines, Mandarine",
+      "coeur": "Feuilles de laurier, Jasmin",
+      "fond": "Ambre gris, Bois de gaïac, Patchouli"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "062",
+    "nom": "Intenso",
+    "marque": "DOLCE & GABBANA",
+    "categorie": "Homme",
+    "description": "Intensité et sophistication",
+    "image": "data/hommes/images/062.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Basilic, Lavande, Marjolaine",
+      "coeur": "Géranium, Feuille de tabac, Iris",
+      "fond": "Cypriole, Santal, Labdanum"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "065",
+    "nom": "The Scent",
+    "marque": "HUGO BOSS",
+    "categorie": "Homme",
+    "description": "Sensualité aphrodisiaque",
+    "image": "data/hommes/images/065.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Gingembre, Mandarine",
+      "coeur": "Maninka, Lavande",
+      "fond": "Cuir"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "068",
+    "nom": "Aventus",
+    "marque": "CREED",
+    "categorie": "Homme",
+    "description": "Succès et force de caractère",
+    "image": "data/hommes/images/068.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Ananas, Cassis, Pomme, Bergamote",
+      "coeur": "Bouleau, Patchouli, Rose, Jasmin",
+      "fond": "Musc, Chêne, Ambre gris, Vanille"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 100 },
+      { "volume": "70ml", "prix": 190 }
+    ]
+  },
+  {
+    "code": "069",
+    "nom": "Acqua di Sale",
+    "marque": "PROFUMUM ROMA",
+    "categorie": "Unisex",
+    "description": "Brise marine salée",
+    "image": "data/hommes/images/069.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Notes marines, Sel",
+      "coeur": "Notes aquatiques",
+      "fond": "Ambre, Musc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "074",
+    "nom": "Black Argano",
+    "marque": "NASOMATTO",
+    "categorie": "Unisex",
+    "description": "Mystère et profondeur",
+    "image": "data/hommes/images/074.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Notes vertes",
+      "coeur": "Lavande, Géranium",
+      "fond": "Bois, Musc"
+    },
+    "variantes": [
+      { "volume": "50ml", "prix": 175 }
+    ]
+  },
+  {
+    "code": "075",
+    "nom": "Man in Black",
+    "marque": "BVLGARI",
+    "categorie": "Homme",
+    "description": "Élégance sombre et magnétique",
+    "image": "data/hommes/images/075.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Rhum, Épices",
+      "coeur": "Iris, Fleur de tuberose",
+      "fond": "Gaïac, Benzoin, Tonka"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "079",
+    "nom": "Myslf",
+    "marque": "YVES SAINT LAURENT",
+    "categorie": "Homme",
+    "description": "Affirmation de soi authentique",
+    "image": "data/hommes/images/079.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote de Calabre",
+      "coeur": "Fleur d'oranger",
+      "fond": "Bois d'ambrofix, Patchouli"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "083",
+    "nom": "Uomo",
+    "marque": "ROBERTO CAVALLI",
+    "categorie": "Homme",
+    "description": "Virilité italienne moderne",
+    "image": "data/hommes/images/083.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Violette, Baies noires",
+      "coeur": "Anis étoilé, Cacao",
+      "fond": "Santal, Fève Tonka, Bois de cèdre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "084",
+    "nom": "Dylan Blue",
+    "marque": "VERSACE",
+    "categorie": "Homme",
+    "description": "Méditerranée intense et virile",
+    "image": "data/hommes/images/084.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Pamplemousse, Feuilles de figuier",
+      "coeur": "Violette, Papyrus, Patchouli",
+      "fond": "Encens, Fève Tonka, Musc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "086",
+    "nom": "Legend",
+    "marque": "MONT BLANC",
+    "categorie": "Homme",
+    "description": "Charisme légendaire",
+    "image": "data/hommes/images/086.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Lavande, Bergamote, Ananas",
+      "coeur": "Géranium, Coumarine, Pomme séchée",
+      "fond": "Fève Tonka, Santal, Chêne"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "087",
+    "nom": "Wanted",
+    "marque": "AZZARO",
+    "categorie": "Homme",
+    "description": "Recherché pour son irrésistibilité",
+    "image": "data/hommes/images/087.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Citron, Gingembre, Menthe",
+      "coeur": "Pomme, Cardamome, Genièvre",
+      "fond": "Fève Tonka, Ambre, Bois de gaïac"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "088",
+    "nom": "Man",
+    "marque": "BVLGARI",
+    "categorie": "Homme",
+    "description": "Sophistication contemporaine",
+    "image": "data/hommes/images/088.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Bergamote, Fleur de lotus",
+      "coeur": "Bois de cashmere",
+      "fond": "Ambre, Musc blanc"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "091",
+    "nom": "Chrome",
+    "marque": "AZZARO",
+    "categorie": "Homme",
+    "description": "Fraîcheur aquatique intemporelle",
+    "image": "data/hommes/images/091.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Citron, Romarin, Ananas",
+      "coeur": "Cyclamen, Coriandre, Jasmin",
+      "fond": "Musc, Cèdre, Santal, Fève Tonka"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "092",
+    "nom": "Mr. Burberry",
+    "marque": "BURBERRY",
+    "categorie": "Homme",
+    "description": "Gentleman londonien moderne",
+    "image": "data/hommes/images/092.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Pamplemousse, Cardamome, Menthe",
+      "coeur": "Bouleau, Muscade, Lavande",
+      "fond": "Vétiver, Santal, Ambre"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "094",
+    "nom": "Sauvage",
+    "marque": "CHRISTIAN DIOR",
+    "categorie": "Homme",
+    "description": "Fraîcheur sauvage et libre",
+    "image": "data/hommes/images/094.webp",
+    "nouveau": false,
     "composition": {
       "tete": "Bergamote de Calabre, Poivre",
-      "coeur": "Poivre de Sichuan, Lavande, Poivre rose",
-      "fond": "Ambroxan, Cèdre, Labdanum"
+      "coeur": "Lavande, Géranium, Elemi",
+      "fond": "Ambroxan, Vanille, Patchouli"
     },
     "variantes": [
-      { "volume": "35ml", "prix": 45 },
-      { "volume": "100ml", "prix": 80 }
+      { "volume": "30ml", "prix": 85 },
+      { "volume": "70ml", "prix": 190 }
     ]
-  }
+  },
+  {
+    "code": "075",
+    "nom": "X for Men",
+    "marque": "CLIVE CHRISTIAN",
+    "categorie": "Homme",
+    "description": "hommes absolu et raffinement",
+    "image": "data/hommes/images/075.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Rhubarbe, Bergamote, Pamplemousse",
+      "coeur": "Jasmin, Iris, Rose",
+      "fond": "Cèdre, Patchouli, Papyrus"
+    },
+    "variantes": [
+      { "volume": "50ml", "prix": 170 }
+    ]
+  },
+  {
+    "code": "100",
+    "nom": "White Aoud",
+    "marque": "MONTALE",
+    "categorie": "Unisex",
+    "description": "Oud blanc précieux et envoûtant",
+    "image": "data/hommes/images/100.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Notes florales",
+      "coeur": "Oud, Rose",
+      "fond": "Musc, Santal"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 60 },
+      { "volume": "70ml", "prix": 120 }
+    ]
+  },
+  {
+    "code": "113",
+    "nom": "Sur la Route",
+    "marque": "LOUIS VUITTON",
+    "categorie": "Unisex",
+    "description": "Voyage olfactif luxueux",
+    "image": "data/hommes/images/113.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Citron, Bergamote",
+      "coeur": "Rose, Cacao",
+      "fond": "Patchouli, Oud"
+    },
+    "variantes": [
+      { "volume": "30ml", "prix": 100 },
+      { "volume": "70ml", "prix": 190 }
+    ]
+  },
+  {
+    "code": "117",
+    "nom": "Tobacco Vanille",
+    "marque": "TOM FORD",
+    "categorie": "Unisex",
+    "description": "Tabac opulent et vanille crémeuse",
+    "image": "data/hommes/images/117.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Feuille de tabac, Notes épicées",
+      "coeur": "Fève Tonka, Fleur de tabac, Vanille",
+      "fond": "Fruits secs, Notes boisées"
+    },
+    "variantes": [
+      { "volume": "50ml", "prix": 175 }
+    ]
+  },
+  {"code": "136",
+"nom": "Dior Homme Intense",
+"marque": "CHRISTIAN DIOR",
+"categorie": "Homme",
+"description": "Iris puissant et séduction intense",
+"image": "data/hommes/images/136.webp",
+"nouveau": false,
+"composition": {
+  "tete": "Lavande",
+  "coeur": "Iris, Ambrette, Poire",
+  "fond": "Cèdre de Virginie, Vétiver"
+},
+"variantes": [
+  { "volume": "70ml", "prix": 150 },
+  { "volume": "30ml", "prix": 85 }
+]
+},
+{
+"code": "140",
+"nom": "Eros",
+"marque": "VERSACE",
+"categorie": "Homme",
+"description": "Passion et désir à la grecque",
+"image": "data/hommes/images/140.webp",
+"nouveau": false,
+"composition": {
+"tete": "Menthe, Pomme verte, Citron",
+"coeur": "Fève Tonka, Géranium, Ambroxan",
+"fond": "Vanille de Madagascar, Vétiver, Mousse de chêne"
+},
+"variantes": [
+{ "volume": "30ml", "prix": 60 },
+{ "volume": "70ml", "prix": 120 }
+]
+}
 ]

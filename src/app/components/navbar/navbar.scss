@@ -1,11 +1,12 @@
 // --- VARIABLES (Style Luxe / Pro) ---
-$bg-glass: rgba(255, 255, 255, 0.95); // Abyadh transparent
+$bg-glass: rgba(255, 255, 255, 0.95);
 $text-color: #1a1a1a;
 $accent-color: #d4af37; // GOLD
 $white: #ffffff;
-$radius: 50px; // Pill shape (très tendance)
+$radius: 50px; // Pill shape
 $shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
-$ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
+$shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15); // Shadow a9wa lel dropdown
+$ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
 
 // --- GLOBAL STYLES ---
 :host {
@@ -33,7 +34,7 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
     display: flex;
     align-items: center;
     gap: 12px;
-    z-index: 1002; // Fou9 el menu mobile
+    z-index: 1002;
 
     .logo {
       height: 45px;
@@ -46,7 +47,6 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
       font-weight: 700;
       letter-spacing: -0.5px;
       text-transform: uppercase;
-      // Gradient Text Gold/Black
       background: linear-gradient(135deg, $text-color 0%, #555 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -66,8 +66,6 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
       letter-spacing: 0.5px;
       position: relative;
       transition: color 0.3s $ease-pro;
-      
-      // Flex pour aligner Icone + Texte
       display: flex;
       align-items: center;
       gap: 8px;
@@ -89,9 +87,9 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
         transition: width 0.3s $ease-pro;
       }
 
-      &:hover {
+      &:hover, &.active-link {
         color: $accent-color;
-        .icon { transform: scale(1.15); } // Zoom icone
+        .icon { transform: scale(1.15); }
         &::after { width: 100%; }
       }
     }
@@ -104,56 +102,106 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
     gap: 20px;
   }
 
-  // Search Bar (Forme Pilule)
-  &-search, .mobile-search-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background: #f9f9f9;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: $radius;
-    padding: 2px; // Espace pour le bouton
-    transition: all 0.3s $ease-pro;
-
-    input {
-      border: none;
-      background: transparent;
-      padding: 0.6rem 1rem;
-      outline: none;
-      font-size: 0.9rem;
-      width: 180px;
-      color: $text-color;
-      font-family: inherit;
-
-      &::placeholder { color: #aaa; }
-    }
-
-    .search-btn {
-      background: $white;
-      border: none;
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
+  // 🔥 SEARCH BAR (MODIFIÉ POUR AUTOCOMPLETE)
+  &-search {
+    
+    // Wrapper: L'element parent mta3 input w button w ul
+    .search-input-wrapper {
+      position: relative; // ⚠️ Tres important bech dropdown yji ta7tou
       display: flex;
       align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: $text-color;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: 0.3s;
-      margin-right: 4px;
-
-      &:hover {
-        background: $accent-color;
-        color: $white;
+      background: #f9f9f9;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: $radius; // Pill shape global
+      padding: 2px;
+      transition: all 0.3s $ease-pro;
+      
+      // Input Style
+      input {
+        border: none;
+        background: transparent;
+        padding: 0.6rem 1rem;
+        outline: none;
+        font-size: 0.9rem;
+        width: 200px;
+        color: $text-color;
+        font-family: inherit;
+        border-radius: $radius 0 0 $radius; // Arrondi a gauche
+        
+        &::placeholder { color: #aaa; }
       }
-    }
+      
+      // Button Style
+      .search-btn {
+        background: $white;
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: $text-color;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        transition: 0.3s;
+        margin-right: 4px;
 
-    // Focus state (Input active)
-    &:focus-within {
-      background: $white;
-      border-color: $accent-color;
-      box-shadow: $shadow-sm;
+        &:hover {
+          background: $accent-color;
+          color: $white;
+        }
+      }
+
+      // Focus State
+      &:focus-within {
+        background: $white;
+        border-color: $accent-color;
+        box-shadow: $shadow-sm;
+      }
+
+      // 🔥 LISTE SUGGESTIONS (DROPDOWN)
+      .autocomplete-list {
+        position: absolute;
+        top: 110%; // Yji ta7t l input chwaya
+        left: 0;
+        width: 100%;
+        background: $white;
+        border-radius: 15px;
+        box-shadow: $shadow-lg;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        z-index: 9999;
+        overflow: hidden;
+        border: 1px solid rgba(0,0,0,0.05);
+
+        li {
+          display: flex;
+          align-items: center;
+          padding: 12px 15px;
+          cursor: pointer;
+          border-bottom: 1px solid #f5f5f5;
+          transition: background 0.2s;
+
+          &:hover { background: #fdfdfd; }
+          &:last-child { border-bottom: none; }
+
+          .mini-img {
+            width: 40px; height: 40px;
+            object-fit: contain;
+            background: #f8f8f8;
+            border-radius: 8px;
+            margin-right: 12px;
+          }
+
+          .info {
+            display: flex; flex-direction: column;
+            .name { font-weight: 600; font-size: 0.9rem; color: $text-color; }
+            .code { font-size: 0.75rem; color: #888; }
+          }
+        }
+      }
     }
   }
 
@@ -191,16 +239,16 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
     }
   }
 
-  // --- 4. TOGGLE (HAMBURGER -> X) ---
+  // --- 4. TOGGLE (MOBILE) ---
   &-toggle {
-    display: none; // Caché sur Desktop
+    display: none;
     flex-direction: column;
     justify-content: center;
     gap: 6px;
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1002; // Très important: doit être au dessus du menu
+    z-index: 1002;
     padding: 5px;
 
     .bar {
@@ -211,7 +259,6 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
       border-radius: 2px;
     }
 
-    // Animation vers X
     &.active {
       .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
       .bar:nth-child(2) { opacity: 0; transform: translateX(10px); }
@@ -219,24 +266,18 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
     }
   }
 
-  // --- 5. MOBILE MENU (FULL SCREEN OVERLAY) ---
+  // --- 5. MOBILE MENU ---
   &-menu {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
     background: $white;
-    z-index: 1001; // Juste en dessous du logo/toggle
-    
-    // Centrage du contenu
+    z-index: 1001;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px; // Espace pour ne pas cacher sous la navbar
+    padding-top: 100px;
     gap: 2rem;
-
-    // Animation d'entrée smooth
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
@@ -256,7 +297,6 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
       text-align: center;
     }
 
-    // Liens Mobile (Gros & Pro)
     .mobile-link {
       font-size: 1.4rem;
       font-weight: 600;
@@ -265,12 +305,7 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: 0.3s;
-      
-      // Alignement icone mobile
-      display: flex;
-      align-items: center;
-      justify-content: center; // Centré
-      gap: 12px;
+      display: flex; align-items: center; justify-content: center; gap: 12px;
 
       &:hover {
         color: $accent-color;
@@ -278,16 +313,80 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
       }
     }
 
-    // Search Mobile specific styles
-    .mobile-search-wrapper {
-      width: 100%;
-      margin-top: 20px;
-      background: #f5f5f5;
+    // Mobile Search Wrapper
+.mobile-search-wrapper {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  position: relative; // ⚠️ Mouhem barcha bech l liste tji ta7tou
+  z-index: 1005;     // Fou9 kol chay
+
+  input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: $radius;
+    outline: none;
+    font-size: 1rem;
+    &:focus { border-color: $accent-color; }
+  }
+  
+  .search-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 38px; width: 38px;
+    background: $text-color;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2; // Fou9 l input
+  }
+
+  // 🔥 STYLE LISTE MOBILE SPECIFIQUE
+  .autocomplete-list.mobile-list {
+    position: absolute;
+    top: 105%; // Ta7t l input
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2); // Dholl 9wi
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #eee;
+    z-index: 999;
+    text-align: left; // Rajja3 ktiba 3alisar (khatr menu mobile centré)
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      border-bottom: 1px solid #f5f5f5;
+      background: white; // Assure fond blanc
       
-      input { width: 100%; }
+      &:last-child { border-bottom: none; }
+
+      .mini-img {
+        width: 40px; height: 40px;
+        object-fit: contain;
+        background: #f8f8f8;
+        border-radius: 8px;
+        margin-right: 15px;
+      }
+
+      .info {
+        display: flex; flex-direction: column;
+        .name { font-weight: bold; color: #333; font-size: 0.95rem; }
+        .code { color: #888; font-size: 0.8rem; }
+      }
     }
+  }
+}
     
-    // Cart Mobile specific styles
     .mobile-cart {
       width: 100%;
       justify-content: center;
@@ -296,10 +395,10 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
       border: none;
       padding: 15px;
       font-size: 1rem;
+      border-radius: $radius;
       
       &:hover {
         background: $accent-color;
-        border-color: $accent-color;
         color: $white;
       }
     }
@@ -307,12 +406,12 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
 }
 
 // --- RESPONSIVE MEDIA QUERIES ---
-@media (max-width: 768px) {
+@media (max-width: 900px) { // Baddeltha 900px bech menu yodhher bekri chwaya
   .navbar {
     padding: 1rem 1.5rem;
 
     &-links,
-    .desktop-only { 
+    &-extras { 
       display: none !important; 
     }
     
@@ -323,7 +422,7 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1); // Animation douce
 }
 
 .disabled {
-  pointer-events: none; /* empêche le clic */
-  opacity: 0.5;         /* effet visuel disabled */
-  cursor: not-allowed;  /* curseur interdit */
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }

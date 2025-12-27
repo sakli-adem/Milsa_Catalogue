@@ -7,9 +7,14 @@ $shadow: 0 6px 18px rgba(0, 0, 0, .1);
 $transition: .3s ease;
 
 
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
 /* ===== Container ===== */
 .boutique-container {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: auto;
   padding: 2rem 1.5rem;
   font-family: 'Inter', sans-serif;

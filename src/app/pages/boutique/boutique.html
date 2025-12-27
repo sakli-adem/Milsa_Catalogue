@@ -4,7 +4,7 @@
     <span class="icon">⚠️</span>
     <p>
       <strong>Note Importante :</strong> Nos parfums sont de la marque <strong>Chogan</strong>. 
-      Les images et noms sont à titre indicatif pour identifier la famille olfactive (similaire à 98%). 
+      Les images et noms sont à titre indicatif pour identifier la famille olfactive (similaire à 99%). 
       Le packaging réel est standard Chogan.<br>
       <small>Une confirmation téléphonique sera effectuée pour chaque commande.</small>
     </p>
@@ -33,25 +33,25 @@
     </button>
   </div>
 
-  <div class="products-grid">
+<div class="products-grid">
     
     <div *ngIf="isLoading" class="loading-msg">
       Chargement des parfums en cours...
     </div>
 
-    <div *ngFor="let p of parfums" class="product-card">
+    <div *ngFor="let p of displayedParfums" class="product-card">
       
       <span *ngIf="p.nouveau" class="badge-new">Nouveau</span>
 
       <div class="image-wrapper" (click)="openModal(p)" style="cursor: pointer;">
-        <img [src]="p.image" [alt]="p.nom" />
+        <img [src]="p.image" [alt]="p.nom" loading="lazy" />
       </div>
 
       <div class="card-content">
         
         <span class="category-tag" [ngClass]="activeCategory">
-  {{ p.categorie }}
-</span>
+          {{ p.categorie }}
+        </span>
         <div style="align-items: flex-start;">
         <h3>{{ p.code }}</h3><h3>{{ p.nom }}</h3>
         </div>
@@ -66,6 +66,10 @@
         </button>
       </div>
     </div>
+  </div>
+  
+  <div *ngIf="displayedParfums.length < parfums.length" class="scroll-loading">
+      Chargement de plus de produits...
   </div>
 
   <app-product-modal 

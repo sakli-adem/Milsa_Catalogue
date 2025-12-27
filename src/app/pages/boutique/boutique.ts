@@ -1,9 +1,7 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// Imports Services
 import { ParfumService } from '../../services/parfum.service';
 import { CartService } from '../../services/cart.service';
-// Import Models & Components
 import { Parfum } from '../../models/parfum.model';
 import { ProductModalComponent } from '../../components/product-modal/product-modal';
 
@@ -16,119 +14,132 @@ import { ProductModalComponent } from '../../components/product-modal/product-mo
 })
 export class BoutiqueComponent implements OnInit {
   
-  // Injection des services
   private parfumService = inject(ParfumService);
   private cartService = inject(CartService);
   
-  // --- VARIABLES DE DONNÉES ---
-  categoryList: Parfum[] = []; // Liste pour l'onglet actif (ex: juste Femmes)
-  globalList: Parfum[] = [];   // Stock complet pour la recherche (Femmes + Hommes + Luxe)
-  parfums: Parfum[] = [];      // Liste affichée à l'écran (celle qu'on filtre)
+  categoryList: Parfum[] = []; 
+  globalList: Parfum[] = [];   
+  parfums: Parfum[] = []; // Liste filtrée KAMLA (ex: 50 parfums)
   
-  // État de l'interface
+  // 🔥 VARIABLES OPTIMISATION 🔥
+  displayedParfums: Parfum[] = []; // Liste elli tban fel Ecran (ex: 8, mba3d 16...)
+  itemsToShow = 5; // Bdech nebda
+  batchSize = 5;   // B9adeh nzid
+  
   activeCategory: 'femmes' | 'hommes' | 'luxe' = 'femmes';
   isLoading = false;
-  selectedProduct: Parfum | null = null; // Pour le Modal
-  
-  // Terme de recherche actuel
+  selectedProduct: Parfum | null = null;
   currentSearchTerm = ''; 
 
   ngOnInit() {
-    // 1. Charger la catégorie par défaut (Femmes)
     this.chargerParfums('femmes');
 
-    // 2. Charger le STOCK GLOBAL en arrière-plan (pour la recherche)
     this.parfumService.getAllParfumsCombined().subscribe(data => {
       this.globalList = data;
     });
 
-    // 3. Écouter la barre de recherche (Navbar)
     this.parfumService.search$.subscribe(term => {
       this.currentSearchTerm = term;
-      this.applyFilter(); // Appliquer le filtre à chaque lettre tapée
+      this.applyFilter();
     });
-  }
 
-  // Fonction appelée quand on clique sur les boutons (Femmes, Hommes, Luxe)
-  chargerParfums(categorie: 'femmes' | 'hommes' | 'luxe') {
-    // On vide la recherche car l'utilisateur a cliqué manuellement sur une catégorie
-    this.parfumService.updateSearchTerm(''); 
-    
-    this.loadCategory(categorie);
-  }
-
-  // Helper pour charger les données d'une catégorie spécifique
-  loadCategory(cat: 'femmes' | 'hommes' | 'luxe') {
-    this.activeCategory = cat;
-    this.isLoading = true;
-    
-    // On vide l'affichage pour montrer le chargement
-    this.parfums = [];
-
-    this.parfumService.getParfums(cat).subscribe({
-      next: (data) => {
-        this.categoryList = data; // On garde les données de la catégorie en mémoire
-        this.applyFilter();       // On affiche
-        this.isLoading = false;
-      },
-      error: (err) => {
-        console.error('Erreur chargement', err);
-        this.isLoading = false;
+    this.parfumService.productOpen$.subscribe(product => {
+      if (product) {
+        if (product.categorie === 'Homme') this.activeCategory = 'hommes';
+        else if (product.categorie === 'Femme') this.activeCategory = 'femmes';
+        else if (product.categorie === 'Unisex') this.activeCategory = 'luxe';
+        
+        this.openModal(product);
+        this.parfumService.clearOpenModal();
       }
     });
   }
 
-  // 🔥 FONCTION INTELLIGENTE DE FILTRAGE
+  // --- SCROLL EVENT LISTENER ---
+  // Hethi tfi9 bik ki t9arreb lel 9a3a mta3 page
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // Nchoufou position scroll
+    const pos = (document.documentElement.scrollTop || document.body.scrollTop) + window.innerHeight;
+    const max = document.documentElement.scrollHeight;
+
+    // Ken wsolna 9rib lel 9a3a (b9ina 100px par exemple)
+    if (pos >= max - 200) {
+      this.loadMore();
+    }
+  }
+
+  // Zid 8 produits jdod
+  loadMore() {
+    // Ken mazal famma ma nzidou
+    if (this.displayedParfums.length < this.parfums.length) {
+      this.itemsToShow += this.batchSize; // Zid 8 fel compteur
+      this.updateDisplayedList(); // Mise à jour l affichage
+    }
+  }
+
+  chargerParfums(categorie: 'femmes' | 'hommes' | 'luxe') {
+    this.activeCategory = categorie;
+    this.isLoading = true;
+    
+    this.parfumService.getParfums(categorie).subscribe({
+      next: (data) => {
+        this.categoryList = data;
+        this.applyFilter();
+        this.isLoading = false;
+      },
+      error: () => this.isLoading = false
+    });
+  }
+
+  onTabClick(categorie: 'femmes' | 'hommes' | 'luxe') {
+    this.parfumService.updateSearchTerm(''); 
+    this.chargerParfums(categorie);
+  }
+
   applyFilter() {
-    // CAS 1: Il y a une recherche active
+    // 1. Reset Compteur (Dima narj3ou l 8 ki nbadlou filtre)
+    this.itemsToShow = this.batchSize;
+
     if (this.currentSearchTerm && this.currentSearchTerm.trim() !== '') {
       const term = this.currentSearchTerm.toLowerCase();
-      
-      // On cherche dans le GLOBAL LIST (Tout le stock)
       this.parfums = this.globalList.filter(p => 
         p.nom.toLowerCase().includes(term) || 
         p.code.toLowerCase().includes(term)
       );
 
-      // ✨ MAGIE: Changement automatique de l'onglet ✨
+      // Auto-switch visual logic
       if (this.parfums.length > 0) {
-        const firstMatch = this.parfums[0]; // On regarde le premier produit trouvé
-        
-        // On change activeCategory selon le type du produit trouvé
-        if (firstMatch.categorie === 'Homme') {
-          this.activeCategory = 'hommes';
-        } else if (firstMatch.categorie === 'Femme') {
-          this.activeCategory = 'femmes';
-        } else if (firstMatch.categorie === 'Unisex') {
-          this.activeCategory = 'luxe';
-        }
+        const firstMatch = this.parfums[0];
+        if (firstMatch.categorie === 'Homme') this.activeCategory = 'hommes';
+        else if (firstMatch.categorie === 'Femme') this.activeCategory = 'femmes';
+        else if (firstMatch.categorie === 'Unisex') this.activeCategory = 'luxe';
       }
-
     } else {
-      // CAS 2: Pas de recherche (Mode navigation normal)
-      // On affiche simplement la liste de la catégorie active
       this.parfums = [...this.categoryList];
     }
+
+    // 🔥 A jour l'affichage initial
+    this.updateDisplayedList();
   }
 
-  // --- LOGIQUE DU MODAL ---
+  // Hethi ta9sam lista l kbira w ta3ti chwaya lel ecran
+  updateDisplayedList() {
+    this.displayedParfums = this.parfums.slice(0, this.itemsToShow);
+  }
+
   openModal(product: Parfum) {
     this.selectedProduct = product;
-    document.body.style.overflow = 'hidden'; // Bloquer le scroll
+    document.body.style.overflow = 'hidden'; 
   }
 
   closeModal() {
     this.selectedProduct = null;
-    document.body.style.overflow = 'auto'; // Débloquer le scroll
+    document.body.style.overflow = 'auto'; 
   }
 
-  // --- LOGIQUE AJOUT PANIER ---
   handleAddToCart(event: any) {
-    this.cartService.addToCart({
-      product: event.product,
-      variant: event.variant,
-      quantity: event.quantity
-    });
-    this.closeModal(); // Fermer le modal après ajout
+    this.cartService.addToCart(event);
+    this.closeModal();
   }
 }

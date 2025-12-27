@@ -71,7 +71,10 @@
       <a (click)="scrollToSection('contact'); toggleMenu()" class="nav-link mobile-link">
         <span class="icon">✉️</span> Contact
       </a>
-
+      <button class="cart-btn mobile-cart" routerLink="/panier" (click)="toggleMenu()">
+        Mon Panier ({{ cartItemCount }}) 🛒
+      </button>
+      
       <div class="mobile-search-wrapper">
         <input type="text" 
                placeholder="Rechercher un parfum..." 
@@ -92,9 +95,7 @@
         </ul>
       </div>
 
-      <button class="cart-btn mobile-cart" routerLink="/panier" (click)="toggleMenu()">
-        Mon Panier ({{ cartItemCount }}) 🛒
-      </button>
+
     </div>
   </div>
 

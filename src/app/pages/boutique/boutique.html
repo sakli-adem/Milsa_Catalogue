@@ -48,10 +48,14 @@
       </div>
 
       <div class="card-content">
-        <span class="category-tag">{{ p.categorie }}</span>
-        <h3>{{ p.nom }}</h3>
         
-        <p class="desc">{{ p.description }}</p>
+        <span class="category-tag" [ngClass]="activeCategory">
+  {{ p.categorie }}
+</span>
+        <div style="align-items: flex-start;">
+        <h3>{{ p.code }}</h3><h3>{{ p.nom }}</h3>
+        </div>
+        <p class="desc">{{ p.description.slice(0, 35) }}...</p>
         
         <div class="price-row">
           <span class="price">dès {{ p.variantes[0].prix }} TND</span>

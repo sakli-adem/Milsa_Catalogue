@@ -53,7 +53,7 @@ export class CheckoutModalComponent {
     };
 
  
-    emailjs.send('SERVICE_ID', 'TEMPLATE_ID', emailParams, 'PUBLIC_KEY')
+    emailjs.send('service_yo1k56n', 'template_6i2ucyi', emailParams, 'RV6vRl7LzHsNCKyJY')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert('✅ Commande envoyée avec succès ! Nous vous contacterons bientôt.');

@@ -1,10 +1,10 @@
 [
   {
-    "code": "FEM-001",
+    "code": "001",
     "nom": "Rose Velvet",
     "categorie": "Femme",
     "description": "Un parfum floral gourmand, inspiré par la douceur de la vie.",
-    "image": "data/femmes/images/rose.webp",
+    "image": "data/femmes/images/f.webp",
     "nouveau": true,
     "composition": {
       "tete": "Cassis, Poire",
@@ -17,11 +17,11 @@
     ]
   },
   {
-    "code": "FEM-002",
+    "code": "002",
     "nom": "Jasmine Pure",
     "categorie": "Femme",
     "description": "L'élégance absolue d'un bouquet floral blanc.",
-    "image": "data/femmes/images/jasmine.webp",
+    "image": "data/femmes/images/f.webp",
     "nouveau": false,
     "composition": {
       "tete": "Magnolia, Melon, Pêche",
@@ -34,11 +34,11 @@
     ]
   },
   {
-    "code": "FEM-003",
+    "code": "003",
     "nom": "Lady Gold",
     "categorie": "Femme",
     "description": "Un parfum audacieux pour celle qui mène le jeu.",
-    "image": "data/femmes/images/lady.webp",
+    "image": "data/femmes/images/f.webp",
     "nouveau": false,
     "composition": {
       "tete": "Néroli, Bigarade, Framboise",
@@ -51,11 +51,48 @@
     ]
   },
   {
-    "code": "FEM-004",
+    "code": "004",
     "nom": "Night Dream",
     "categorie": "Femme",
     "description": "Le café noir rencontre les fleurs blanches. Addictif.",
-    "image": "data/femmes/images/night.webp",
+    "image": "data/femmes/images/f.webp",
+    "nouveau": true,
+    "composition": {
+      "tete": "Poire, Poivre rose, Fleur d'oranger",
+      "coeur": "Café, Jasmin, Amande amère",
+      "fond": "Vanille, Patchouli, Cèdre"
+    },
+    "variantes": [
+      { "volume": "35ml", "prix": 38 },
+      { "volume": "100ml", "prix": 68 }
+    ]
+  },
+
+
+    {
+    "code": "005",
+    "nom": "Night Dream",
+    "categorie": "Femme",
+    "description": "Le café noir rencontre les fleurs blanches. Addictif.",
+    "image": "data/femmes/images/019.avif",
+    "nouveau": true,
+    "composition": {
+      "tete": "Poire, Poivre rose, Fleur d'oranger",
+      "coeur": "Café, Jasmin, Amande amère",
+      "fond": "Vanille, Patchouli, Cèdre"
+    },
+    "variantes": [
+      { "volume": "35ml", "prix": 38 },
+      { "volume": "100ml", "prix": 68 }
+    ]
+  },
+
+      {
+    "code": "006",
+    "nom": "Night Dream",
+    "categorie": "Femme",
+    "description": "Le café noir rencontre les fleurs blanches. Addictif.",
+    "image": "data/femmes/images/006.jpg",
     "nouveau": true,
     "composition": {
       "tete": "Poire, Poivre rose, Fleur d'oranger",

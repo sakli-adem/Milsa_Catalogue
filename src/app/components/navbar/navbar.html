@@ -11,10 +11,10 @@
       <span class="icon">🏠</span> Accueil
     </a>
     
-    <!-- <a routerLink="/boutique" class="nav-link" routerLinkActive="active-link" >
+    <a routerLink="/boutique" class="nav-link" routerLinkActive="active-link" >
       <span class="icon">🛍️</span> Boutique
-    </a> -->
-<a routerLink="/boutique" class="nav-link" [class.disabled]="true" > <span class="icon">🛍️</span> Boutique </a>
+    </a>
+<!-- <a routerLink="/boutique" class="nav-link" [class.disabled]="true" > <span class="icon">🛍️</span> Boutique </a> -->
 
 
     <a (click)="scrollToSection('apropos')" class="nav-link" style="cursor: pointer;">
@@ -48,7 +48,7 @@
         <span class="icon">🏠</span> Accueil
       </a>
 
-      <a routerLink="/boutique" (click)="toggleMenu()" class="nav-link mobile-link">
+      <a  (click)="toggleMenu()" class="nav-link mobile-link">
         <span class="icon">🛍️</span> Boutique
       </a>
 

@@ -1,138 +1,202 @@
+/* ===== Variables ===== */
+$primary: #2c3e50;
+$accent: #e74c3c;
+$luxe: rgb(28, 50, 66);
+$radius: 12px;
+$shadow: 0 6px 18px rgba(0, 0, 0, .1);
+$transition: .3s ease;
+
+
+/* ===== Container ===== */
 .boutique-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 20px 50px; // 120px top bech mayghatich 3liha navbar
+  max-width: 1400px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  background: #f8f9fa;
 }
 
-// --- 1. DISCLAIMER STYLE ---
+/* ===== Disclaimer ===== */
 .disclaimer-box {
-  background-color: #fff8e1; // Asfer fete7
-  border-left: 5px solid #ffc107; // Asfer ghamed
-  padding: 15px 20px;
-  margin-bottom: 30px;
-  border-radius: 8px;
   display: flex;
-  align-items: center;
-  gap: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  gap: 1rem;
+  padding: 1.4rem;
+  margin-bottom: 2.5rem;
+  background: #fff3cd;
+  border-left: 5px solid #f39c12;
+  border-radius: $radius;
+  box-shadow: $shadow;
 
-  .icon { font-size: 1.5rem; }
-  p { margin: 0; font-size: 0.95rem; color: #555; line-height: 1.5; }
-  strong { color: #333; }
+  .icon { font-size: 2rem; }
+
+  p {
+    margin: 0;
+    font-size: .95rem;
+    color: #856404;
+
+    small { display: block; margin-top: .4rem; }
+  }
 }
 
-// --- 2. CATEGORIES BUTTONS ---
+/* ===== Categories ===== */
 .categories-wrapper {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 40px;
+  gap: 1rem;
+  margin-bottom: 3rem;
   flex-wrap: wrap;
 
   .cat-btn {
-    padding: 10px 25px;
-    border: 2px solid #eee;
-    background: white;
-    border-radius: 50px;
+    padding: .8rem 2rem;
+    border-radius: 30px;
+    border: 2px solid #ddd;
+    background: #fff;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    transition: $transition;
 
-    &:hover { border-color: #d4af37; }
-    
+    &:hover { transform: translateY(-2px); }
+
     &.active {
-      background: #333;
-      color: white;
-      border-color: #333;
-      
-      &.luxe {
-        background: black;
-        border-color: gold;
-        color: gold;
+      color: #fff;
+      background: #e91e63;
+      border-color: transparent;
+
+      &:nth-child(2) { background: #2196f3; }
+      &.luxe { background: rgb(26, 148, 26); }
+    }
+  }
+}
+
+/* ===== Grid ===== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* ===== Card ===== */
+.product-card {
+  background: #fff;
+  border-radius: $radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-6px);
+
+    img { transform: scale(1.05); }
+  }
+}
+
+/* Badge */
+.badge-new {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: .35rem .8rem;
+  background: $accent;
+  color: #fff;
+  font-size: .75rem;
+  border-radius: 20px;
+}
+
+/* Image */
+.image-wrapper {
+  height: 260px;
+  background: #f1f3f5;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: $transition;
+  }
+}
+
+/* Content */
+.card-content {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+
+.category-tag {
+    font-size: .7rem;
+    font-weight: 600;
+    color: #fff;
+    padding: .3rem .7rem;
+    border-radius: 12px;
+    align-self: flex-start;
+    
+    /* ⚠️ NA77INA background: $luxe; MELA LNI */
+    
+    /* ✅ ZIDNA HADHOUMA: */
+    &.femmes {
+      background: #e91e63; /* Rose kima bouton femmes */
+    }
+    
+    &.hommes {
+      background: #2196f3; /* Azra9 kima bouton hommes */
+    }
+    
+    &.luxe {
+      background: rgb(27, 171, 27); /* Dégradé kima bouton luxe */
+    }
+  }
+
+  /* Code + Nom نفس السطر */
+  h3 {
+    display: inline;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+
+    &:first-of-type {
+      color: $primary;
+
+      &::after {
+        content: " - ";
+        color: #aaa;
+        font-weight: 400;
       }
     }
   }
-}
 
-// --- 3. PRODUCTS GRID ---
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); // Responsive Grid
-  gap: 30px;
-}
-
-.product-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-  position: relative;
-
-  &:hover { transform: translateY(-5px); }
-
-  .badge-new {
-    position: absolute;
-    top: 10px; left: 10px;
-    background: #d4af37;
-    color: white;
-    padding: 5px 10px;
-    font-size: 0.75rem;
-    border-radius: 4px;
-    z-index: 2;
+  .desc {
+    font-size: .9rem;
+    color: #666;
+    line-height: 1.4;
   }
 
-  .image-wrapper {
-    height: 250px;
-    overflow: hidden;
-    background: #f9f9f9;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; // Bech taswira matetkbsich
-      padding: 20px;
-    }
+  .price {
+    margin-top: auto;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $accent;
   }
 
-  .card-content {
-    padding: 20px;
-    
-    .category-tag {
-      font-size: 0.8rem;
-      color: #999;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+  .add-btn {
+    margin-top: .8rem;
+    padding: .85rem;
+    border: none;
+    border-radius: 8px;
+    background: $luxe;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: $transition;
 
-    h3 { margin: 5px 0; font-size: 1.2rem; }
-    
-    .desc { 
-      font-size: 0.9rem; color: #666; 
-      margin-bottom: 15px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2; // Max 2 lignes description
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .price-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-      .price { font-weight: bold; font-size: 1.1rem; color: #333; }
-    }
-
-    .add-btn {
-      width: 100%;
-      padding: 10px;
-      background: #333;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      &:hover { background: #d4af37; }
-    }
+    &:hover { transform: translateY(-2px); }
   }
 }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .image-wrapper { height: 220px; }
+  .categories-wrapper .cat-btn { padding: .7rem 1.4rem; }
+}
+
+

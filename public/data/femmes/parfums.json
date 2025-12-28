@@ -56,7 +56,7 @@
     "categorie": "Femme",
     "description": "Le café noir rencontre les fleurs blanches. Addictif.",
     "image": "data/femmes/images/011.webp",
-    "nouveau": true,
+    "nouveau": false,
     "composition": {
       "tete": "Poire, Poivre rose, Fleur d'oranger",
       "coeur": "Café, Jasmin, Amande amère",

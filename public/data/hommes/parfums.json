@@ -484,24 +484,7 @@
       { "volume": "50ml", "prix": 175 }
     ]
   },
-  {
-    "code": "075",
-    "nom": "Man in Black",
-    "marque": "BVLGARI",
-    "categorie": "Homme",
-    "description": "Élégance sombre et magnétique",
-    "image": "data/hommes/images/075.webp",
-    "nouveau": false,
-    "composition": {
-      "tete": "Rhum, Épices",
-      "coeur": "Iris, Fleur de tuberose",
-      "fond": "Gaïac, Benzoin, Tonka"
-    },
-    "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
-    ]
-  },
+
   {
     "code": "079",
     "nom": "Myslf",

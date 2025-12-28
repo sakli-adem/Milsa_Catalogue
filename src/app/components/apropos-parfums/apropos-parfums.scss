@@ -90,17 +90,42 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
 .comparison-section {
   margin-bottom: 80px;
   
+  // Wrapper mta3 tableau
   .table-wrapper {
-    overflow-x: auto; // Bch fil mobile nscrolliw tableau
+    overflow-x: auto; // Scroll Horizontal
     border-radius: $radius;
     box-shadow: $shadow-lg;
+    
+    // 🔥 UX TRICK: Smooth Scroll + Indication
+    -webkit-overflow-scrolling: touch; // Scroll rtb fel iPhone
+    
+    // Style Scrollbar (Android/Windows)
+    &::-webkit-scrollbar {
+      height: 6px; // Toul scrollbar
+    }
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ccc; 
+      border-radius: 4px;
+      &:hover { background: #bbb; }
+    }
+    
+    // 🔥 UX TRICK: Indication Mobile "Swipe Left"
+    // Hethi tzidha ken t7eb tbayen l user annou famma scroll
+    position: relative;
+    
+    // Ken t7eb tzid "flèche" walla message, 
+    // l a7sen tzidha fel HTML (chouf louta)
   }
 
   .styled-table {
     width: 100%;
     border-collapse: collapse;
     background: $white;
-    min-width: 600px; // Min width bch mayet3assech
+    min-width: 650px; // ⚠️ Kabbart l min-width chwaya bech yforsi scroll
 
     thead tr {
       background-color: #1a1a1a;
@@ -110,6 +135,7 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
 
     th, td {
       padding: 20px 25px;
+      white-space: nowrap; // ⚠️ Mouhem: Ymanaa l ktiba bech tahbet star
     }
 
     tbody tr {

@@ -23,8 +23,8 @@ export class BoutiqueComponent implements OnInit {
   
   // 🔥 VARIABLES OPTIMISATION 🔥
   displayedParfums: Parfum[] = []; // Liste elli tban fel Ecran (ex: 8, mba3d 16...)
-  itemsToShow = 5; // Bdech nebda
-  batchSize = 5;   // B9adeh nzid
+  itemsToShow = 7; // Bdech nebda
+  batchSize = 7;   // B9adeh nzid
   
   activeCategory: 'femmes' | 'hommes' | 'luxe' = 'femmes';
   isLoading = false;

@@ -9,14 +9,10 @@ $green: #27ae60;
 
 // --- CONTAINER GLOBAL ---
 .boutique-container {
-  max-width: 1450px;
-  margin: 0 auto;
   background: $bg-color;
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
 
-  // Desktop
-  padding: 30px 20px;
 
   // 🔥 MOBILE: 0 Espace 3al jnab (Edge to Edge)
   @media (max-width: 768px) {

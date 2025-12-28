@@ -5,7 +5,7 @@
     "categorie": "Femme",
     "description": "Un parfum floral gourmand, inspiré par la douceur de la vie.",
     "image": "data/femmes/images/006.webp",
-    "nouveau": true,
+    "nouveau": false,
     "composition": {
       "tete": "Cassis, Poire",
       "coeur": "Iris, Jasmin, Fleur d'oranger",

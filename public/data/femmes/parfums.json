@@ -328,7 +328,7 @@
     "categorie": "Femme",
     "description": "Oriental mystérieux, sensuel et précieux.",
     "image": "data/femmes/images/047.webp",
-    "nouveau": false,
+    "nouveau": 1,
     "composition": {
       "tete": "Gingembre, Poivre, Cardamome",
       "coeur": "Fleur d'oranger, Pivoine, Gardénia",

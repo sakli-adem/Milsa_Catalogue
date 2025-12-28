@@ -2,68 +2,55 @@
   
   <div class="disclaimer-box">
     <span class="icon">⚠️</span>
-    <p>
+    <div class="text-content">
       <strong>Note Importante :</strong> Nos parfums sont de la marque <strong>Chogan</strong>. 
-      Les images et noms sont à titre indicatif pour identifier la famille olfactive (similaire à 99%). 
-      Le packaging réel est standard Chogan.<br>
+      Les images et noms sont à titre indicatif (similaire à 99%). Le packaging réel est standard Chogan.
       <small>Une confirmation téléphonique sera effectuée pour chaque commande.</small>
-    </p>
+    </div>
   </div>
 
   <div class="categories-wrapper">
-    <button 
-      (click)="chargerParfums('femmes')" 
-      [class.active]="activeCategory === 'femmes'"
-      class="cat-btn">
+    <button (click)="chargerParfums('femmes')" [class.active]="activeCategory === 'femmes'" class="cat-btn femmes">
       👩 Femmes
     </button>
-
-    <button 
-      (click)="chargerParfums('hommes')" 
-      [class.active]="activeCategory === 'hommes'"
-      class="cat-btn">
+    <button (click)="chargerParfums('hommes')" [class.active]="activeCategory === 'hommes'" class="cat-btn hommes">
       👨 Hommes
     </button>
-
-    <button 
-      (click)="chargerParfums('luxe')" 
-      [class.active]="activeCategory === 'luxe'"
-      class="cat-btn luxe">
+    <button (click)="chargerParfums('luxe')" [class.active]="activeCategory === 'luxe'" class="cat-btn luxe">
       ✨ Luxe
     </button>
   </div>
 
-<div class="products-grid">
+  <div class="products-grid">
     
-    <div *ngIf="isLoading" class="loading-msg">
-      Chargement des parfums en cours...
-    </div>
+    <div *ngIf="isLoading" class="loading-msg">Chargement...</div>
 
     <div *ngFor="let p of displayedParfums" class="product-card">
       
       <span *ngIf="p.nouveau" class="badge-new">Nouveau</span>
 
-      <div class="image-wrapper" (click)="openModal(p)" style="cursor: pointer;">
+      <div class="image-wrapper" (click)="openModal(p)">
         <img [src]="p.image" [alt]="p.nom" loading="lazy" />
       </div>
 
       <div class="card-content">
         
-        <span class="category-tag" [ngClass]="activeCategory">
-          {{ p.categorie }}
-        </span>
-        <div style="align-items: flex-start;">
-        <h3>{{ p.code }}</h3><h3>{{ p.nom }}</h3>
-        </div>
-        <p class="desc">{{ p.description.slice(0, 30) }}...</p>
-        
-        <div class="price-row">
-          <span class="price">dès {{ p.variantes[0].prix }} TND</span>
+        <div class="meta-row">
+          <span class="category-tag" [ngClass]="activeCategory">{{ p.categorie }}</span>
+          <span class="code-tag">{{ p.code }}</span>
         </div>
 
+        <h3 class="product-name" (click)="openModal(p)">{{ p.nom }}</h3>
+        
+        <p class="desc">
+          {{ p.description }} </p>
+        
+        <div class="price">{{ p.variantes[0].prix }} TND</div>
+
         <button class="add-btn" (click)="openModal(p)">
-          Voir Options 🛒
+          Ajouter au Panier 🛍️
         </button>
+
       </div>
     </div>
   </div>

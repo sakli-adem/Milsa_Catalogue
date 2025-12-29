@@ -1,40 +1,65 @@
 <div class="cart-container">
+  
+  <!-- HEADER -->
   <h1>🛒 Mon Panier</h1>
 
+  <!-- EMPTY STATE -->
   <div *ngIf="cartItems.length === 0" class="empty-cart">
     <p>Votre panier est vide pour le moment.</p>
-    <a routerLink="/boutique" class="btn-shop">Aller à la boutique</a>
+    <a routerLink="/boutique" class="btn-shop">
+      Découvrir nos parfums
+    </a>
   </div>
 
+  <!-- CART CONTENT -->
   <div *ngIf="cartItems.length > 0" class="cart-content">
     
+    <!-- ITEMS LIST -->
     <div class="cart-items">
-      <div *ngFor="let item of cartItems" class="cart-item">
+      <div *ngFor="let item of cartItems; let i = index" 
+           class="cart-item">
         
+        <!-- IMAGE -->
         <div class="item-img">
-          <img [src]="item.product.image" [alt]="item.product.nom">
+          <img [src]="item.product.image" 
+               [alt]="item.product.nom">
         </div>
 
+        <!-- INFO -->
         <div class="item-info">
           <h3>{{ item.product.nom }}</h3>
           <span class="variant-badge">{{ item.variant.volume }}</span>
           <p class="unit-price">{{ item.variant.prix }} TND / unité</p>
         </div>
 
+        <!-- QUANTITY -->
         <div class="item-qty">
-          <button (click)="decreaseQty(item)">-</button>
+          <button (click)="decreaseQty(item)" 
+                  aria-label="Diminuer">
+            −
+          </button>
           <span>{{ item.quantity }}</span>
-          <button (click)="increaseQty(item)">+</button>
+          <button (click)="increaseQty(item)" 
+                  aria-label="Augmenter">
+            +
+          </button>
         </div>
 
+        <!-- TOTAL PRICE -->
         <div class="item-total">
           {{ item.variant.prix * item.quantity }} TND
         </div>
 
-        <button class="btn-delete" (click)="removeItem(item)">🗑️</button>
+        <!-- DELETE BUTTON -->
+        <button class="btn-delete" 
+                (click)="removeItem(item)"
+                aria-label="Supprimer">
+          🗑️
+        </button>
       </div>
     </div>
 
+    <!-- SUMMARY BOX -->
     <div class="cart-summary">
       <h2>Récapitulatif</h2>
       
@@ -49,17 +74,20 @@
       </div>
       
       <div class="summary-row total">
-        <span>Total à payer</span>
+        <span>Total</span>
         <span>{{ totalPrice + 8 }} TND</span>
       </div>
 
-      <button class="btn-checkout" (click)="openCheckout()">
-        Passer la commande 👉
+      <button class="btn-checkout" 
+              (click)="openCheckout()">
+        Passer la commande 
+        <span>→</span>
       </button>
     </div>
 
   </div>
 
+  <!-- CHECKOUT MODAL -->
   <app-checkout-modal 
     *ngIf="showCheckoutModal" 
     [cartItems]="cartItems" 

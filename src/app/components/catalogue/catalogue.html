@@ -3,7 +3,7 @@
   <header class="app-header">
     <div class="logo-wrapper">
       <img ngSrc="images/logo.webp" 
-           width="200" height="200" 
+           width="140" height="140" 
            priority 
            alt="Logo Milsa" 
            class="app-logo">
@@ -13,6 +13,12 @@
     <div class="header-line"></div>
     <p class="brand-subtitle">L'essence de l'élégance en trois univers</p>
   </header>
+
+  <!-- SCROLL INDICATOR -->
+  <div class="scroll-indicator">
+    <div class="scroll-icon"></div>
+    <p class="scroll-text">Explorez</p>
+  </div>
 
   <div class="catalog-grid">
     <article 
@@ -31,10 +37,11 @@
            <span class="explore-btn">Découvrir</span>
         </div>
       </div>
-           
+
     </article>
   </div>
 
+  <!-- MODAL CAROUSEL -->
   <div class="modal-overlay" *ngIf="selectedCatalog">
     
     <button class="close-btn" (click)="closeCatalog()" aria-label="Close">✕</button>

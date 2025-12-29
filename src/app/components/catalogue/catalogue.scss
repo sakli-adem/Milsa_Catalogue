@@ -1,154 +1,242 @@
-// --- VARIABLES LUXE ---
-$bg-color: #ffffff;
-$text-primary: #1a1a1a;
-$text-secondary: #666666;
-$accent-color: #122238; // GOLD
-$overlay-bg: rgba(0, 0, 0, 0.9);
-$radius: 20px;
-$ease-pro: cubic-bezier(0.33, 1, 0.68, 1);
+// --- VARIABLES LUXE PREMIUM ---
+$bg-primary: #fefdf8;
+$bg-secondary: #f8f6f0;
+$text-primary: #2c2416;
+$text-secondary: #6b5d4f;
+$accent-gold: #c9a961;
+$accent-dark: #8b7355;
+$overlay-bg: rgba(44, 36, 22, 0.95);
+$radius: 16px;
+$ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
 
 :host {
   display: block;
   min-height: 100vh;
-  background-color: $bg-color;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, $bg-primary 0%, $bg-secondary 100%);
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
 }
 
 .main-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 80px 40px 120px;
+  
+  @media (max-width: 768px) {
+    padding: 60px 20px 100px;
+  }
 }
 
-// --- HEADER ---
+// --- HEADER REFINED ---
 .app-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, $accent-gold, transparent);
+  }
 
   .logo-wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    animation: fadeInDown 0.8s $ease-luxury;
+    
     .app-logo {
+      width: 140px;
+      height: 140px;
       object-fit: contain;
       border-radius: 50%;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+      border: 3px solid $accent-gold;
+      padding: 8px;
+      background: white;
+      box-shadow: 0 8px 32px rgba(201, 169, 97, 0.2);
     }
   }
 
   .brand-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: clamp(2.8rem, 6vw, 4.2rem);
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin: 0;
+    letter-spacing: 8px;
+    margin: 0 0 25px;
     color: $text-primary;
+    animation: fadeInUp 0.8s $ease-luxury 0.2s both;
   }
 
   .header-line {
-    width: 60px;
-    height: 3px;
-    background-color: $accent-color;
-    margin: 20px auto;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $accent-gold, transparent);
+    margin: 30px auto;
+    animation: expandWidth 1s $ease-luxury 0.4s both;
   }
 
   .brand-subtitle {
     color: $text-secondary;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-style: italic;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 1px;
+    animation: fadeInUp 0.8s $ease-luxury 0.6s both;
   }
 }
 
-// --- GRID ---
+// --- SCROLL INDICATOR ---
+.scroll-indicator {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: bounce 2s infinite;
+  
+  .scroll-icon {
+    width: 30px;
+    height: 50px;
+    border: 2px solid $accent-gold;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 auto 15px;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 10px;
+      background: $accent-gold;
+      border-radius: 2px;
+      animation: scrollDot 1.5s infinite;
+    }
+  }
+  
+  .scroll-text {
+    color: $text-secondary;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+// --- GRID COMPACT & ELEGANT ---
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
 
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 70px;
   }
 }
 
-// --- CARD STYLE ---
+// --- CARD PREMIUM ---
 .catalog-card {
   cursor: pointer;
+  animation: fadeInUp 0.6s $ease-luxury both;
+  
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.15}s;
+    }
+  }
   
   .image-wrapper {
     position: relative;
     aspect-ratio: 3/4;
     overflow: hidden;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #f5f3ed 0%, #e8e4da 100%);
     border-radius: $radius;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+    border: 1px solid rgba(201, 169, 97, 0.2);
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.7s $ease-pro;
+      transition: all 0.8s $ease-luxury;
+      filter: grayscale(5%) contrast(1.05);
     }
 
     .card-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.2);
-      opacity: 1;
+      background: linear-gradient(to top, rgba(44,36,22,0.85), transparent 60%);
+      opacity: 0;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
-      transition: opacity 0.4s ease;
+      padding-bottom: 50px;
+      transition: opacity 0.5s ease;
 
       .explore-btn {
-        background: $accent-color; // <--- HETHI TSAL7ET (kenet $create-color)
-        color: white;
-        border: 2px solid white;
-        padding: 10px 24px;
+        background: $accent-gold;
+        color: $text-primary;
+        border: 2px solid rgba(255,255,255,0.8);
+        padding: 14px 35px;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.8rem;
-        transform: translateY(20px);
-        transition: transform 0.4s $ease-pro;
-        backdrop-filter: blur(4px);
+        letter-spacing: 3px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        border-radius: 30px;
+        transform: translateY(30px);
+        opacity: 0;
+        transition: all 0.5s $ease-luxury;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       }
     }
   }
 
   .card-info {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 25px;
 
     h3 {
-      font-size: 1.4rem;
-      margin: 0;
+      font-size: 1.6rem;
+      margin: 0 0 8px;
       font-weight: 400;
       color: $text-primary;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      transition: color 0.3s ease;
     }
 
     p {
-      color: $accent-color;
-      font-size: 0.9rem;
-      margin-top: 5px;
-      font-weight: 600;
+      color: $accent-dark;
+      font-size: 0.95rem;
+      margin: 0;
+      font-weight: 500;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: 1px;
     }
   }
 
-  // HOVER EFFECT
   &:hover {
     .image-wrapper {
-      img { transform: scale(1.1); }
-      .card-overlay { opacity: 1; }
-      .explore-btn { transform: translateY(0); }
+      img { 
+        transform: scale(1.08);
+        filter: grayscale(0%) contrast(1.1);
+      }
+      .card-overlay { 
+        opacity: 1;
+        .explore-btn { 
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
     }
+    .card-info h3 { color: $accent-gold; }
   }
 }
 
-// --- MODAL / CAROUSEL ---
+// --- MODAL PREMIUM ---
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -157,23 +245,41 @@ $ease-pro: cubic-bezier(0.33, 1, 0.68, 1);
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
   animation: fadeIn 0.4s ease;
 }
 
 .close-btn {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 2.5rem;
+  top: 40px;
+  right: 40px;
+  background: rgba(201, 169, 97, 0.15);
+  border: 2px solid rgba(201, 169, 97, 0.4);
+  color: $accent-gold;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 1.8rem;
   cursor: pointer;
   z-index: 2001;
-  transition: transform 0.3s;
+  transition: all 0.3s $ease-luxury;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
-  &:hover { transform: rotate(90deg); color: $accent-color; }
+  &:hover { 
+    background: $accent-gold;
+    color: $text-primary;
+    transform: rotate(90deg) scale(1.1);
+    border-color: $accent-gold;
+  }
+
+  @media (max-width: 768px) {
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
 }
 
 .carousel-content {
@@ -181,77 +287,130 @@ $ease-pro: cubic-bezier(0.33, 1, 0.68, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; // <--- ZID HETHI (Tchadded l boutons)
+  position: relative;
+  padding: 0 120px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 }
+
 .slide-display {
   position: relative;
-  max-width: 90%;
+  max-width: 85%;
   
   img {
-    max-height: 80vh;
+    max-height: 82vh;
     max-width: 100%;
     object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    border: 3px solid rgba(201, 169, 97, 0.3);
   }
 
   .slide-counter {
     position: absolute;
-    bottom: -40px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
-    color: #888;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
+    color: $accent-gold;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 300;
   }
 }
 
-// --- NAVIGATION BUTTONS ---
-// --- NAVIGATION BUTTONS ---
+// --- NAVIGATION BUTTONS PREMIUM ---
 .nav-btn {
-  // --- STYLE PC (Desktop) ---
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  width: 60px;
-  height: 60px;
+  background: rgba(201, 169, 97, 0.2);
+  border: 2px solid rgba(201, 169, 97, 0.5);
+  color: $accent-gold;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   cursor: pointer;
   z-index: 2010;
-  transition: all 0.3s;
+  transition: all 0.4s $ease-luxury;
+  backdrop-filter: blur(8px);
   
-  // --- HETHI L PARTIE ELLI KENET NAQSA FIL PC ---
-  &.prev { left: 40px; }   // 40px 3al lisar
-  &.next { right: 40px; }  // 40px 3al limin
-  // ----------------------------------------------
+  &.prev { left: 50px; }
+  &.next { right: 50px; }
 
   &:hover {
-    background: $accent-color;
-    color: black;
-    border-color: $accent-color;
-    transform: translateY(-50%) scale(1.1);
+    background: $accent-gold;
+    color: $text-primary;
+    border-color: $accent-gold;
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 8px 25px rgba(201, 169, 97, 0.4);
   }
 
-  // --- STYLE MOBILE (TLP) ---
   @media (max-width: 768px) {
-    width: 50px; 
+    width: 50px;
     height: 50px;
-    font-size: 1.2rem;
-    background: rgba(0, 0, 0, 0.7); 
-    border: 1px solid rgba(255, 255, 255, 0.5); 
-    color: white;
+    font-size: 1.3rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-color: rgba(201, 169, 97, 0.6);
     
-    // Houni deja enti mrigelhom
-    &.prev { left: 10px; }
-    &.next { right: 10px; }
+    &.prev { left: 15px; }
+    &.next { right: 15px; }
 
     &:active {
-      background: $accent-color;
-      color: black;
+      background: $accent-gold;
+      color: $text-primary;
     }
+  }
+}
+
+// --- ANIMATIONS ---
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 100px; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes scrollDot {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
   }
 }

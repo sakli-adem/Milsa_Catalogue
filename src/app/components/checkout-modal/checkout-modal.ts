@@ -49,7 +49,7 @@ export class CheckoutModalComponent {
       email: this.formData.email || 'Non fourni',
       address: this.formData.adresse,
       order_details: orderDetails,
-      total_price: this.totalPrice + 7 
+      total_price: this.totalPrice + 8
     };
 
  

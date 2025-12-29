@@ -4,6 +4,7 @@ import { CatalogueComponent } from '../../components/catalogue/catalogue';
 import { ContenuCommande } from '../../components/contenu-commande/contenu-commande';
 import { AproposParfumsComponent } from '../../components/apropos-parfums/apropos-parfums';
 import { ContactComponent } from '../../components/contact/contact';
+
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -34,15 +35,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }, 100);
   }
 
-  private checkScroll() {
-    const url = this.router.url; // Nchoufou l lien chnowa fih
+private checkScroll() {
+    const url = this.router.url;
 
     if (url.includes('/apropos')) {
       this.scrollTo('apropos');
     } else if (url.includes('/contact')) {
       this.scrollTo('contact');
-    } else {
-      // Kanou home 3adi, natl3ou lfou9
+    } 
+    // 3. 🔥 ZID EL CONDITION HETHI
+    else if (url.includes('/contenu-commande')) {
+      this.scrollTo('contenu-commande');
+    } 
+    else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
@@ -51,7 +56,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   private scrollTo(id: string) {
     const element = document.getElementById(id);
     if (element) {
-      // Nzidou offset sghir 3la 5ater navbar fixe (100px)
       const headerOffset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;

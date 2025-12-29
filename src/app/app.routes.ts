@@ -4,6 +4,7 @@ import { BoutiqueComponent } from './pages/boutique/boutique';
 // Import Jdid
 import { PanierComponent } from './pages/panier/panier';
 
+
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'boutique', component: BoutiqueComponent },
@@ -11,6 +12,6 @@ export const routes: Routes = [
   { path: 'contact', component: HomeComponent },
   // Route Panier
   { path: 'panier', component: PanierComponent },
-
+  { path: 'contenu-commande', component: HomeComponent },
   { path: '**', redirectTo: '' }
 ];

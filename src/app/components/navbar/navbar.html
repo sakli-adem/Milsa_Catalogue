@@ -12,12 +12,16 @@
     <a routerLink="/boutique" class="nav-link" routerLinkActive="active-link">
       <span class="icon">🛍️</span> Boutique
     </a>
-    <a (click)="scrollToSection('apropos')" class="nav-link" style="cursor: pointer;">
-      <span class="icon">⚜️</span> À propos
-    </a>
-    <a (click)="scrollToSection('contact')" class="nav-link" style="cursor: pointer;">
-      <span class="icon">✉️</span> Contact
-    </a>
+    
+<a routerLink="/apropos" class="nav-link" routerLinkActive="active-link">
+  <span class="icon">⚜️</span> À propos
+</a>
+
+<a routerLink="/contact" class="nav-link" routerLinkActive="active-link">
+  <span class="icon">✉️</span> Contact
+</a>
+
+
   </div>
 
   <div class="navbar-extras desktop-only">

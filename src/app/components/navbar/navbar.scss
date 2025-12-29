@@ -71,7 +71,9 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
       gap: 8px;
 
       .icon {
-        font-size: 1.1rem;
+        width: 20px; 
+        height: 20px;
+        stroke-width: 1.5; // Finesse du trait (plus élégant)
         transition: transform 0.3s ease;
       }
 
@@ -89,7 +91,10 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
 
       &:hover, &.active-link {
         color: $accent-color;
-        .icon { transform: scale(1.15); }
+        .icon {
+          transform: scale(1.1); // Zoom léger
+          stroke: $accent-color; // Changement de couleur au survol
+        }
         &::after { width: 100%; }
       }
     }
@@ -275,30 +280,34 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1001;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
+    align-items: center;     // Center Horizontal
+    justify-content: center; // 🔥 Center Vertical (Hethi l mouhma)
+    padding-top: 0;          // 🔥 Na77ina l 100px bech yji fel west
     gap: 2rem;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-20px);
-    transition: all 0.4s ease-in-out;
+    transform: scale(0.95);  // Effect zoom sghir a7la men translate
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &.open {
       opacity: 1;
       visibility: visible;
-      transform: translateY(0);
+      transform: scale(1);
     }
 
     .mobile-content {
       width: 85%;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 2rem; // Espace akber chwaya bin les liens
       text-align: center;
+      max-height: 80vh; // 🔥 Limiter l'hauteur pour eviter problemes d'affichage sur petits ecrans
+      overflow-y: auto; // 🔥 Scroll si le contenu depasse
+      // margin: auto; // (Optionnel mademna 3malna justify-center lfo9)
     }
 
-    .mobile-link {
-      font-size: 1.4rem;
+.mobile-link {
+      font-size: 1.3rem; // Na9asna chwaya fel taille
       font-weight: 600;
       color: $text-color;
       text-decoration: none;
@@ -307,85 +316,92 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
       transition: 0.3s;
       display: flex; align-items: center; justify-content: center; gap: 12px;
 
-      &:hover {
+      // 🔥🔥 ICONES MOBILE 🔥🔥
+      svg.icon {
+        width: 28px !important; // Chwaya akber mel desktop bech ybanou
+        height: 28px !important;
+      }
+
+      &:hover, &.active-mobile { // Zid active-mobile houni
         color: $accent-color;
         letter-spacing: 2px;
+        svg.icon { stroke: $accent-color; }
       }
     }
 
     // Mobile Search Wrapper
-.mobile-search-wrapper {
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  position: relative; // ⚠️ Mouhem barcha bech l liste tji ta7tou
-  z-index: 1005;     // Fou9 kol chay
-
-  input {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: $radius;
-    outline: none;
-    font-size: 1rem;
-    &:focus { border-color: $accent-color; }
-  }
-  
-  .search-btn {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    height: 38px; width: 38px;
-    background: $text-color;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 2; // Fou9 l input
-  }
-
-  // 🔥 STYLE LISTE MOBILE SPECIFIQUE
-  .autocomplete-list.mobile-list {
-    position: absolute;
-    top: 105%; // Ta7t l input
-    left: 0;
-    width: 100%;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2); // Dholl 9wi
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    border: 1px solid #eee;
-    z-index: 999;
-    text-align: left; // Rajja3 ktiba 3alisar (khatr menu mobile centré)
-
-    li {
+    .mobile-search-wrapper {
+      width: 100%;
+      margin-top: 20px;
       display: flex;
-      align-items: center;
-      padding: 12px 15px;
-      border-bottom: 1px solid #f5f5f5;
-      background: white; // Assure fond blanc
-      
-      &:last-child { border-bottom: none; }
+      position: relative; // ⚠️ Mouhem barcha bech l liste tji ta7tou
+      z-index: 1005;     // Fou9 kol chay
 
-      .mini-img {
-        width: 40px; height: 40px;
-        object-fit: contain;
-        background: #f8f8f8;
-        border-radius: 8px;
-        margin-right: 15px;
+      input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: $radius;
+        outline: none;
+        font-size: 1rem;
+        &:focus { border-color: $accent-color; }
+      }
+      
+      .search-btn {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 38px; width: 38px;
+        background: $text-color;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 2; // Fou9 l input
       }
 
-      .info {
-        display: flex; flex-direction: column;
-        .name { font-weight: bold; color: #333; font-size: 0.95rem; }
-        .code { color: #888; font-size: 0.8rem; }
+      // 🔥 STYLE LISTE MOBILE SPECIFIQUE
+      .autocomplete-list.mobile-list {
+        position: absolute;
+        top: 105%; // Ta7t l input
+        left: 0;
+        width: 100%;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2); // Dholl 9wi
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid #eee;
+        z-index: 999;
+        text-align: left; // Rajja3 ktiba 3alisar (khatr menu mobile centré)
+
+        li {
+          display: flex;
+          align-items: center;
+          padding: 12px 15px;
+          border-bottom: 1px solid #f5f5f5;
+          background: white; // Assure fond blanc
+          
+          &:last-child { border-bottom: none; }
+
+          .mini-img {
+            width: 40px; height: 40px;
+            object-fit: contain;
+            background: #f8f8f8;
+            border-radius: 8px;
+            margin-right: 15px;
+          }
+
+          .info {
+            display: flex; flex-direction: column;
+            .name { font-weight: bold; color: #333; font-size: 0.95rem; }
+            .code { color: #888; font-size: 0.8rem; }
+          }
+        }
       }
     }
-  }
-}
     
     .mobile-cart {
       width: 100%;

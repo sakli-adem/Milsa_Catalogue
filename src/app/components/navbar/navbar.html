@@ -6,70 +6,109 @@
   </div>
 
   <div class="navbar-links desktop-only">
-    <a routerLink="/" class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
-      <span class="icon">🏠</span> Accueil
+    <a routerLink="/" 
+       class="nav-link" 
+       routerLinkActive="active-link" 
+       [routerLinkActiveOptions]="{exact: true}">
+      <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+      Accueil
     </a>
+
     <a routerLink="/boutique" class="nav-link" routerLinkActive="active-link">
-      <span class="icon">🛍️</span> Boutique
+      <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+      </svg>
+      Boutique
     </a>
+
     <a routerLink="/apropos" class="nav-link" routerLinkActive="active-link">
-      <span class="icon">⚜️</span> À propos
+      <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      À propos
     </a>
+
     <a routerLink="/contact" class="nav-link" routerLinkActive="active-link">
-      <span class="icon">✉️</span> Contact
+      <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+      Contact
+    </a>
+
+    <a routerLink="/contenu-commande" class="nav-link" routerLinkActive="active-link">
+      <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+      </svg>
+      Mon Colis
     </a>
   </div>
 
   <div class="navbar-extras desktop-only">
-    
     <div class="navbar-search">
       <div class="search-input-wrapper">
-        <input type="text" 
-               placeholder="Rechercher..." 
-               [(ngModel)]="searchTerm"
-               (input)="onSearchInput()"
-               (keyup.enter)="onSearchSubmit()"
-               autocomplete="off" />
-        
-        <button class="search-btn" (click)="onSearchSubmit()">🔍</button>
-
+        <input type="text" placeholder="Rechercher..." [(ngModel)]="searchTerm" (input)="onSearchInput()" (keyup.enter)="onSearchSubmit()" autocomplete="off" />
+        <button class="search-btn" (click)="onSearchSubmit()">
+           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        </button>
         <ul class="autocomplete-list" *ngIf="showSuggestions && suggestions.length > 0">
           <li *ngFor="let s of suggestions" (click)="selectSuggestion(s)">
             <img [src]="s.image" alt="ico" class="mini-img">
-            <div class="info">
-              <span class="name">{{ s.nom }}</span>
-              <span class="code">{{ s.code }}</span>
-            </div>
+            <div class="info"><span class="name">{{ s.nom }}</span><span class="code">{{ s.code }}</span></div>
           </li>
         </ul>
       </div>
     </div>
-
     <button class="cart-btn" routerLink="/panier">
-      🛒 <span class="badge">{{ cartItemCount }}</span>
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+      <span class="badge">{{ cartItemCount }}</span>
     </button>
   </div>
 
   <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
   </button>
 
   <div class="navbar-menu" [class.open]="isMenuOpen">
     <div class="mobile-content">
       
-      <a routerLink="/" class="nav-link mobile-link" routerLinkActive="active-mobile">
-        <span class="icon">🏠</span> Accueil
+      <a routerLink="/" 
+         class="nav-link mobile-link" 
+         routerLinkActive="active-mobile" 
+         [routerLinkActiveOptions]="{exact: true}">
+        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+        Accueil
       </a>
+
       <a routerLink="/boutique" class="nav-link mobile-link" routerLinkActive="active-mobile">
-        <span class="icon">🛍️</span> Boutique
+        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        Boutique
       </a>
+
       <a routerLink="/apropos" class="nav-link mobile-link" routerLinkActive="active-mobile">
-        <span class="icon">⚜️</span> À propos
+        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        À propos
       </a>
+
       <a routerLink="/contact" class="nav-link mobile-link" routerLinkActive="active-mobile">
-        <span class="icon">✉️</span> Contact
+        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Contact
+      </a>
+
+      <a routerLink="/contenu-commande" class="nav-link mobile-link" routerLinkActive="active-mobile">
+        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        </svg>
+        Mon Colis
       </a>
 
       <button class="cart-btn mobile-cart" routerLink="/panier">
@@ -77,26 +116,15 @@
       </button>
       
       <div class="mobile-search-wrapper">
-        <input type="text" 
-               placeholder="Rechercher un parfum..." 
-               [(ngModel)]="searchTerm"
-               (input)="onSearchInput()"
-               (keyup.enter)="onSearchSubmit()" />
-        
-        <button class="search-btn" (click)="onSearchSubmit()">🔍</button>
-
+        <input type="text" placeholder="Rechercher..." [(ngModel)]="searchTerm" (input)="onSearchInput()" (keyup.enter)="onSearchSubmit()" />
+        <button class="search-btn" (click)="onSearchSubmit()"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></button>
         <ul class="autocomplete-list mobile-list" *ngIf="showSuggestions && suggestions.length > 0">
           <li *ngFor="let s of suggestions" (click)="selectSuggestion(s)">
             <img [src]="s.image" alt="ico" class="mini-img">
-            <div class="info">
-              <span class="name">{{ s.nom }}</span>
-              <span class="code">{{ s.code }}</span>
-            </div>
+            <div class="info"><span class="name">{{ s.nom }}</span><span class="code">{{ s.code }}</span></div>
           </li>
         </ul>
       </div>
-
     </div>
   </div>
-
 </nav>

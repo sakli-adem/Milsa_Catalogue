@@ -8,7 +8,54 @@ $accent-dark: #8b7355;
 $overlay-bg: rgba(44, 36, 22, 0.95);
 $radius: 16px;
 $ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+// --- BOUTIQUE ACTION SECTION (NEW) ---
+.boutique-action {
+  text-align: center;
+  margin-top: 80px; // Espace kbir binou w bin les cartes
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s $ease-luxury 0.8s both; // Animation d'apparition
 
+  .btn-boutique {
+    display: inline-block;
+    background: $accent-gold; // Nafs couleur les autres boutons
+    color: $text-primary;     // Ecriture noir/marron foncé
+    padding: 18px 50px;       // Kbir w Wase3
+    font-family: 'Cormorant Garamond', serif; // Police Luxe
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 2px solid $accent-gold;
+    border-radius: 50px;      // Mdawar (Pill shape)
+    cursor: pointer;
+    transition: all 0.4s $ease-luxury;
+    box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3); // Dholl Doré
+    position: relative;
+    overflow: hidden;
+
+    // Hover Effect (Luxe)
+    &:hover {
+      background: $text-primary; // Ywalli Noir
+      border-color: $text-primary;
+      color: $accent-gold;       // Ecriture Doré
+      transform: translateY(-5px); // Yatla3 l fou9
+      box-shadow: 0 20px 40px rgba(44, 36, 22, 0.4); // Dholl yzid ya9wa
+    }
+
+    // Active Effect (Click)
+    &:active {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(44, 36, 22, 0.4);
+    }
+
+    // Mobile adjustment
+    @media (max-width: 768px) {
+      width: 80%; // 3ridh fel mobile
+      padding: 15px 30px;
+      font-size: 1rem;
+    }
+  }
+}
 :host {
   display: block;
   min-height: 100vh;

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Catalog } from '../../catalog.model'; 
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-catalogue',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage, RouterLink],
   templateUrl: './catalogue.html',  // Thabet elli esm fichier html hakka
   styleUrl: './catalogue.scss'      // Thabet elli esm fichier scss hakka
 })

@@ -19,12 +19,12 @@ export class BoutiqueComponent implements OnInit {
   
   categoryList: Parfum[] = []; 
   globalList: Parfum[] = [];   
-  parfums: Parfum[] = []; // Liste filtrée KAMLA (ex: 50 parfums)
+  parfums: Parfum[] = [];
   
-  // 🔥 VARIABLES OPTIMISATION 🔥
-  displayedParfums: Parfum[] = []; // Liste elli tban fel Ecran (ex: 8, mba3d 16...)
-  itemsToShow = 6; // Bdech nebda
-  batchSize = 6;   // B9adeh nzid
+  // 🔥 VARIABLES OPTIMISATION
+  displayedParfums: Parfum[] = [];
+  itemsToShow = 6;
+  batchSize = 6;
   
   activeCategory: 'femmes' | 'hommes' | 'luxe' = 'femmes';
   isLoading = false;
@@ -56,25 +56,32 @@ export class BoutiqueComponent implements OnInit {
   }
 
   // --- SCROLL EVENT LISTENER ---
-  // Hethi tfi9 bik ki t9arreb lel 9a3a mta3 page
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // Nchoufou position scroll
     const pos = (document.documentElement.scrollTop || document.body.scrollTop) + window.innerHeight;
     const max = document.documentElement.scrollHeight;
 
-    // Ken wsolna 9rib lel 9a3a (b9ina 100px par exemple)
     if (pos >= max - 200) {
       this.loadMore();
     }
   }
 
-  // Zid 8 produits jdod
+  // 🔥 1. LISTENER BOUTON RETOUR (Mobile)
+  // Hetha yasma3 ki tenzel Retour fi telephone
+  @HostListener('window:popstate', ['$event'])
+  onPopState(event: any) {
+    // Ken l modal ma7loula
+    if (this.selectedProduct) {
+      // Sakkerha direct (bla ma tarja3 page lteli, khater deja sar retour)
+      this.selectedProduct = null;
+      document.body.style.overflow = 'auto';
+    }
+  }
+
   loadMore() {
-    // Ken mazal famma ma nzidou
     if (this.displayedParfums.length < this.parfums.length) {
-      this.itemsToShow += this.batchSize; // Zid 8 fel compteur
-      this.updateDisplayedList(); // Mise à jour l affichage
+      this.itemsToShow += this.batchSize;
+      this.updateDisplayedList();
     }
   }
 
@@ -98,7 +105,6 @@ export class BoutiqueComponent implements OnInit {
   }
 
   applyFilter() {
-    // 1. Reset Compteur (Dima narj3ou l 8 ki nbadlou filtre)
     this.itemsToShow = this.batchSize;
 
     if (this.currentSearchTerm && this.currentSearchTerm.trim() !== '') {
@@ -108,7 +114,6 @@ export class BoutiqueComponent implements OnInit {
         p.code.toLowerCase().includes(term)
       );
 
-      // Auto-switch visual logic
       if (this.parfums.length > 0) {
         const firstMatch = this.parfums[0];
         if (firstMatch.categorie === 'Homme') this.activeCategory = 'hommes';
@@ -119,23 +124,32 @@ export class BoutiqueComponent implements OnInit {
       this.parfums = [...this.categoryList];
     }
 
-    // 🔥 A jour l'affichage initial
     this.updateDisplayedList();
   }
 
-  // Hethi ta9sam lista l kbira w ta3ti chwaya lel ecran
   updateDisplayedList() {
     this.displayedParfums = this.parfums.slice(0, this.itemsToShow);
   }
 
+  // 🔥 2. OPEN MODAL (Avec Historique)
   openModal(product: Parfum) {
     this.selectedProduct = product;
     document.body.style.overflow = 'hidden'; 
+    
+    // Zidna hethi: N9oulo lel browser "rani 3malt action"
+    // Bech ki tenzel retour, yarja3 etape lteli (fassa5 hethi) w ydeclanchi onPopState
+    window.history.pushState({ modal: true }, '', window.location.href);
   }
 
+  // 🔥 3. CLOSE MODAL (Avec nettoyage Historique)
   closeModal() {
-    this.selectedProduct = null;
-    document.body.style.overflow = 'auto'; 
+    // Nthabtou sa3a elli hiya ma7loula
+    if (this.selectedProduct) {
+      this.selectedProduct = null;
+      document.body.style.overflow = 'auto'; 
+
+      window.history.back();
+    }
   }
 
   handleAddToCart(event: any) {

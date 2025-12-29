@@ -38,7 +38,7 @@
         </div>
 
         <!-- TÉLÉPHONE -->
-        <div class="form-group">
+<div class="form-group">
           <label for="telephone">Numéro de téléphone *</label>
           <input 
             type="tel" 
@@ -46,8 +46,17 @@
             [(ngModel)]="formData.telephone" 
             name="telephone" 
             required 
-            placeholder="Ex: 22 123 456"
+            minlength="8" 
+            maxlength="8" 
+            pattern="[0-9]{8}"
+            inputmode="numeric"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            placeholder="Ex: 22123456"
             autocomplete="tel">
+            
+            <div *ngIf="formData.telephone && formData.telephone.length !== 8" style="color: red; font-size: 0.8rem; margin-top: 5px;">
+               Le numéro doit contenir exactement 8 chiffres.
+            </div>
         </div>
 
         <!-- ADRESSE -->

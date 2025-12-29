@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { CartService } from '../../services/cart.service';
@@ -28,6 +28,17 @@ export class PanierComponent implements OnInit {
     });
   }
 
+  // 🔥 1. LISTENER RETOUR MOBILE
+  // Hetha yasma3 ki tenzel Retour fi telephone
+  @HostListener('window:popstate', ['$event'])
+  onPopState(event: any) {
+    if (this.showCheckoutModal) {
+      // Sakker modal w rajja3 scroll
+      this.showCheckoutModal = false;
+      document.body.style.overflow = 'auto';
+    }
+  }
+
   calculateTotal() {
     this.totalPrice = this.cartItems.reduce((acc, item) => acc + (item.variant.prix * item.quantity), 0);
   }
@@ -44,16 +55,35 @@ export class PanierComponent implements OnInit {
     this.cartService.removeFromCart(item);
   }
 
+  // 🔥 2. OPEN MODAL (Avec Historique)
   openCheckout() {
     if (this.cartItems.length > 0) {
       this.showCheckoutModal = true;
+      document.body.style.overflow = 'hidden';
+      
+      // Nzidou etape fictive fel historique
+      window.history.pushState({ modal: true }, '', window.location.href);
     }
   }
 
+  // 🔥 3. CLOSE MODAL MANUEL (Ki tenzel X)
+  closeCheckout() {
+    if (this.showCheckoutModal) {
+      this.showCheckoutModal = false;
+      document.body.style.overflow = 'auto';
+      
+      // Nraj3ou l historique etape lteli (clean up)
+      window.history.back();
+    }
+  }
 
+  // 🔥 4. SUCCESS ORDER
   onOrderSuccess() {
     this.cartService.clearCart();   
-    this.showCheckoutModal = false; 
-
+    if (this.showCheckoutModal) {
+        this.showCheckoutModal = false;
+        document.body.style.overflow = 'auto';
+        window.history.back();
+    }
   }
 }

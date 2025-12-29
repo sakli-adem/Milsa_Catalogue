@@ -156,4 +156,11 @@ export class BoutiqueComponent implements OnInit {
     this.cartService.addToCart(event);
     this.closeModal();
   }
+
+
+
+clearSearch() {
+    this.parfumService.updateSearchTerm(''); // Hethi tfarragh service + navbar
+    // El reste (applyFilter etc.) يصير وحدو خاطرنا عاملين subscribe
+  }
 }

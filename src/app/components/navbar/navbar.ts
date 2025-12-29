@@ -18,17 +18,17 @@ import { Parfum } from '../../models/parfum.model';
 })
 export class NavbarComponent implements OnInit {
 
-  // Injections (Nouvelle syntaxe Angular 16+)
+
   private router = inject(Router);
   private cartService = inject(CartService);
   private parfumService = inject(ParfumService);
 
-  // Variables UI
+
   isMenuOpen = false;
   isScrolled = false;
   cartItemCount = 0;
 
-  // Variables Recherche
+
   searchTerm: string = '';
   allProducts: Parfum[] = [];
   suggestions: Parfum[] = [];
@@ -51,6 +51,11 @@ export class NavbarComponent implements OnInit {
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
       this.closeMenu();
+    });
+
+    // Kif Boutique yfassa5 el recherche, hetha yfi9 w yfarragh el input
+    this.parfumService.search$.subscribe(term => {
+      this.searchTerm = term; 
     });
   }
 

@@ -20,7 +20,20 @@
       ✨ Luxe
     </button>
   </div>
+<div *ngIf="currentSearchTerm && currentSearchTerm.trim() !== ''" 
+       style="display: flex; justify-content: center; align-items: center; gap: 15px; margin: 20px 0; background: #f9f9f9; padding: 10px; border-radius: 8px;">
+    
+    <h3 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: 500;">
+      Résultats de recherche pour <strong style="color: #d4af37;">"{{ currentSearchTerm }}"</strong>
+    </h3>
 
+    <button (click)="clearSearch()" 
+            style="background: #e74c3c; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; transition: 0.2s;"
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'">
+      ✕
+    </button>
+  </div>
   <div class="products-grid">
     
     <div *ngIf="isLoading" class="loading-msg">Chargement...</div>

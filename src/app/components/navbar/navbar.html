@@ -1,7 +1,7 @@
 <nav class="navbar" [class.scrolled]="isScrolled">
   
   <div class="navbar-brand" routerLink="/" style="cursor: pointer;">
-    <img src="images/logo.webp" alt="Logo" class="logo" />
+    <img src="images/logo.webp" alt="Logo Milsa" class="logo" />
     <span class="brand-name">MilSa</span>
   </div>
 
@@ -12,16 +12,12 @@
     <a routerLink="/boutique" class="nav-link" routerLinkActive="active-link">
       <span class="icon">🛍️</span> Boutique
     </a>
-    
-<a routerLink="/apropos" class="nav-link" routerLinkActive="active-link">
-  <span class="icon">⚜️</span> À propos
-</a>
-
-<a routerLink="/contact" class="nav-link" routerLinkActive="active-link">
-  <span class="icon">✉️</span> Contact
-</a>
-
-
+    <a routerLink="/apropos" class="nav-link" routerLinkActive="active-link">
+      <span class="icon">⚜️</span> À propos
+    </a>
+    <a routerLink="/contact" class="nav-link" routerLinkActive="active-link">
+      <span class="icon">✉️</span> Contact
+    </a>
   </div>
 
   <div class="navbar-extras desktop-only">
@@ -54,7 +50,7 @@
     </button>
   </div>
 
-  <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+  <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Menu">
     <span class="bar"></span>
     <span class="bar"></span>
     <span class="bar"></span>
@@ -63,19 +59,20 @@
   <div class="navbar-menu" [class.open]="isMenuOpen">
     <div class="mobile-content">
       
-      <a routerLink="/" (click)="toggleMenu()" class="nav-link mobile-link">
+      <a routerLink="/" class="nav-link mobile-link" routerLinkActive="active-mobile">
         <span class="icon">🏠</span> Accueil
       </a>
-      <a routerLink="/boutique" (click)="toggleMenu()" class="nav-link mobile-link">
+      <a routerLink="/boutique" class="nav-link mobile-link" routerLinkActive="active-mobile">
         <span class="icon">🛍️</span> Boutique
       </a>
-      <a (click)="scrollToSection('apropos'); toggleMenu()" class="nav-link mobile-link">
+      <a routerLink="/apropos" class="nav-link mobile-link" routerLinkActive="active-mobile">
         <span class="icon">⚜️</span> À propos
       </a>
-      <a (click)="scrollToSection('contact'); toggleMenu()" class="nav-link mobile-link">
+      <a routerLink="/contact" class="nav-link mobile-link" routerLinkActive="active-mobile">
         <span class="icon">✉️</span> Contact
       </a>
-      <button class="cart-btn mobile-cart" routerLink="/panier" (click)="toggleMenu()">
+
+      <button class="cart-btn mobile-cart" routerLink="/panier">
         Mon Panier ({{ cartItemCount }}) 🛒
       </button>
       
@@ -84,12 +81,12 @@
                placeholder="Rechercher un parfum..." 
                [(ngModel)]="searchTerm"
                (input)="onSearchInput()"
-               (keyup.enter)="onSearchSubmit(); toggleMenu()" />
+               (keyup.enter)="onSearchSubmit()" />
         
-        <button class="search-btn" (click)="onSearchSubmit(); toggleMenu()">🔍</button>
+        <button class="search-btn" (click)="onSearchSubmit()">🔍</button>
 
         <ul class="autocomplete-list mobile-list" *ngIf="showSuggestions && suggestions.length > 0">
-          <li *ngFor="let s of suggestions" (click)="selectSuggestion(s); toggleMenu()">
+          <li *ngFor="let s of suggestions" (click)="selectSuggestion(s)">
             <img [src]="s.image" alt="ico" class="mini-img">
             <div class="info">
               <span class="name">{{ s.nom }}</span>
@@ -98,7 +95,6 @@
           </li>
         </ul>
       </div>
-
 
     </div>
   </div>

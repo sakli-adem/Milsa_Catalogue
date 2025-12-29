@@ -1,9 +1,10 @@
 import { Component, HostListener, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive, Router } from '@angular/router';
+import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { filter } from 'rxjs/operators';
 
-// Services & Models
+// Services & Models (Assurez-vous que les chemins sont corrects)
 import { CartService } from '../../services/cart.service';
 import { ParfumService } from '../../services/parfum.service';
 import { Parfum } from '../../models/parfum.model';
@@ -11,20 +12,22 @@ import { Parfum } from '../../models/parfum.model';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive, FormsModule], 
-  templateUrl: './navbar.html',
-  styleUrl: './navbar.scss'
+  imports: [CommonModule, RouterLink, RouterLinkActive, FormsModule],
+  templateUrl: './navbar.html', // Thabbet esm fichier html
+  styleUrls: ['./navbar.scss']   // Thabbet esm fichier scss
 })
 export class NavbarComponent implements OnInit {
-  
+
+  // Injections (Nouvelle syntaxe Angular 16+)
   private router = inject(Router);
   private cartService = inject(CartService);
   private parfumService = inject(ParfumService);
 
+  // Variables UI
   isMenuOpen = false;
   isScrolled = false;
   cartItemCount = 0;
-  
+
   // Variables Recherche
   searchTerm: string = '';
   allProducts: Parfum[] = [];
@@ -32,18 +35,41 @@ export class NavbarComponent implements OnInit {
   showSuggestions = false;
 
   ngOnInit() {
-    // 1. Panier
+    // 1. Abonnement au Panier
     this.cartService.cartItems$.subscribe(items => {
       this.cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
     });
 
-    // 2. Charger Stock Global pour Autocomplete
+    // 2. Charger les parfums pour l'Autocomplete
     this.parfumService.getAllParfumsCombined().subscribe(data => {
       this.allProducts = data;
     });
+
+    // 🔥 3. SOLUTION PRO: Fermer le menu automatiquement après chaque navigation
+    // Hetha yasma3 el Router, dès que page tetbaddel (wala lien Apropos), ysakker menu
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.closeMenu();
+    });
   }
 
-  // Quand on écrit dans l'input
+  // --- LOGIQUE MENU MOBILE ---
+  
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+    // Bloquer le scroll quand le menu est ouvert
+    document.body.style.overflow = this.isMenuOpen ? 'hidden' : 'auto';
+  }
+
+  // Fonction spécifique pour fermer (utilisée par le Router event)
+  closeMenu(): void {
+    this.isMenuOpen = false;
+    document.body.style.overflow = 'auto'; // Rrajja3 scroll
+  }
+
+  // --- LOGIQUE RECHERCHE ---
+
   onSearchInput() {
     this.parfumService.updateSearchTerm(this.searchTerm);
 
@@ -52,7 +78,7 @@ export class NavbarComponent implements OnInit {
       this.suggestions = this.allProducts.filter(p => 
         p.nom.toLowerCase().includes(term) || 
         p.code.toLowerCase().includes(term)
-      ).slice(0, 5); // Max 5 résultats
+      ).slice(0, 5); // Max 5 suggestions
       this.showSuggestions = true;
     } else {
       this.suggestions = [];
@@ -60,60 +86,38 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  // 🔥 CLICK SUR SUGGESTION (C'est ici que ça se passe)
+  // Click sur une suggestion
   selectSuggestion(parfum: Parfum) {
-    this.searchTerm = parfum.nom; 
-    this.showSuggestions = false; 
+    this.searchTerm = parfum.nom;
+    this.showSuggestions = false;
+    this.closeMenu(); // Sakker menu fel mobile
 
-    // 1. Envoyer le terme pour filtrer la grille
+    // 1. Envoyer filtre
     this.parfumService.updateSearchTerm(parfum.nom);
     
-    // 2. 🔥 Envoyer le signal pour OUVRIR LE MODAL DIRECTEMENT
+    // 2. Ouvrir Modal
     this.parfumService.triggerOpenModal(parfum);
     
-    // 3. Aller vers la boutique si on n'y est pas
+    // 3. Aller vers boutique si on n'y est pas
     if (this.router.url !== '/boutique') {
       this.router.navigate(['/boutique']);
     }
   }
 
-  // Click sur Loupe ou Entrée
+  // Click Entrée ou Loupe
   onSearchSubmit() {
     this.showSuggestions = false;
+    this.closeMenu(); // Sakker menu fel mobile
+    
     if (this.searchTerm.length > 0 && this.router.url !== '/boutique') {
       this.router.navigate(['/boutique']);
     }
   }
 
-  // UI Logic
-  toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
-    document.body.style.overflow = this.isMenuOpen ? 'hidden' : 'auto';
-  }
-
+  // --- SCROLL EFFECT ---
   @HostListener('window:scroll', [])
-  onWindowScroll() { this.isScrolled = window.scrollY > 50; }
-
-  scrollToSection(sectionId: string): void {
-    this.isMenuOpen = false;
-    document.body.style.overflow = 'auto';
-    if (this.router.url === '/') {
-      this.doScroll(sectionId);
-    } else {
-      this.router.navigate(['/']).then(() => {
-        setTimeout(() => { this.doScroll(sectionId); }, 100);
-      });
-    }
-  }
-
-  private doScroll(id: string) {
-    const element = document.getElementById(id);
-    if (element) {
-      const headerOffset = 100;
-      window.scrollTo({
-        top: element.getBoundingClientRect().top + window.scrollY - headerOffset,
-        behavior: "smooth"
-      });
-    }
+  onWindowScroll() {
+    // Ajoute une classe .scrolled au navbar si on descend > 50px
+    this.isScrolled = window.scrollY > 50;
   }
 }

@@ -4,11 +4,11 @@ import { ParfumService } from '../../services/parfum.service';
 import { CartService } from '../../services/cart.service';
 import { Parfum } from '../../models/parfum.model';
 import { ProductModalComponent } from '../../components/product-modal/product-modal';
-
+import { FormsModule } from '@angular/forms'; // 1. 🔥 Zid hethi
 @Component({
   selector: 'app-boutique',
   standalone: true,
-  imports: [CommonModule, ProductModalComponent],
+  imports: [CommonModule, ProductModalComponent, FormsModule], // 2. 🔥 Zid FormsModule houni
   templateUrl: './boutique.html',
   styleUrls: ['./boutique.scss']
 })
@@ -157,7 +157,10 @@ export class BoutiqueComponent implements OnInit {
     this.closeModal();
   }
 
-
+onSearchInput() {
+    // Heka l input ywalli connected m3a l navbar w m3a l filtre
+    this.parfumService.updateSearchTerm(this.currentSearchTerm);
+  }
 
 clearSearch() {
     this.parfumService.updateSearchTerm(''); // Hethi tfarragh service + navbar

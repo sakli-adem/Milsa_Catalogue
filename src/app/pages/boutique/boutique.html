@@ -20,6 +20,17 @@
       ✨ Luxe
     </button>
   </div>
+
+  <div class="mobile-only-search">
+    <div class="search-box">
+      <input type="text" 
+             placeholder="Rechercher un parfum..." 
+             [(ngModel)]="currentSearchTerm" 
+             (input)="onSearchInput()"> <span class="search-icon">🔍</span>
+    </div>
+  </div>
+
+  
 <div *ngIf="currentSearchTerm && currentSearchTerm.trim() !== ''" 
        style="display: flex; justify-content: center; align-items: center; gap: 15px; margin: 20px 0; background: #f9f9f9; padding: 10px; border-radius: 8px;">
     

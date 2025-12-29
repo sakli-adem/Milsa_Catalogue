@@ -1,211 +1,343 @@
-// --- VARIABLES (Design System) ---
-$primary-color: #d4af37; // Gold Milsa
-$success-green: #27ae60; // Green Pro
-$bg-overlay: rgba(30, 30, 30, 0.7); // Darker overlay for focus
-$radius: 16px; // Modern rounded corners
-$shadow: 0 15px 40px rgba(0,0,0,0.25); // Deep shadow
+// --- VARIABLES LUXE (MATCHED WITH CATALOG & NAVBAR) ---
+$bg-cream: #fefdf8;
+$text-primary: #2c2416;
+$text-secondary: #6b5d4f;
+$accent-gold: #c9a961;
+$accent-dark: #8b7355;
+$success-green: #5a8f6f;
+$white: #ffffff;
+$overlay-dark: rgba(44, 36, 22, 0.85);
+$radius: 20px;
+$radius-soft: 16px;
+$shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.3);
+$ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
 
-// --- 1. OVERLAY (L'arrière plan) ---
+// --- 1. OVERLAY ---
 .modal-overlay {
-  // Nasta3mlou 'fixed' houni SEULEMENT bech yghatti l ecran lkol
-  // AMA l content dakhani bch ykoun libre
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: $bg-overlay;
-  backdrop-filter: blur(8px); // Effet flou moderne (Glassmorphism)
-  z-index: 9999;
-  
-  // CENTRAGE PARFAIT (Flexbox)
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $overlay-dark;
+  backdrop-filter: blur(12px) saturate(180%);
+  z-index: 10000;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; // Espace 3al jnab fel mobile
-  
-  // Animation d'entrée (Fade In)
-  animation: fadeIn 0.3s ease-out forwards;
+  padding: 20px;
+  animation: fadeIn 0.4s $ease-luxury forwards;
+
+  // MOBILE: Full screen minus margins
+  @media (max-width: 768px) {
+    padding: 3px; // 3px margin ken 3al jnab
+    align-items: flex-end; // Modal yji mel louta
+  }
 }
 
-// --- 2. MODAL CONTENT (La Boite) ---
+// --- 2. MODAL CONTENT ---
 .modal-content {
-  background: #ffffff;
-  width: 500px;
+  background: linear-gradient(135deg, $white 0%, $bg-cream 100%);
+  width: 550px;
   max-width: 100%;
-  max-height: 90vh; // Ma yfoutch toul l ecran
+  max-height: 90vh;
   border-radius: $radius;
-  box-shadow: $shadow;
+  box-shadow: $shadow-strong;
   display: flex;
   flex-direction: column;
-  position: relative; // Important
-  
-  // Animation de montée (Slide Up)
-  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; // Animation fluide Pro
+  position: relative;
+  border: 2px solid rgba(201, 169, 97, 0.2);
+  animation: slideUpScale 0.5s $ease-luxury forwards;
+
+  @media (max-width: 768px) {
+    border-radius: $radius $radius 0 0; // Arrondi ken lfo9
+    max-height: 95vh; // Yekhou quasi kol l ecran
+    width: 100%; // Full width
+    animation: slideUpMobile 0.4s $ease-luxury forwards;
+  }
 }
 
-// --- 3. HEADER (Titre + Fermer) ---
+// --- 3. HEADER ---
 .modal-header {
-  padding: 20px 25px;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 25px 30px;
+  border-bottom: 2px solid rgba(201, 169, 97, 0.15);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,246,240,0.9) 100%);
   border-radius: $radius $radius 0 0;
+  backdrop-filter: blur(10px);
+
+  @media (max-width: 768px) {
+    padding: 20px 20px;
+  }
 
   h2 {
     margin: 0;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #333;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $text-primary;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    letter-spacing: 1px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+    }
   }
 
   .close-btn {
-    background: transparent;
-    border: none;
-    font-size: 1.8rem;
+    background: rgba(201, 169, 97, 0.1);
+    border: 2px solid rgba(201, 169, 97, 0.3);
+    font-size: 1.6rem;
     line-height: 1;
-    color: #aaa;
+    color: $accent-gold;
     cursor: pointer;
-    transition: all 0.2s;
-    width: 32px; height: 32px;
+    transition: all 0.3s $ease-luxury;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    &:hover {
-      background: #f5f5f5;
-      color: #e74c3c;
+    &:hover:not(:disabled) {
+      background: $accent-gold;
+      color: white;
+      transform: rotate(90deg) scale(1.1);
+      border-color: $accent-gold;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 768px) {
+      width: 36px;
+      height: 36px;
+      font-size: 1.4rem;
     }
   }
 }
 
-// --- 4. BODY (Scrollable Area) ---
+// --- 4. BODY (SCROLLABLE) ---
 .modal-body {
-  padding: 25px;
-  overflow-y: auto; // Houni l scroll يصير
+  padding: 30px;
+  overflow-y: auto; // Scroll houni
+  overflow-x: hidden; // ⚠️ MA 8ER X SCROLL
   
-  // Custom Scrollbar
-  &::-webkit-scrollbar { width: 6px; }
-  &::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; }
+  @media (max-width: 768px) {
+    padding: 20px; // Padding a9al fil mobile
+  }
 
-  // Résumé Box (Bleu clair)
-  .summary-text {
-    background: #f8f9fa;
-    border-left: 4px solid $primary-color;
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 25px;
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.5;
+  // Custom Scrollbar Luxe
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(201, 169, 97, 0.05);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $accent-gold;
+    border-radius: 10px;
     
-    strong { color: #333; }
+    &:hover {
+      background: $accent-dark;
+    }
+  }
+
+  // Summary Box
+  .summary-text {
+    background: linear-gradient(135deg, #f8f6f0 0%, #fefdfb 100%);
+    border-left: 4px solid $accent-gold;
+    border-radius: $radius-soft;
+    padding: 20px;
+    margin-bottom: 30px;
+    color: $text-secondary;
+    font-size: 1rem;
+    line-height: 1.6;
+    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.08);
+
+    strong {
+      color: $accent-gold;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      padding: 16px;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+    }
   }
 }
 
 // --- 5. FORMULAIRE ---
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 18px;
+  }
 
   label {
     display: block;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
     font-weight: 600;
-    color: #444;
+    color: $text-primary;
+    letter-spacing: 0.5px;
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    padding: 14px 18px;
+    border: 2px solid rgba(201, 169, 97, 0.2);
+    border-radius: 12px;
     font-size: 1rem;
     font-family: inherit;
-    transition: all 0.3s ease;
-    background: #fcfcfc;
+    color: $text-primary;
+    background: white;
+    transition: all 0.3s $ease-luxury;
+    box-sizing: border-box; // ⚠️ IMPORTANT: Bech ma ykhabberch
+
+    @media (max-width: 768px) {
+      padding: 12px 15px;
+      font-size: 0.95rem;
+    }
+
+    &::placeholder {
+      color: $text-secondary;
+      font-style: italic;
+    }
 
     &:focus {
       outline: none;
-      border-color: $primary-color;
-      background: #fff;
-      box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1); // Glow effect Gold
+      border-color: $accent-gold;
+      background: $bg-cream;
+      box-shadow: 0 0 0 4px rgba(201, 169, 97, 0.1);
+      transform: translateY(-2px);
     }
   }
 
   textarea {
     resize: vertical;
-    min-height: 80px;
+    min-height: 100px;
+    font-family: inherit;
+
+    @media (max-width: 768px) {
+      min-height: 85px;
+    }
   }
 }
 
-// --- 6. BOUTON SUBMIT ---
+// --- 6. SUBMIT BUTTON ---
 .submit-btn {
   width: 100%;
-  padding: 16px;
-  background: $success-green;
+  padding: 18px;
+  background: linear-gradient(135deg, $success-green 0%, darken($success-green, 8%) 100%);
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 700;
+  border-radius: 14px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
-  display: flex; justify-content: center; align-items: center; gap: 10px;
+  transition: all 0.3s $ease-luxury;
+  box-shadow: 0 8px 25px rgba(90, 143, 111, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
 
-  &:hover {
-    background: darken($success-green, 5%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(39, 174, 96, 0.4);
+  @media (max-width: 768px) {
+    padding: 16px;
+    font-size: 1.05rem;
   }
 
-  &:active {
-    transform: translateY(0);
+  &:hover:not(:disabled) {
+    background: linear-gradient(135deg, darken($success-green, 5%) 0%, darken($success-green, 12%) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(90, 143, 111, 0.4);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(-1px);
   }
 
   &:disabled {
-    background: #ccc;
+    background: linear-gradient(135deg, #b8b8b8 0%, #9a9a9a 100%);
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
+    opacity: 0.7;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
 
 // --- ANIMATIONS ---
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { 
-    opacity: 0; 
-    transform: translateY(40px) scale(0.95); 
+  from {
+    opacity: 0;
   }
-  to { 
-    opacity: 1; 
-    transform: translateY(0) scale(1); 
+  to {
+    opacity: 1;
   }
 }
 
-// --- RESPONSIVE ---
-@media (max-width: 480px) {
-  .modal-overlay {
-    align-items: flex-end; // Fel mobile yji mel louta a7la
-    padding: 0;
+@keyframes slideUpScale {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
   }
-  
-  .modal-content {
-    border-radius: $radius $radius 0 0; // Arrondi ken lfo9
-    max-height: 85vh;
-    animation: slideUpMobile 0.3s ease-out forwards;
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
 @keyframes slideUpMobile {
-  from { transform: translateY(100%); }
-  to { transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// --- LOADING STATE ---
+.submit-btn {
+  &:disabled {
+    span {
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }

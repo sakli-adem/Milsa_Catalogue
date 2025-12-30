@@ -6,6 +6,7 @@
     "categorie": "Unisex",
     "description": "Une fraîcheur alpine cristalline et revigorante.",
     "image": "data/luxe/images/044.webp",
+    "hover_image": "../images/bouteilles/taswira.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Mandarine",

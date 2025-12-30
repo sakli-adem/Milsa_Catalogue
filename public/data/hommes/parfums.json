@@ -6,6 +6,7 @@
     "categorie": "Homme",
     "description": "Une fragrance audacieuse et séduisante",
     "image": "data/hommes/images/001.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Pamplemousse, Menthe",
@@ -13,8 +14,14 @@
       "fond": "Cuir, Ambre, Patchouli"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -24,6 +31,7 @@
     "categorie": "Homme",
     "description": "Fraîcheur marine et élégance intemporelle",
     "image": "data/hommes/images/002.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Néroli, Mandarine verte",
@@ -31,8 +39,14 @@
       "fond": "Cèdre, Mousse de chêne, Patchouli"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -42,6 +56,7 @@
     "categorie": "Homme",
     "description": "Un contraste unique entre puissance et raffinement",
     "image": "data/hommes/images/003.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine, Fleur d'aubépine, Noisette",
@@ -49,8 +64,14 @@
       "fond": "Cuir, Vétiver, Musc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -60,6 +81,7 @@
     "categorie": "Homme",
     "description": "Élégance orientale et moderne",
     "image": "data/hommes/images/004.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Coriandre, Basilic, Pamplemousse",
@@ -67,8 +89,14 @@
       "fond": "Ambre, Tabac, Cèdre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -78,6 +106,7 @@
     "categorie": "Homme",
     "description": "Fraîcheur verte et dynamique",
     "image": "data/hommes/images/005.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Pomme verte, Menthe, Lavande",
@@ -85,8 +114,14 @@
       "fond": "Cèdre, Sapin, Patchouli"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -96,6 +131,7 @@
     "categorie": "Homme",
     "description": "Fraîcheur citronnée intemporelle",
     "image": "data/hommes/images/012.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Citron, Bergamote, Basilic",
@@ -103,8 +139,14 @@
       "fond": "Vétiver, Patchouli, Mousse de chêne"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -114,6 +156,7 @@
     "categorie": "Homme",
     "description": "Élégance italienne classique",
     "image": "data/hommes/images/015.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Menthe, Galbanum, Basilic",
@@ -121,8 +164,14 @@
       "fond": "Mousse de chêne, Patchouli, Santal"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -132,6 +181,7 @@
     "categorie": "Homme",
     "description": "Puissance et sensualité masculine",
     "image": "data/hommes/images/016.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Menthe, Lavande, Cardamome",
@@ -139,8 +189,14 @@
       "fond": "Vanille, Cèdre, Santal, Tonka"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -150,6 +206,7 @@
     "categorie": "Homme",
     "description": "Sensualité contemporaine et provocante",
     "image": "data/hommes/images/017.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Citron, Lavande",
@@ -157,8 +214,14 @@
       "fond": "Patchouli, Cèdre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -168,6 +231,7 @@
     "categorie": "Homme",
     "description": "Épicé et boisé, une déclaration d'amour",
     "image": "data/hommes/images/018.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Mandarine, Cardamome",
@@ -175,8 +239,14 @@
       "fond": "Cèdre, Vétiver, Musc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -186,6 +256,7 @@
     "categorie": "Homme",
     "description": "Séduction nocturne et mystérieuse",
     "image": "data/hommes/images/020.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Cardamome, Bergamote",
@@ -193,8 +264,14 @@
       "fond": "Vétiver, Cumin, Fève Tonka"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -204,6 +281,7 @@
     "categorie": "Homme",
     "description": "Fraîcheur méditerranéenne lumineuse",
     "image": "data/hommes/images/021.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine sicilienne, Bergamote, Genévrier",
@@ -211,8 +289,14 @@
       "fond": "Musc, Bois de gaïac"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -222,6 +306,7 @@
     "categorie": "Homme",
     "description": "Un parfum qui relie l'homme à la terre",
     "image": "data/hommes/images/022.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Pamplemousse, Poivre",
@@ -229,8 +314,14 @@
       "fond": "Vétiver, Cèdre, Benjoin"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -240,6 +331,7 @@
     "categorie": "Homme",
     "description": "Excès et sensualité extrême",
     "image": "data/hommes/images/030.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Citron, Tagète",
@@ -247,8 +339,14 @@
       "fond": "Patchouli, Ambre noir"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -258,6 +356,7 @@
     "categorie": "Homme",
     "description": "Explosion d'épices captivante",
     "image": "data/hommes/images/032.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Piment, Grapefruit",
@@ -265,8 +364,14 @@
       "fond": "Tabac, Vétiver, Cuir"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -276,6 +381,7 @@
     "categorie": "Homme",
     "description": "Séduction intense et mystérieuse",
     "image": "data/hommes/images/033.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Citron",
@@ -283,8 +389,14 @@
       "fond": "Fève Tonka, Cuir"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -294,6 +406,7 @@
     "categorie": "Homme",
     "description": "Sophistication et modernité",
     "image": "data/hommes/images/037.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Fleur de lotus",
@@ -301,8 +414,14 @@
       "fond": "Ambre, Musc blanc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -312,6 +431,7 @@
     "categorie": "Homme",
     "description": "Liberté et détermination masculine",
     "image": "data/hommes/images/038.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Citron, Menthe, Pamplemousse rose",
@@ -319,8 +439,14 @@
       "fond": "Encens, Vétiver, Cèdre, Santal"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -330,6 +456,7 @@
     "categorie": "Homme",
     "description": "Fraîcheur et sensualité orientale",
     "image": "data/hommes/images/048.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine, Menthe",
@@ -337,8 +464,14 @@
       "fond": "Vanille, Vétiver, Cèdre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -348,6 +481,7 @@
     "categorie": "Homme",
     "description": "Élégance britannique intemporelle",
     "image": "data/hommes/images/050.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Thym, Bergamote, Menthe",
@@ -355,8 +489,14 @@
       "fond": "Cèdre, Santal, Musc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -366,6 +506,7 @@
     "categorie": "Homme",
     "description": "Raffinement et caractère",
     "image": "data/hommes/images/052.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine, Anis, Carvi",
@@ -373,8 +514,14 @@
       "fond": "Labdanum, Patchouli, Santal"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -384,6 +531,7 @@
     "categorie": "Homme",
     "description": "Victoire éclatante et puissance",
     "image": "data/hommes/images/061.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Pamplemousse, Notes marines, Mandarine",
@@ -391,8 +539,14 @@
       "fond": "Ambre gris, Bois de gaïac, Patchouli"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -402,6 +556,7 @@
     "categorie": "Homme",
     "description": "Intensité et sophistication",
     "image": "data/hommes/images/062.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Basilic, Lavande, Marjolaine",
@@ -409,8 +564,14 @@
       "fond": "Cypriole, Santal, Labdanum"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -420,6 +581,7 @@
     "categorie": "Homme",
     "description": "Sensualité aphrodisiaque",
     "image": "data/hommes/images/065.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Gingembre, Mandarine",
@@ -427,8 +589,14 @@
       "fond": "Cuir"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -438,6 +606,7 @@
     "categorie": "Homme",
     "description": "Succès et force de caractère",
     "image": "data/hommes/images/068.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Ananas, Cassis, Pomme, Bergamote",
@@ -445,8 +614,14 @@
       "fond": "Musc, Chêne, Ambre gris, Vanille"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 100 },
-      { "volume": "70ml", "prix": 190 }
+      {
+        "volume": "30ml",
+        "prix": 100
+      },
+      {
+        "volume": "70ml",
+        "prix": 190
+      }
     ]
   },
   {
@@ -456,6 +631,7 @@
     "categorie": "Unisex",
     "description": "Brise marine salée",
     "image": "data/hommes/images/069.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Notes marines, Sel",
@@ -463,8 +639,14 @@
       "fond": "Ambre, Musc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -474,6 +656,7 @@
     "categorie": "Unisex",
     "description": "Mystère et profondeur",
     "image": "data/hommes/images/074.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Notes vertes",
@@ -481,10 +664,12 @@
       "fond": "Bois, Musc"
     },
     "variantes": [
-      { "volume": "50ml", "prix": 175 }
+      {
+        "volume": "50ml",
+        "prix": 175
+      }
     ]
   },
-
   {
     "code": "079",
     "nom": "Myslf",
@@ -492,6 +677,7 @@
     "categorie": "Homme",
     "description": "Affirmation de soi authentique",
     "image": "data/hommes/images/079.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote de Calabre",
@@ -499,8 +685,14 @@
       "fond": "Bois d'ambrofix, Patchouli"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -510,6 +702,7 @@
     "categorie": "Homme",
     "description": "Virilité italienne moderne",
     "image": "data/hommes/images/083.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Violette, Baies noires",
@@ -517,8 +710,14 @@
       "fond": "Santal, Fève Tonka, Bois de cèdre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -528,6 +727,7 @@
     "categorie": "Homme",
     "description": "Méditerranée intense et virile",
     "image": "data/hommes/images/084.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Pamplemousse, Feuilles de figuier",
@@ -535,8 +735,14 @@
       "fond": "Encens, Fève Tonka, Musc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -546,6 +752,7 @@
     "categorie": "Homme",
     "description": "Charisme légendaire",
     "image": "data/hommes/images/086.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Lavande, Bergamote, Ananas",
@@ -553,8 +760,14 @@
       "fond": "Fève Tonka, Santal, Chêne"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -564,6 +777,7 @@
     "categorie": "Homme",
     "description": "Recherché pour son irrésistibilité",
     "image": "data/hommes/images/087.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Citron, Gingembre, Menthe",
@@ -571,8 +785,14 @@
       "fond": "Fève Tonka, Ambre, Bois de gaïac"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -582,6 +802,7 @@
     "categorie": "Homme",
     "description": "Sophistication contemporaine",
     "image": "data/hommes/images/088.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Fleur de lotus",
@@ -589,8 +810,14 @@
       "fond": "Ambre, Musc blanc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -600,6 +827,7 @@
     "categorie": "Homme",
     "description": "Fraîcheur aquatique intemporelle",
     "image": "data/hommes/images/091.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Citron, Romarin, Ananas",
@@ -607,8 +835,14 @@
       "fond": "Musc, Cèdre, Santal, Fève Tonka"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -618,6 +852,7 @@
     "categorie": "Homme",
     "description": "Gentleman londonien moderne",
     "image": "data/hommes/images/092.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Pamplemousse, Cardamome, Menthe",
@@ -625,8 +860,14 @@
       "fond": "Vétiver, Santal, Ambre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -636,6 +877,7 @@
     "categorie": "Homme",
     "description": "Fraîcheur sauvage et libre",
     "image": "data/hommes/images/094.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote de Calabre, Poivre",
@@ -643,8 +885,14 @@
       "fond": "Ambroxan, Vanille, Patchouli"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 85 },
-      { "volume": "70ml", "prix": 190 }
+      {
+        "volume": "30ml",
+        "prix": 85
+      },
+      {
+        "volume": "70ml",
+        "prix": 190
+      }
     ]
   },
   {
@@ -654,6 +902,7 @@
     "categorie": "Homme",
     "description": "hommes absolu et raffinement",
     "image": "data/hommes/images/075.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Rhubarbe, Bergamote, Pamplemousse",
@@ -661,7 +910,10 @@
       "fond": "Cèdre, Patchouli, Papyrus"
     },
     "variantes": [
-      { "volume": "50ml", "prix": 170 }
+      {
+        "volume": "50ml",
+        "prix": 170
+      }
     ]
   },
   {
@@ -671,6 +923,7 @@
     "categorie": "Unisex",
     "description": "Oud blanc précieux et envoûtant",
     "image": "data/hommes/images/100.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Notes florales",
@@ -678,8 +931,14 @@
       "fond": "Musc, Santal"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -689,6 +948,7 @@
     "categorie": "Unisex",
     "description": "Voyage olfactif luxueux",
     "image": "data/hommes/images/113.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Citron, Bergamote",
@@ -696,8 +956,14 @@
       "fond": "Patchouli, Oud"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 100 },
-      { "volume": "70ml", "prix": 190 }
+      {
+        "volume": "30ml",
+        "prix": 100
+      },
+      {
+        "volume": "70ml",
+        "prix": 190
+      }
     ]
   },
   {
@@ -707,6 +973,7 @@
     "categorie": "Unisex",
     "description": "Tabac opulent et vanille crémeuse",
     "image": "data/hommes/images/117.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Feuille de tabac, Notes épicées",
@@ -714,42 +981,60 @@
       "fond": "Fruits secs, Notes boisées"
     },
     "variantes": [
-      { "volume": "50ml", "prix": 175 }
+      {
+        "volume": "50ml",
+        "prix": 175
+      }
     ]
   },
-  {"code": "136",
-"nom": "Dior Homme Intense",
-"marque": "CHRISTIAN DIOR",
-"categorie": "Homme",
-"description": "Iris puissant et séduction intense",
-"image": "data/hommes/images/136.webp",
-"nouveau": false,
-"composition": {
-  "tete": "Lavande",
-  "coeur": "Iris, Ambrette, Poire",
-  "fond": "Cèdre de Virginie, Vétiver"
-},
-"variantes": [
-  { "volume": "70ml", "prix": 150 },
-  { "volume": "30ml", "prix": 85 }
-]
-},
-{
-"code": "140",
-"nom": "Eros",
-"marque": "VERSACE",
-"categorie": "Homme",
-"description": "Passion et désir à la grecque",
-"image": "data/hommes/images/140.webp",
-"nouveau": false,
-"composition": {
-"tete": "Menthe, Pomme verte, Citron",
-"coeur": "Fève Tonka, Géranium, Ambroxan",
-"fond": "Vanille de Madagascar, Vétiver, Mousse de chêne"
-},
-"variantes": [
-{ "volume": "30ml", "prix": 60 },
-{ "volume": "70ml", "prix": 120 }
-]
-}
+  {
+    "code": "136",
+    "nom": "Dior Homme Intense",
+    "marque": "CHRISTIAN DIOR",
+    "categorie": "Homme",
+    "description": "Iris puissant et séduction intense",
+    "image": "data/hommes/images/136.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Lavande",
+      "coeur": "Iris, Ambrette, Poire",
+      "fond": "Cèdre de Virginie, Vétiver"
+    },
+    "variantes": [
+      {
+        "volume": "70ml",
+        "prix": 150
+      },
+      {
+        "volume": "30ml",
+        "prix": 85
+      }
+    ]
+  },
+  {
+    "code": "140",
+    "nom": "Eros",
+    "marque": "VERSACE",
+    "categorie": "Homme",
+    "description": "Passion et désir à la grecque",
+    "image": "data/hommes/images/140.webp",
+    "hover_image": "../images/bouteilles/homme.webp",
+    "nouveau": false,
+    "composition": {
+      "tete": "Menthe, Pomme verte, Citron",
+      "coeur": "Fève Tonka, Géranium, Ambroxan",
+      "fond": "Vanille de Madagascar, Vétiver, Mousse de chêne"
+    },
+    "variantes": [
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
+    ]
+  }
 ]

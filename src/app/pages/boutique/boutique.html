@@ -1,9 +1,9 @@
 <div class="boutique-container">
-  
+
   <div class="disclaimer-box">
     <span class="icon">⚠️</span>
     <div class="text-content">
-      <strong>Note Importante :</strong> Nos parfums sont de la marque <strong>Chogan</strong>. 
+      <strong>Note Importante :</strong> Nos parfums sont de la marque <strong>Chogan</strong>.
       Les images et noms sont à titre indicatif (similaire à 99%). Le packaging réel est standard Chogan.
       <small>Une confirmation téléphonique sera effectuée pour chaque commande.</small>
     </div>
@@ -23,52 +23,53 @@
 
   <div class="mobile-only-search">
     <div class="search-box">
-      <input type="text" 
-             placeholder="Rechercher un parfum..." 
-             [(ngModel)]="currentSearchTerm" 
-             (input)="onSearchInput()"> <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Rechercher un parfum..." [(ngModel)]="currentSearchTerm"
+        (input)="onSearchInput()"> <span class="search-icon">🔍</span>
     </div>
   </div>
 
-  
-<div *ngIf="currentSearchTerm && currentSearchTerm.trim() !== ''" 
-       style="display: flex; justify-content: center; align-items: center; gap: 15px; margin: 20px 0; background: #f9f9f9; padding: 10px; border-radius: 8px;">
-    
+
+  <div *ngIf="currentSearchTerm && currentSearchTerm.trim() !== ''"
+    style="display: flex; justify-content: center; align-items: center; gap: 15px; margin: 20px 0; background: #f9f9f9; padding: 10px; border-radius: 8px;">
+
     <h3 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: 500;">
       Résultats de recherche pour <strong style="color: #d4af37;">"{{ currentSearchTerm }}"</strong>
     </h3>
 
-    <button (click)="clearSearch()" 
-            style="background: #e74c3c; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; transition: 0.2s;"
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'">
+    <button (click)="clearSearch()"
+      style="background: #e74c3c; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; transition: 0.2s;"
+      onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
       ✕
     </button>
   </div>
   <div class="products-grid">
-    
+
     <div *ngIf="isLoading" class="loading-msg">Chargement...</div>
 
     <div *ngFor="let p of displayedParfums" class="product-card">
-      
+
       <span *ngIf="p.nouveau" class="badge-new">Nouveau</span>
 
       <div class="image-wrapper" (click)="openModal(p)">
-        <img [src]="p.image" [alt]="p.nom" loading="lazy" />
+
+        <img [src]="p.image" [alt]="p.nom" class="img-main" loading="lazy" />
+
+        <img *ngIf="p.hover_image" [src]="p.hover_image" [alt]="p.nom" class="img-hover" loading="lazy" />
+
       </div>
 
       <div class="card-content">
-        
+
         <div class="meta-row">
           <span class="category-tag" [ngClass]="activeCategory">{{ p.categorie }}</span>
           <span class="code-tag">{{ p.code }}</span>
         </div>
 
         <h3 class="product-name" (click)="openModal(p)">{{ p.nom }}</h3>
-        
+
         <p class="desc">
           {{ p.description }} </p>
-        
+
         <div class="price">{{ p.variantes[0].prix }} TND</div>
 
         <button class="add-btn" (click)="openModal(p)">
@@ -78,15 +79,12 @@
       </div>
     </div>
   </div>
-  
+
   <div *ngIf="displayedParfums.length < parfums.length" class="scroll-loading">
-      Chargement de plus de produits...
+    Chargement de plus de produits...
   </div>
 
-  <app-product-modal 
-    *ngIf="selectedProduct" 
-    [product]="selectedProduct" 
-    (close)="closeModal()"
+  <app-product-modal *ngIf="selectedProduct" [product]="selectedProduct" (close)="closeModal()"
     (addToCart)="handleAddToCart($event)">
   </app-product-modal>
 

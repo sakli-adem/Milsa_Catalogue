@@ -5,6 +5,7 @@
     "categorie": "Femme",
     "description": "Un parfum floral gourmand, inspiré par la douceur de la vie.",
     "image": "data/femmes/images/006.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Cassis, Poire",
@@ -12,8 +13,14 @@
       "fond": "Patchouli, Fève Tonka, Vanille"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -22,6 +29,7 @@
     "categorie": "Femme",
     "description": "L'élégance absolue d'un bouquet floral blanc.",
     "image": "data/femmes/images/007.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Magnolia, Melon, Pêche",
@@ -29,8 +37,14 @@
       "fond": "Musc, Vanille, Cèdre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -39,6 +53,7 @@
     "categorie": "Femme",
     "description": "Un parfum audacieux pour celle qui mène le jeu.",
     "image": "data/femmes/images/010.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Néroli, Bigarade, Framboise",
@@ -46,8 +61,14 @@
       "fond": "Patchouli, Miel"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -56,6 +77,7 @@
     "categorie": "Femme",
     "description": "Le café noir rencontre les fleurs blanches. Addictif.",
     "image": "data/femmes/images/011.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Poire, Poivre rose, Fleur d'oranger",
@@ -63,8 +85,14 @@
       "fond": "Vanille, Patchouli, Cèdre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -73,6 +101,7 @@
     "categorie": "Femme",
     "description": "Une fragrance rebelle et sensuelle pour les âmes libres.",
     "image": "data/femmes/images/013.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine, Bergamote, Poivre rose",
@@ -80,8 +109,14 @@
       "fond": "Patchouli, Ambre, Vanille"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -90,6 +125,7 @@
     "categorie": "Femme",
     "description": "Un manifeste floral audacieux et moderne.",
     "image": "data/femmes/images/014.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Cassis",
@@ -97,8 +133,14 @@
       "fond": "Bois de santal, Vanille, Cèdre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -107,6 +149,7 @@
     "categorie": "Femme",
     "description": "L'essence du glamour, extravagant et irrésistible.",
     "image": "data/femmes/images/019.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Néroli, Framboise, Fleur d'oranger",
@@ -114,8 +157,14 @@
       "fond": "Miel, Patchouli, Ambre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -124,6 +173,7 @@
     "categorie": "Femme",
     "description": "Envoûtant et mystérieux, un poison irrésistible.",
     "image": "data/femmes/images/023.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Prune, Noix de coco",
@@ -131,8 +181,14 @@
       "fond": "Vanille, Amande, Bois de santal"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -141,6 +197,7 @@
     "categorie": "Femme",
     "description": "L'icône intemporelle de l'élégance et du raffinement.",
     "image": "data/femmes/images/024.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Néroli, Ylang-ylang, Aldéhydes",
@@ -148,8 +205,14 @@
       "fond": "Vétiver, Bois de santal, Vanille"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -158,6 +221,7 @@
     "categorie": "Femme",
     "description": "Sensuel et musqué, une signature féminine unique.",
     "image": "data/femmes/images/025.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Mandarine, Pêche",
@@ -165,8 +229,14 @@
       "fond": "Patchouli, Vanille, Ambre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -175,6 +245,7 @@
     "categorie": "Femme",
     "description": "Un coquelicot délicat, frais et poudré.",
     "image": "data/femmes/images/026.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Cassis, Rose bulgare",
@@ -182,8 +253,14 @@
       "fond": "Musc blanc, Vanille, Encens"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -192,6 +269,7 @@
     "categorie": "Femme",
     "description": "Un trésor floral romantique et précieux.",
     "image": "data/femmes/images/027.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Abricot, Pêche, Rose",
@@ -199,8 +277,14 @@
       "fond": "Musc, Vanille, Bois de santal"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -209,6 +293,7 @@
     "categorie": "Femme",
     "description": "Gourmand céleste, sucré et envoûtant.",
     "image": "data/femmes/images/028.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Melon",
@@ -216,8 +301,14 @@
       "fond": "Patchouli, Vanille, Chocolat"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -226,6 +317,7 @@
     "categorie": "Femme",
     "description": "Aquatique et floral, la pureté de l'eau.",
     "image": "data/femmes/images/029.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Melon, Freesia, Rose",
@@ -233,8 +325,14 @@
       "fond": "Bois de cèdre, Musc, Ambre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -243,6 +341,7 @@
     "categorie": "Femme",
     "description": "Romantique et pétillant, un bouquet de jeunesse.",
     "image": "data/femmes/images/039.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine verte, Fraise",
@@ -250,8 +349,14 @@
       "fond": "Musc, Patchouli, Popcorn"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -260,6 +365,7 @@
     "categorie": "Femme",
     "description": "Sensuel et mystérieux, un jeu de séduction.",
     "image": "data/femmes/images/040.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Passion fruit, Vanille",
@@ -267,8 +373,14 @@
       "fond": "Vétiver, Vanille, Musc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -277,6 +389,7 @@
     "categorie": "Femme",
     "description": "Romantique et féminin, l'essence de la féminité moderne.",
     "image": "data/femmes/images/041.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Pivoine, Freesia, Litchi",
@@ -284,8 +397,14 @@
       "fond": "Ambre, Cèdre, Miel"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -294,6 +413,7 @@
     "categorie": "Femme",
     "description": "La vie est belle, gourmand et joyeux.",
     "image": "data/femmes/images/042.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Cassis, Poire",
@@ -301,8 +421,14 @@
       "fond": "Patchouli, Fève Tonka, Vanille"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -311,6 +437,7 @@
     "categorie": "Femme",
     "description": "Frais et fleuri, une déclaration d'amour parfumée.",
     "image": "data/femmes/images/043.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Néroli, Orange sanguine",
@@ -318,8 +445,14 @@
       "fond": "Cèdre, Musc, Riz"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -328,6 +461,7 @@
     "categorie": "Femme",
     "description": "Oriental mystérieux, sensuel et précieux.",
     "image": "data/femmes/images/047.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Gingembre, Poivre, Cardamome",
@@ -335,8 +469,14 @@
       "fond": "Ambre, Musc, Bois de santal"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -345,6 +485,7 @@
     "categorie": "Femme",
     "description": "Floral frais et féminin, la dolce vita italienne.",
     "image": "data/femmes/images/049.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Néroli, Papaye",
@@ -352,8 +493,14 @@
       "fond": "Musc, Cashmeran, Bois de santal"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -362,6 +509,7 @@
     "categorie": "Femme",
     "description": "Frais et moderne, l'esprit rebelle de Chanel.",
     "image": "data/femmes/images/051.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Orange, Bergamote, Pamplemousse",
@@ -369,8 +517,14 @@
       "fond": "Patchouli, Vanille, Vétiver"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -379,6 +533,7 @@
     "categorie": "Femme",
     "description": "Musqué et sensuel, une signature minimaliste.",
     "image": "data/femmes/images/053.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Mandarine",
@@ -386,8 +541,14 @@
       "fond": "Vétiver, Cèdre, Vanille"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -396,6 +557,7 @@
     "categorie": "Femme",
     "description": "Café noir addictif, rock et glamour.",
     "image": "data/femmes/images/055.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Poire, Poivre rose, Fleur d'oranger",
@@ -403,8 +565,14 @@
       "fond": "Vanille, Patchouli, Cèdre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -413,6 +581,7 @@
     "categorie": "Femme",
     "description": "Entre innocence et sensualité, un double jeu.",
     "image": "data/femmes/images/056.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine, Safran",
@@ -420,8 +589,14 @@
       "fond": "Fève Tonka, Bois de santal, Vanille"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -430,6 +605,7 @@
     "categorie": "Femme",
     "description": "Floral délicat aux reflets d'iris et de rose.",
     "image": "data/femmes/images/057.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Pamplemousse rose, Iris",
@@ -437,8 +613,14 @@
       "fond": "Bois de santal, Musc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -447,6 +629,7 @@
     "categorie": "Femme",
     "description": "Frais et pétillant, l'énergie féminine.",
     "image": "data/femmes/images/063.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Cassis, Thé vert, Framboise",
@@ -454,8 +637,14 @@
       "fond": "Cèdre, Musc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -464,6 +653,7 @@
     "categorie": "Femme",
     "description": "Oriental épicé, mystérieux et envoûtant.",
     "image": "data/femmes/images/064.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Safran, Orange, Mandarine",
@@ -471,8 +661,14 @@
       "fond": "Ambre, Encens, Bois"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -481,6 +677,7 @@
     "categorie": "Femme",
     "description": "Une déesse moderne, sensuelle et puissante.",
     "image": "data/femmes/images/067.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine verte, Gingembre, Eau",
@@ -488,8 +685,14 @@
       "fond": "Vanille, Ambre, Bois de cachemire"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -498,6 +701,7 @@
     "categorie": "Femme",
     "description": "Élégant et chaleureux, l'unique.",
     "image": "data/femmes/images/070.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Mandarine, Litchi",
@@ -505,8 +709,14 @@
       "fond": "Vanille, Musc, Ambre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -515,6 +725,7 @@
     "categorie": "Femme",
     "description": "Le parfum de la séduction intemporelle.",
     "image": "data/femmes/images/071.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Mandarine, Pêche",
@@ -522,8 +733,14 @@
       "fond": "Vanille, Vétiver, Patchouli"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -532,6 +749,7 @@
     "categorie": "Femme",
     "description": "Fraîcheur aquatique et lumineuse.",
     "image": "data/femmes/images/076.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Menthe, Citron vert",
@@ -539,8 +757,14 @@
       "fond": "Cèdre, Sucre brun"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -549,6 +773,7 @@
     "categorie": "Femme",
     "description": "Jardin floral radieux et joyeux.",
     "image": "data/femmes/images/077.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Agrumes, Pivoine",
@@ -556,8 +781,14 @@
       "fond": "Bois de santal, Patchouli"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -566,6 +797,7 @@
     "categorie": "Femme",
     "description": "Chypré moderne, audacieux et féminin.",
     "image": "data/femmes/images/080.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Cassis, Mandarine",
@@ -573,8 +805,14 @@
       "fond": "Patchouli, Musc, Vanille"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -583,6 +821,7 @@
     "categorie": "Femme",
     "description": "L'essence pure de la féminité sensuelle.",
     "image": "data/femmes/images/081.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Poire",
@@ -590,8 +829,14 @@
       "fond": "Vanille, Musc, Ambre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -600,6 +845,7 @@
     "categorie": "Femme",
     "description": "Chic et élégant, l'esprit italien.",
     "image": "data/femmes/images/082.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Pamplemousse rose, Groseille",
@@ -607,8 +853,14 @@
       "fond": "Patchouli, Musc, Panacotta"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -617,6 +869,7 @@
     "categorie": "Femme",
     "description": "Frais et pétillant, un tourbillon de chance.",
     "image": "data/femmes/images/085.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Pamplemousse rose, Coing",
@@ -624,8 +877,14 @@
       "fond": "Musc blanc, Ambre, Iris"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -634,6 +893,7 @@
     "categorie": "Femme",
     "description": "L'amour fou à Paris, gourmand et fleuri.",
     "image": "data/femmes/images/089.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Fraise, Framboise, Bergamote",
@@ -641,8 +901,14 @@
       "fond": "Patchouli, Mousse, Musc blanc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -651,6 +917,7 @@
     "categorie": "Femme",
     "description": "Sensuel et sucré, irrésistiblement séduisant.",
     "image": "data/femmes/images/090.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Orange amère, Citron",
@@ -658,8 +925,14 @@
       "fond": "Fève Tonka, Vanille, Amande"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -668,6 +941,7 @@
     "categorie": "Femme",
     "description": "Fruité et puissant, pour les femmes conquérantes.",
     "image": "data/femmes/images/093.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Citron vert, Bergamote, Pamplemousse",
@@ -675,8 +949,14 @@
       "fond": "Bois de santal, Patchouli, Styrax"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 100 },
-      { "volume": "70ml", "prix": 190 }
+      {
+        "volume": "30ml",
+        "prix": 100
+      },
+      {
+        "volume": "70ml",
+        "prix": 190
+      }
     ]
   },
   {
@@ -685,6 +965,7 @@
     "categorie": "Femme",
     "description": "Élégance britannique, frais et sophistiqué.",
     "image": "data/femmes/images/095.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Cassis, Pomme verte, Cèdre",
@@ -692,8 +973,14 @@
       "fond": "Musc, Bois de santal, Ambre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -702,6 +989,7 @@
     "categorie": "Femme",
     "description": "Solaire et lumineux, l'essence de Gabrielle Chanel.",
     "image": "data/femmes/images/096.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine, Cassis, Pamplemousse",
@@ -709,8 +997,14 @@
       "fond": "Musc, Bois de santal, Vanille"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -719,6 +1013,7 @@
     "categorie": "Femme",
     "description": "Je t'aime en italien, floral et romantique.",
     "image": "data/femmes/images/097.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Prune, Poivre rose",
@@ -726,8 +1021,14 @@
       "fond": "Vanille, Musc, Bois de santal"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -736,6 +1037,7 @@
     "categorie": "Femme",
     "description": "La joie pure dans un flacon, intensément floral.",
     "image": "data/femmes/images/098.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Mandarine",
@@ -743,8 +1045,14 @@
       "fond": "Bois de santal, Musc blanc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -753,6 +1061,7 @@
     "categorie": "Femme",
     "description": "L'essence absolue de J'adore, précieux et rare.",
     "image": "data/femmes/images/109.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine, Ylang-ylang",
@@ -760,7 +1069,10 @@
       "fond": "Bois de santal, Tubéreuse"
     },
     "variantes": [
-      { "volume": "50ml", "prix": 175 }
+      {
+        "volume": "50ml",
+        "prix": 175
+      }
     ]
   },
   {
@@ -769,6 +1081,7 @@
     "categorie": "Femme",
     "description": "Floral propre et moderne pour une nouvelle génération.",
     "image": "data/femmes/images/115.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Poire, Bergamote",
@@ -776,8 +1089,14 @@
       "fond": "Musc blanc, Vanille, Cèdre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -786,6 +1105,7 @@
     "categorie": "Femme",
     "description": "Affirmation audacieuse, gourmand et sensuel.",
     "image": "data/femmes/images/116.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Gingembre, Cardamome",
@@ -793,8 +1113,14 @@
       "fond": "Bois de santal, Vanille, Lait"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -803,6 +1129,7 @@
     "categorie": "Femme",
     "description": "Scandaleux et addictif, miel et fleurs.",
     "image": "data/femmes/images/119.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine sanguine, Miel",
@@ -810,8 +1137,14 @@
       "fond": "Caramel, Patchouli"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -820,6 +1153,7 @@
     "categorie": "Femme",
     "description": "La petite robe noire du parfum, intemporel et gourmand.",
     "image": "data/femmes/images/120.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Cerise noire, Amande, Bergamote",
@@ -827,8 +1161,14 @@
       "fond": "Vanille, Iris, Patchouli"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -837,6 +1177,7 @@
     "categorie": "Femme",
     "description": "L'audace interdite, floral blanc enivrant.",
     "image": "data/femmes/images/121.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Poire",
@@ -844,8 +1185,14 @@
       "fond": "Patchouli, Vanille, Vétiver"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -854,6 +1201,7 @@
     "categorie": "Femme",
     "description": "Libre d'être soi-même, lavande et fleur d'oranger.",
     "image": "data/femmes/images/122.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Mandarine, Lavande, Cassis",
@@ -861,8 +1209,14 @@
       "fond": "Vanille, Musc, Ambre gris"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 85 },
-      { "volume": "70ml", "prix": 160 }
+      {
+        "volume": "30ml",
+        "prix": 85
+      },
+      {
+        "volume": "70ml",
+        "prix": 160
+      }
     ]
   },
   {
@@ -871,6 +1225,7 @@
     "categorie": "Femme",
     "description": "La bonne fille devenue rebelle, tuberéuse addictive.",
     "image": "data/femmes/images/123.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Osmanthus, Néroli",
@@ -878,7 +1233,10 @@
       "fond": "Ambre, Vanille, Bois de santal"
     },
     "variantes": [
-      { "volume": "50ml", "prix": 175 }
+      {
+        "volume": "50ml",
+        "prix": 175
+      }
     ]
   },
   {
@@ -887,6 +1245,7 @@
     "categorie": "Femme",
     "description": "Bonne ou méchante, audacieusement féminin.",
     "image": "data/femmes/images/131.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Amande, Café",
@@ -894,8 +1253,14 @@
       "fond": "Fève Tonka, Cacao, Bois de santal"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 85 },
-      { "volume": "70ml", "prix": 160 }
+      {
+        "volume": "30ml",
+        "prix": 85
+      },
+      {
+        "volume": "70ml",
+        "prix": 160
+      }
     ]
   },
   {
@@ -904,6 +1269,7 @@
     "categorie": "Femme",
     "description": "Mon chemin, floral rayonnant et universel.",
     "image": "data/femmes/images/132.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Fleur d'oranger",
@@ -911,8 +1277,14 @@
       "fond": "Vanille de Madagascar, Musc blanc, Cèdre"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 85 },
-      { "volume": "70ml", "prix": 160 }
+      {
+        "volume": "30ml",
+        "prix": 85
+      },
+      {
+        "volume": "70ml",
+        "prix": 160
+      }
     ]
   },
   {
@@ -921,6 +1293,7 @@
     "categorie": "Femme",
     "description": "Le paradoxe de la féminité moderne, floral musc.",
     "image": "data/femmes/images/133.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Poire, Bergamote, Mandarine",
@@ -928,8 +1301,14 @@
       "fond": "Vanille Bourbon, Ambre, Musc blanc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   },
   {
@@ -938,6 +1317,7 @@
     "categorie": "Femme",
     "description": "Dévotion italienne, fleur d'oranger lumineuse.",
     "image": "data/femmes/images/145.webp",
+    "hover_image": "../images/bouteilles/femme.webp",
     "nouveau": false,
     "composition": {
       "tete": "Citron de Sicile, Fleur d'oranger",
@@ -945,8 +1325,14 @@
       "fond": "Vanille, Musc"
     },
     "variantes": [
-      { "volume": "30ml", "prix": 60 },
-      { "volume": "70ml", "prix": 120 }
+      {
+        "volume": "30ml",
+        "prix": 60
+      },
+      {
+        "volume": "70ml",
+        "prix": 120
+      }
     ]
   }
 ]

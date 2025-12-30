@@ -92,25 +92,101 @@ $white: #ffffff;
 }
 
 // --- 4. IMAGE SECTION ---
+// --- 4. IMAGE SECTION (DUO MODE) ---
 .product-image {
   flex: 1;
-  background: #f9f9f9;
-  padding: 40px;
-  display: flex; align-items: center; justify-content: center;
-  position: relative; // Bech image to93od stable
-
-  img {
-    max-width: 100%;
-    max-height: 350px;
-    object-fit: contain;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
-    transition: transform 0.3s;
+  background: #f8f9fa; // Gris très clair PRO
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  // Container pour les 2 cartes
+  .images-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch; // Même hauteur
   }
 
+  // Style de la Carte
+  .img-card {
+    background: $white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); // Ombre légère
+    padding: 15px;
+    flex: 1; // Ya9smou l espace
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+
+    &:hover {
+      transform: translateY(-5px); // Animation sghira ki t3adi souris
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    // Etiquette (Label)
+    .card-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: #999;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    // Wrappper image
+    .img-wrap {
+      flex-grow: 1; // Takhou l ba9i lkol
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 180px; // Hauteur minimale
+
+      img {
+        max-width: 100%;
+        max-height: 180px;
+        object-fit: contain;
+        filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+      }
+    }
+
+    // Specific Styles
+    &.main .card-label { color: $text-dark; } // Titre noir pour notre produit
+    &.inspiration .card-label { color: $gold; } // Titre doré pour l'inspiration
+  }
+
+  // 🔥 MOBILE ADJUSTMENTS
   @media (max-width: 768px) {
-    padding: 20px;
-    min-height: 220px;
-    img { max-height: 180px; } // Image asgher fel mobile
+    padding: 20px 15px;
+    min-height: auto; // Na7i l hauteur fixe
+    background: white; // Fond blanc fel mobile a7la
+
+    .images-container {
+      gap: 10px; // Espace a9al
+    }
+
+    .img-card {
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: none; // Na7i l dholl fel mobile bech tji clean
+      border: 1px solid #f0f0f0;
+
+      .card-label {
+        font-size: 0.6rem; // Ktiba sghira
+        margin-bottom: 5px;
+      }
+
+      .img-wrap {
+        min-height: 120px; // Image asgher
+        img { max-height: 120px; }
+      }
+    }
   }
 }
 
@@ -191,13 +267,48 @@ $white: #ffffff;
   }
 
   // --- MOBILE ADJUSTMENTS ---
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     padding: 20px;
     
-    h2 { font-size: 1.5rem; }
+    // 1. Nraja3ouha Flexbox bech najmou nbadlou tartib
+    display: flex;
+    flex-direction: column;
+
+    // --- TARTIB (ORDER) ---
     
-    // Sticky Footer Logic
+    // 1️⃣ Category tji loula
+    .category { 
+      order: 1; 
+    }
+
+    // 2️⃣ Esm l Parfum
+    h2 { 
+      order: 2; 
+      font-size: 1.5rem; 
+      margin-bottom: 5px; 
+    }
+
+    // 3️⃣ 🔥 VOLUME SELECTOR (Houni l changement)
+    // Jabneh direct ta7t l esm (Order 3)
+    .variants-selector {
+      order: 3;
+      margin-top: 5px;
+      margin-bottom: 15px; // Espace 9bel description
+    }
+
+    // 4️⃣ Description (Hbatna ha louta)
+    .description { 
+      order: 4; 
+    }
+
+    // 5️⃣ Composition Box
+    .composition-box { 
+      order: 5; 
+    }
+
+    // 6️⃣ Sticky Footer (Action Area)
     .action-area {
+      order: 6; // Dima louta
       position: sticky; 
       bottom: 0; 
       background: white; 

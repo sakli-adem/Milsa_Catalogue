@@ -4,10 +4,29 @@
     <button class="close-btn" (click)="close.emit()">×</button>
 
     <div class="modal-body">
-      <div class="product-image">
-        <img [src]="product.image" [alt]="product.nom">
+<div class="product-image">
+        
+        <div class="images-container">
+          
+          <div class="img-card main">
+            <span class="card-label">Inspiration Olfactive</span>
+            <div class="img-wrap">
+              <img [src]="product.image" [alt]="product.nom">
+            </div>
+          </div>
+
+          <div class="img-card inspiration" *ngIf="product.hover_image">
+            <span class="card-label">Le Packaging Chogan</span>
+            <div class="img-wrap">
+              <img [src]="product.hover_image" alt="Inspiration">
+            </div>
+          </div>
+
+        </div>
       </div>
 
+
+      
       <div class="product-details">
         <span class="category">{{ product.categorie }}</span>
         <h2>{{ product.nom }}</h2>

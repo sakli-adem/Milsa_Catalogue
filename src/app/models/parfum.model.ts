@@ -16,7 +16,7 @@ export interface Parfum {
   description: string;
   image: string;
   nouveau: boolean;
-  // Zidna hethi:
+  hover_image?: string;
   composition: Composition; 
   variantes: Variante[];
 }

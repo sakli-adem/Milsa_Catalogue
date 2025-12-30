@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>https://milsa.tn/</loc>
@@ -8,5 +7,17 @@
    <url>
       <loc>https://milsa.tn/boutique</loc>
       <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://milsa.tn/apropos</loc>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://milsa.tn/contact</loc>
+      <priority>0.8</priority>
+   </url>
+    <url>
+      <loc>https://milsa.tn/contenu-commande</loc>
+      <priority>0.7</priority>
    </url>
 </urlset>

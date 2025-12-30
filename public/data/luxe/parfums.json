@@ -6,7 +6,7 @@
     "categorie": "Unisex",
     "description": "Une fraîcheur alpine cristalline et revigorante.",
     "image": "data/luxe/images/044.webp",
-    "hover_image": "../images/bouteilles/taswira.webp", 
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Mandarine",
@@ -25,6 +25,7 @@
     "categorie": "Unisex",
     "description": "Un classique frais et universel.",
     "image": "data/luxe/images/046.webp",
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Citron, Mandarine, Papaye",
@@ -43,6 +44,7 @@
     "categorie": "Unisex",
     "description": "Luxe, sophistication et sensualité mystérieuse.",
     "image": "data/luxe/images/054.webp",
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Truffe, Gardénia, Cassis",
@@ -61,6 +63,7 @@
     "categorie": "Unisex",
     "description": "Audacieux, luxueux et inoubliable.",
     "image": "data/luxe/images/106.webp",
+    "hover_image": "../images/bouteilles/luxejaune.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Amande amère, Lavande",
@@ -78,6 +81,7 @@
     "categorie": "Unisex",
     "description": "Une fragrance magique et envoûtante.",
     "image": "data/luxe/images/110.webp",
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Pêche, Passion",
@@ -96,6 +100,7 @@
     "categorie": "Unisex",
     "description": "Gourmand et séduisant, un plaisir défendu.",
     "image": "data/luxe/images/111.webp",
+    "hover_image": "../images/bouteilles/luxeblanc.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Cerise noire, Liqueur de cerise",
@@ -113,6 +118,7 @@
     "categorie": "Unisex",
     "description": "L'essence pure du patchouli, profonde et terreuse.",
     "image": "data/luxe/images/072.webp",
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Notes vertes",
@@ -131,6 +137,7 @@
     "categorie": "Homme",
     "description": "Frais et viril, inspiré des sommets himalayens.",
     "image": "data/luxe/images/073.webp",
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Citron, Bergamote, Mandarine",
@@ -149,6 +156,7 @@
     "categorie": "Unisex",
     "description": "L'essence vibrante de la côte amalfitaine.",
     "image": "data/luxe/images/099.webp",
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Citron, Menthe, Mandarine",
@@ -167,6 +175,7 @@
     "categorie": "Unisex",
     "description": "Fraîcheur méditerranéenne élégante et lumineuse.",
     "image": "data/luxe/images/112.webp",
+    "hover_image": "../images/bouteilles/luxeblanc.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Mandarine, Citron",
@@ -184,6 +193,7 @@
     "categorie": "Unisex",
     "description": "Oud puissant et mystérieux du désert.",
     "image": "data/luxe/images/114.webp",
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Encens, Bois de rose",
@@ -202,6 +212,7 @@
     "categorie": "Unisex",
     "description": "Une signature olfactive lumineuse et iconique.",
     "image": "data/luxe/images/118.webp",
+    "hover_image": "../images/bouteilles/luxerouge.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Jasmin, Safran",
@@ -219,6 +230,7 @@
     "categorie": "Unisex",
     "description": "Chaleur veloutée et sensuelle.",
     "image": "data/luxe/images/101.webp",
+    "hover_image": "../images/bouteilles/luxeblanc.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Notes fleuries",
@@ -236,6 +248,7 @@
     "categorie": "Unisex",
     "description": "Chaleur solaire et dorée.",
     "image": "data/luxe/images/102.webp",
+    "hover_image": "../images/bouteilles/luxenoir.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Notes fleuries, Néroli",
@@ -253,6 +266,7 @@
     "categorie": "Unisex",
     "description": "Café intense et addictif.",
     "image": "data/luxe/images/105.webp",
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Rose, Fleur d'oranger",
@@ -271,6 +285,7 @@
     "categorie": "Unisex",
     "description": "Fragrance moderne et sophistiquée.",
     "image": "data/luxe/images/124.webp",
+    "hover_image": "../images/bouteilles/luxejaune.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Notes fraîches",
@@ -288,6 +303,7 @@
     "categorie": "Unisex",
     "description": "Fraîcheur ensoleillée de la côte italienne.",
     "image": "data/luxe/images/125.webp",
+    "hover_image": "../images/bouteilles/luxebleu.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Citron sicilien",
@@ -305,6 +321,7 @@
     "categorie": "Unisex",
     "description": "Sensualité solaire et addictive.",
     "image": "data/luxe/images/126.webp",
+    "hover_image": "../images/bouteilles/luxejaune.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Bergamote, Cardamome, Poivre rose",
@@ -322,6 +339,7 @@
     "categorie": "Unisex",
     "description": "Oud rare et précieux, exotique et raffiné.",
     "image": "data/luxe/images/127.webp",
+    "hover_image": "../images/bouteilles/luxejaune.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Bois de rose, Cardamome",
@@ -339,6 +357,7 @@
     "categorie": "Unisex",
     "description": "Vanille sombre et envoûtante.",
     "image": "data/luxe/images/128.webp",
+    "hover_image": "../images/bouteilles/luxejaune.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Notes orientales",
@@ -356,6 +375,7 @@
     "categorie": "Unisex",
     "description": "Fraîcheur fruitée méditerranéenne.",
     "image": "data/luxe/images/129.webp",
+    "hover_image": "../images/bouteilles/luxebleu.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Citron de Sicile, Orange",
@@ -373,6 +393,7 @@
     "categorie": "Unisex",
     "description": "Héritage oriental luxueux et raffiné.",
     "image": "data/luxe/images/141.webp",
+    "hover_image": "../images/bouteilles/luxejaune.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Notes orientales",
@@ -390,6 +411,7 @@
     "categorie": "Unisex",
     "description": "Cuir brut et sauvage du désert.",
     "image": "data/luxe/images/142.webp",
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Cardamome",
@@ -408,6 +430,7 @@
     "categorie": "Unisex",
     "description": "Vanille poudrée et réconfortante.",
     "image": "data/luxe/images/143.webp",
+    "hover_image": "../images/bouteilles/luxeblanc.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Notes poudrées",
@@ -425,6 +448,7 @@
     "categorie": "Unisex",
     "description": "L'essence brute de la mer.",
     "image": "data/luxe/images/130.webp",
+    "hover_image": "../images/bouteilles/luxenoir.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Notes marines, Sel marin",
@@ -442,6 +466,7 @@
     "categorie": "Unisex",
     "description": "Pêche gourmande et sensuelle.",
     "image": "data/luxe/images/134.webp",
+    "hover_image": "../images/bouteilles/luxenoir.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Pêche, Rhum, Cognac",
@@ -459,6 +484,7 @@
     "categorie": "Unisex",
     "description": "Élégance boisée et argentée.",
     "image": "data/luxe/images/135.webp",
+    "hover_image": "../images/bouteilles/homme.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Iris, Cyprès",
@@ -477,6 +503,7 @@
     "categorie": "Unisex",
     "description": "Douceur lactée et réconfortante.",
     "image": "data/luxe/images/144.webp",
+    "hover_image": "../images/bouteilles/luxeblanc.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Lait, Vanille",
@@ -494,6 +521,7 @@
     "categorie": "Femme",
     "description": "Rouge passionné et glamour.",
     "image": "data/luxe/images/146.webp",
+    "hover_image": "../images/bouteilles/luxerouge.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Notes fruitées",
@@ -511,6 +539,7 @@
     "categorie": "Unisex",
     "description": "Gourmand méditerranéen au miel et lavande.",
     "image": "data/luxe/images/137.webp",
+    "hover_image": "../images/bouteilles/luxeblanc.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Lavande, Bergamote, Citron",
@@ -529,6 +558,7 @@
     "description": "Murmure boisé mystérieux.",
     "image": "data/luxe/images/138.webp",
     "nouveau": false,
+    "hover_image": "../images/bouteilles/luxenoir.webp", 
     "composition": {
       "tete": "Notes épicées",
       "coeur": "Bois précieux",
@@ -545,6 +575,7 @@
     "categorie": "Unisex",
     "description": "Sables rosés du désert oriental.",
     "image": "data/luxe/images/139.webp",
+    "hover_image": "../images/bouteilles/luxeblanc.webp", 
     "nouveau": false,
     "composition": {
       "tete": "Notes épicées",

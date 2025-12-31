@@ -36,7 +36,7 @@ export class CatalogueComponent {
       title: 'Collection Mixte',
       coverImage: 'images/cat3/cover.webp',
       images: [
-        'images/cat3/16.png', 'images/cat3/17.png', 'images/cat3/18.png', 'images/cat3/19.png'
+        'images/cat3/16.webp', 'images/cat3/17.webp', 'images/cat3/18.webp', 'images/cat3/19.webp'
       ]
     }
   ];

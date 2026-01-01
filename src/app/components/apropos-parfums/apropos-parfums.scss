@@ -1,7 +1,7 @@
 // --- VARIABLES ---
 $bg-color: #fafafa;
 $text-color: #1a1a1a;
-$accent-color: #208b25; // Doré
+$accent-color: #208b25; 
 $white: #ffffff;
 $radius: 16px;
 $shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -57,7 +57,7 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
       filter: grayscale(100%); // Logo Noir et Blanc pour le style
       transition: filter 0.3s;
       
-      &:hover { filter: grayscale(0%); } // Ywalli couleur fil hover
+      &:hover { filter: grayscale(0%); } 
     }
   }
 
@@ -90,18 +90,15 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
 .comparison-section {
   margin-bottom: 80px;
   
-  // Wrapper mta3 tableau
   .table-wrapper {
     overflow-x: auto; // Scroll Horizontal
     border-radius: $radius;
     box-shadow: $shadow-lg;
+
+    -webkit-overflow-scrolling: touch; 
     
-    // 🔥 UX TRICK: Smooth Scroll + Indication
-    -webkit-overflow-scrolling: touch; // Scroll rtb fel iPhone
-    
-    // Style Scrollbar (Android/Windows)
     &::-webkit-scrollbar {
-      height: 6px; // Toul scrollbar
+      height: 6px; 
     }
     &::-webkit-scrollbar-track {
       background: #f1f1f1;
@@ -112,20 +109,15 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
       border-radius: 4px;
       &:hover { background: #bbb; }
     }
-    
-    // 🔥 UX TRICK: Indication Mobile "Swipe Left"
-    // Hethi tzidha ken t7eb tbayen l user annou famma scroll
     position: relative;
     
-    // Ken t7eb tzid "flèche" walla message, 
-    // l a7sen tzidha fel HTML (chouf louta)
   }
 
   .styled-table {
     width: 100%;
     border-collapse: collapse;
     background: $white;
-    min-width: 650px; // ⚠️ Kabbart l min-width chwaya bech yforsi scroll
+    min-width: 650px;
 
     thead tr {
       background-color: #1a1a1a;
@@ -135,7 +127,7 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
 
     th, td {
       padding: 20px 25px;
-      white-space: nowrap; // ⚠️ Mouhem: Ymanaa l ktiba bech tahbet star
+      white-space: nowrap; 
     }
 
     tbody tr {
@@ -148,7 +140,7 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
       
       // Ligne Spéciale (Notre produit)
       &.highlight {
-        background-color: rgba(86, 212, 55, 0.05); // Doré très clair
+        background-color: rgba(86, 212, 55, 0.05);
         font-weight: bold;
         
         .type-cell {
@@ -187,16 +179,15 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-header {
   text-align: center;
-  margin-bottom: 60px; // Espace binou w bin section Chogan
+  margin-bottom: 60px; 
 
   .grand-title {
-    font-size: clamp(2.2rem, 5vw, 3rem); // Yetsaghrou wa7dou fil mobile
+    font-size: clamp(2.2rem, 5vw, 3rem); 
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0;
     
-    // Gradient effect kima catalogue
     background: linear-gradient(135deg, #1a1a1a 0%, #555 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -205,7 +196,7 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
   .header-line {
     width: 80px;
     height: 4px;
-    background: #d4af37; // Doré
+    background: #d4af37; 
     margin: 20px auto;
     border-radius: 2px;
   }
@@ -230,7 +221,7 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
     
     .icon-circle {
       transform: scale(1.1) rotate(10deg);
-      background: #e8f5e9; // Vert clair bio
+      background: #e8f5e9; 
     }
     .separator { background: #4caf50; width: 50px;}
   }

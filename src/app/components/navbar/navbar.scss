@@ -459,8 +459,8 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
-// --- RESPONSIVE MEDIA QUERIES ---
-@media (max-width: 900px) { // Baddeltha 900px bech menu yodhher bekri chwaya
+
+@media (max-width: 900px) { 
   .navbar {
     padding: 1rem 1.5rem;
 

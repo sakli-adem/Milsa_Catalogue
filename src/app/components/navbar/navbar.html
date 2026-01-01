@@ -78,8 +78,15 @@
     </button>
   </div>
 
-  <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Menu">
-    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+<button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+
+    <span *ngIf="cartItemCount > 0" class="mobile-badge-toggle">
+      {{ cartItemCount }}
+    </span>
+    
   </button>
 
   <div class="navbar-menu" [class.open]="isMenuOpen">
@@ -129,8 +136,12 @@
 
 
 
-      <button class="cart-btn mobile-cart" routerLink="/panier">
-        Mon Panier ({{ cartItemCount }}) 🛒
+<button class="cart-btn mobile-cart" routerLink="/panier">
+        Mon Panier 
+        <span class="count-red" *ngIf="cartItemCount > 0">
+           (+{{ cartItemCount }})
+        </span> 
+        🛒
       </button>
 
       <div class="mobile-search-wrapper">

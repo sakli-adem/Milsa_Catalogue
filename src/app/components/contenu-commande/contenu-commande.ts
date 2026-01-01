@@ -24,7 +24,7 @@ export class ContenuCommande {
       type: 'Bonus',
       title: 'Deux échantillons au choix',
       image: 'images/commande/echantillon.webp', 
-      description: 'Chaque commande que vous passez chez nous est accompagnée de deux cadeaux : des échantillons de haute qualité selon votre choix. Ce sont des parfums puissants et concentrés pour vous faire découvrir nos autres univers.'
+      description: 'Chaque commande que vous passez chez nous est accompagnée de deux échantillons de haute qualité selon votre choix. Ce sont des parfums puissants et concentrés pour vous faire découvrir nos autres univers.'
     },
     {
       id: 2,

@@ -245,7 +245,11 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   // --- 4. TOGGLE (MOBILE) ---
+// --- 4. TOGGLE (MOBILE) ---
   &-toggle {
+    // 🔥 1. Zidna "relative" bech l badge yji fou9ha
+    position: relative; 
+    
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -269,8 +273,38 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
       .bar:nth-child(2) { opacity: 0; transform: translateX(10px); }
       .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
     }
-  }
 
+    // 🔥🔥 2. HETHA CODE EL BADGE (ZIDOU HOUNI DAKHEL EL TOGGLE) 🔥🔥
+    .mobile-badge-toggle {
+      position: absolute;
+      top: -2px;    // Tji mel fou9 chwaya
+      right: -2px;  // Tji 3al lmmine
+      
+      background-color: #ff3b30; // Rouge
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      
+      // Forme
+      min-width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      
+      // Centrage
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+      
+      // Style Pro
+      border: 2px solid white; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      
+      // Animation
+      animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 10;
+    }
+  }
   // --- 5. MOBILE MENU ---
   &-menu {
     position: fixed;
@@ -416,6 +450,10 @@ $ease-pro: cubic-bezier(0.4, 0, 0.2, 1);
       &:hover {
         background: $accent-color;
         color: $white;
+      }
+
+      .count-red {
+        color: #ff3b30; 
       }
     }
   }

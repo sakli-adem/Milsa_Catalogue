@@ -7,6 +7,7 @@ $primary-btn: #1a1a1a;
 $rose: #e91e63;
 $blue: #2196f3;
 $green: #27ae60;
+$orange: #ff9800;
 
 // --- CONTAINER GLOBAL ---
 .boutique-container {
@@ -97,6 +98,13 @@ $green: #27ae60;
           background: color.adjust($green, $lightness: 5%);
         }
       }
+      &.enfants {
+      background: $orange; 
+      
+      &:hover {
+        background-color: color.adjust($orange, $lightness: 5%);
+      }
+    }
     }
   }
 }
@@ -253,6 +261,10 @@ $green: #27ae60;
 
         &.luxe {
           background: color.adjust($green, $lightness: 5%);
+        }
+
+        &.enfants {
+          background: color.adjust($orange, $lightness: 5%);
         }
       }
 

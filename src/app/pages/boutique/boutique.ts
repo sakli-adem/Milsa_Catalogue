@@ -26,7 +26,7 @@ export class BoutiqueComponent implements OnInit {
   itemsToShow = 6;
   batchSize = 6;
   
-  activeCategory: 'femmes' | 'hommes' | 'luxe' = 'femmes';
+activeCategory: 'femmes' | 'hommes' | 'luxe' | 'enfants' = 'femmes';
   isLoading = false;
   selectedProduct: Parfum | null = null;
   currentSearchTerm = ''; 
@@ -48,6 +48,7 @@ export class BoutiqueComponent implements OnInit {
         if (product.categorie === 'Homme') this.activeCategory = 'hommes';
         else if (product.categorie === 'Femme') this.activeCategory = 'femmes';
         else if (product.categorie === 'Unisex') this.activeCategory = 'luxe';
+        else if (product.categorie === 'Enfant') this.activeCategory = 'enfants';
         
         this.openModal(product);
         this.parfumService.clearOpenModal();
@@ -85,7 +86,7 @@ export class BoutiqueComponent implements OnInit {
     }
   }
 
-  chargerParfums(categorie: 'femmes' | 'hommes' | 'luxe') {
+  chargerParfums(categorie: 'femmes' | 'hommes' | 'luxe' | 'enfants') {
     this.activeCategory = categorie;
     this.isLoading = true;
     
@@ -99,7 +100,7 @@ export class BoutiqueComponent implements OnInit {
     });
   }
 
-  onTabClick(categorie: 'femmes' | 'hommes' | 'luxe') {
+  onTabClick(categorie: 'femmes' | 'hommes' | 'luxe' | 'enfants') {
     this.parfumService.updateSearchTerm(''); 
     this.chargerParfums(categorie);
   }
@@ -119,6 +120,7 @@ export class BoutiqueComponent implements OnInit {
         if (firstMatch.categorie === 'Homme') this.activeCategory = 'hommes';
         else if (firstMatch.categorie === 'Femme') this.activeCategory = 'femmes';
         else if (firstMatch.categorie === 'Unisex') this.activeCategory = 'luxe';
+        else if (firstMatch.categorie === 'Enfant') this.activeCategory = 'enfants';
       }
     } else {
       this.parfums = [...this.categoryList];

@@ -10,6 +10,7 @@
   </div>
 
   <div class="categories-wrapper">
+
     <button (click)="chargerParfums('femmes')" [class.active]="activeCategory === 'femmes'" class="cat-btn femmes">
       👩 Femmes
     </button>
@@ -19,6 +20,10 @@
     <button (click)="chargerParfums('luxe')" [class.active]="activeCategory === 'luxe'" class="cat-btn luxe">
       ✨ Luxe
     </button>
+    <button (click)="chargerParfums('enfants')" [class.active]="activeCategory === 'enfants'" class="cat-btn enfants">
+      🧸 Enfants
+    </button>
+
   </div>
 
   <div class="mobile-only-search">

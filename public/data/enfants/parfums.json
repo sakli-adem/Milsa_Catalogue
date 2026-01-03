@@ -23,8 +23,8 @@
     "marque": "hypoallergénique",
     "categorie": "enfants",
     "description": "Fraîcheur florale et fruitée, douce et sûre pour les enfants.",
-    "image": "data/luxe/images/rose.webp",
-    "hover_image": "data/luxe/images/rose.webp", 
+    "image": "data/enfants/images/rose.webp",
+    "hover_image": "data/enfants/images/rose.webp",
     "nouveau": false,
     "composition": {
       "tete": "",
@@ -41,8 +41,8 @@
     "marque": "hypoallergénique",
     "categorie": "enfants",
     "description": "Fraîcheur florale, longue tenue, pour bébé et maman.",
-    "image": "data/luxe/images/jaune.webp",
-    "hover_image": "data/luxe/images/jaune.webp", 
+    "image": "data/enfants/images/jaune.webp",
+    "hover_image": "data/enfants/images/jaune.webp", 
     "nouveau": false,
     "composition": {
       "tete": "",

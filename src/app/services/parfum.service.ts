@@ -31,9 +31,10 @@ export class ParfumService {
     return forkJoin([
       this.http.get<Parfum[]>('data/femmes/parfums.json'),
       this.http.get<Parfum[]>('data/hommes/parfums.json'),
-      this.http.get<Parfum[]>('data/luxe/parfums.json')
+      this.http.get<Parfum[]>('data/luxe/parfums.json'),
+      this.http.get<Parfum[]>('data/enfants/parfums.json')
     ]).pipe(
-      map(([femmes, hommes, luxe]) => [...femmes, ...hommes, ...luxe])
+      map(([femmes, hommes, luxe, enfants]) => [...femmes, ...hommes, ...luxe, ...enfants])
     );
   }
 

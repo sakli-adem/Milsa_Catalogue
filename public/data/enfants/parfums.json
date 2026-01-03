@@ -9,9 +9,9 @@
     "hover_image": "data/enfants/images/bleu.webp", 
     "nouveau": false,
     "composition": {
-      "tete": ",",
-      "coeur": ", ",
-      "fond": ", "
+      "tete": "",
+      "coeur": "",
+      "fond": ""
     },
     "variantes": [
       { "volume": "30ml", "prix": 99 }
